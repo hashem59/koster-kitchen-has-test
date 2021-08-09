@@ -915,7 +915,7 @@
           "0558f420-3573-493c-929c-11c59361f8be": {
             "type": "logo_text",
             "settings": {
-              "title": "bekannt aus",
+              "title": "bekannt aus 2021",
               "show_mobile": false
             }
           },
@@ -1072,7 +1072,8 @@
           },
           "1c46cd31-2996-4454-a3f5-4425554333d9": {
             "type": "logo_image",
-            "settings": {}
+            "settings": {
+            }
           }
         },
         "block_order": [
@@ -1820,7 +1821,8 @@
           "d09d6394-d7d6-4015-b8ac-14f5fd9cab20",
           "4dbae612-f979-4cad-a993-dbb4bfd4d8a7"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "1624892614c65a21cb": {
         "type": "instagram-section",
@@ -1867,7 +1869,8 @@
       },
       "product-description": {
         "type": "product-description",
-        "settings": {}
+        "settings": {
+        }
       },
       "product-logos_section": {
         "type": "product-logos_section",
@@ -1894,19 +1897,23 @@
       },
       "product-community-section": {
         "type": "product-community-section",
-        "settings": {}
+        "settings": {
+        }
       },
       "product-image-with-text": {
         "type": "product-image-with-text",
-        "settings": {}
+        "settings": {
+        }
       },
       "product-product-focus": {
         "type": "product-product-focus",
-        "settings": {}
+        "settings": {
+        }
       },
       "product-faq": {
         "type": "product-faq",
-        "settings": {}
+        "settings": {
+        }
       },
       "1626262649501e2281": {
         "type": "featured-product",
@@ -2075,7 +2082,8 @@
           "fbb9e91b-0de0-49f5-aef8-32c64fd1e3e9",
           "72eafee0-5ff1-4925-be8b-c9630c7e672d"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "extra-template-3": {
         "type": "extra-template-3",
@@ -2245,7 +2253,8 @@
           "0701c4e9-6e3c-4587-9484-9ca8351c93a0",
           "ce7f4de7-c941-4141-852c-a6de0aae8a95"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "extra-template-4": {
         "type": "extra-template-4",
@@ -2382,7 +2391,8 @@
           "14cf191a-48e0-45a6-a3eb-c1d54dcb64af",
           "e230388f-6a0b-4316-9db4-b8d6ffbc35b5"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "extra-template-5": {
         "type": "extra-template-5",
@@ -2490,7 +2500,8 @@
           "305d29ab-703c-4fcd-bfcb-e39f7bb12455",
           "7e959956-1ad5-45b2-904a-dcad31d34817"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "extra-template-6": {
         "type": "extra-template-6",
@@ -2576,7 +2587,8 @@
           "6daaf596-524b-437b-afd8-5b4ad5f66478",
           "5a338d83-a15e-411b-b465-f164dbe54761"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "extra-template-7": {
         "type": "extra-template-7",
@@ -2717,7 +2729,8 @@
           "f41efee7-8d68-48bd-9f8d-e42acf53f8c4",
           "be4cc0d9-b579-4c7c-8b88-52e06dd2bee8"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "extra-template-8": {
         "type": "extra-template-8",
@@ -2861,7 +2874,8 @@
           "a2d71e91-ebcb-446a-b3bc-a598b1902f23",
           "59de755e-9f8f-414c-9d46-acd3b2969b5e"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "linktree-page": {
         "type": "linktree-page",
@@ -3095,11 +3109,13 @@
           "9206dc02-72f5-41ca-a580-239da50bf15d",
           "5295a40c-592b-4de6-a5c0-95b2aa0f417e"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "extra-template-10": {
         "type": "extra-template-10",
-        "settings": {}
+        "settings": {
+        }
       }
     },
     "content_for_index": [
