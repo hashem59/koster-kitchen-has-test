@@ -1,0 +1,99 @@
+{%- capture flickity_options -%}
+{
+  "prevNextButtons": false,
+  "pageDots":  {% if section.blocks.size > 1 %}true{% else %}false{% endif %},
+  "autoPlay": {% if section.settings.autoplay %}{{ section.settings.cycle_speed | times: 1000 }}{% else %}false{% endif %},
+  "watchCSS": true,
+  "dragThreshold": 8,
+  "groupCells": 1,
+  "wrapAround": true
+}
+{%- endcapture -%}
+<section id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="collection-list">
+
+  {%- capture collection_items -%}
+
+    {% for block in section.blocks %}
+        <div {{ block.shopify_attributes }} class="testimonial-item Carousel__Cell {% if forloop.index <=2 %}is-selected{% endif %}" data-slide-index="{{ forloop.index0 }}">
+            {%- capture section_content -%}
+                <div class="FeatureText__ContentWrapper">
+                    <div class="FeatureText__Content">
+                        {%- if block.settings.subheading != blank or block.settings.title != blank -%}
+                        <header class="SectionHeader">
+
+                            {%- if block.settings.name != blank -%}
+                                <h3 class="SectionHeader__SubHeading Heading u-h6 regular_font bold_weight" style="margin-bottom: 11px;font-size: 18px;">{{ block.settings.name | escape }} </h3>
+                            {%- endif -%}
+
+                            {%- if block.settings.subheading != blank -%}
+                            <h3 class="SectionHeader__SubHeading Heading regular_font" style="font-size: 16px;">{{ block.settings.subheading | escape }}</h3>
+                            {%- endif -%}
+
+                            {% if block.settings.reviews_score %}
+                                {% assign stars = block.settings.reviews_score | times: 1.00 %}
+                                <div class="stars">
+                                    {%- for i in (1..5) -%}
+                                    {% assign half_star = i | minus: 0.5 %}
+                                    {%- if stars >= i -%}
+                                    <span class="clip-star star-on"></span>
+                                    {% elsif stars == half_star %}
+                                    <span class="clip-star star-half"></span>
+                                    {% else %}
+                                    <span class="clip-star star-off"></span>
+                                    {%- endif -%}
+                                {%- endfor -%}
+                                </div>
+                            {% endif %}
+
+                            {%- if block.settings.title != blank -%}
+                            <h2 class="SectionHeader__Heading Heading u-h5">{{ block.settings.title | escape }}</h2>
+                            {%- endif -%}
+
+                            {%- if block.settings.quote != blank -%}
+                            <div class="SectionHeader__Description Rte">
+                                {{ block.settings.quote }}
+                            </div>
+                            {%- endif -%}
+
+                        </header>
+                        {%- endif -%}
+                    </div>
+                </div>
+            {%- endcapture -%}
+
+            {%- capture section_image -%}
+                {%- if block.settings.image != blank -%}
+                <div class="FeatureText__ImageWrapper">
+                    {%- capture supported_sizes -%}{%- render 'image-size', sizes: '50,70,75,80,90,100,200,300,400', image: block.settings.image -%}{%- endcapture -%}
+
+                    <div class="AspectRatio" style="max-width: 70px; --aspect-ratio: {{ block.settings.image.aspect_ratio }}">
+                    {%- assign image_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                    <img  class="Image--lazyLoad Image--slideLeft hidden-tablet-and-up " src="{{block.settings.image | img_url: '300x'}}">
+                    <img class="Image--lazyLoad Image--slideLeft hidden-phone"
+                     data-src="{{ image_url }}"
+                     data-expand="-200"
+                     data-widths="[{{ supported_sizes }}]"
+                     data-sizes="auto"
+                     alt="{{ block.settings.image.alt | escape }}">
+
+                    <noscript>
+                        <img src="{{ block.settings.image | img_url: '300x' }}" alt="{{ block.settings.image.alt | escape }}">
+                    </noscript>
+                    </div>
+                </div>
+                {%- endif -%}
+            {%- endcapture -%}
+
+            <div class="FeatureText {% if block.settings.image != blank %}FeatureText--withImage FeatureText--imageLeft{% endif %}">
+                {{- section_image -}}
+                {{- section_content -}}
+            </div>
+        </div>
+    {% endfor %}
+  {%- endcapture -%}
+
+    <div class="Carousel Carousel--insideDots CollectionList CollectionList--spaced Section Container testimonial" data-flickity-config='{{ flickity_options }}'>
+      {{ collection_items }}
+    </div>
+
+</section>

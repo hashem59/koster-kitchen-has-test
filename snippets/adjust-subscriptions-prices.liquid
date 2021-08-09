@@ -1,0 +1,23 @@
+<script type="text/javascript">
+(function($) {
+  $(document).on('page:load page:change' , function(evt) {
+
+    var recurringLinesSummery = $('[data-recurring-totals-section]');
+    var cartLines = $('[data-order-summary-section="line-items"] [data-variant-id]');
+    if (recurringLinesSummery.length > 0) {
+
+      cartLines.filter(function( index ) {
+          return $(this).find('.product__description__selling_plan').length > 0
+      })
+        .each(function(i){
+          var lineRecurringPrice = $(this).find('.product__price span.order-summary__emphasis').html();
+          var $summeryPrice = recurringLinesSummery.eq(i).find('.total-line__price span');
+          var newSummeryPrice = $summeryPrice.html().trim().split(' ').slice(1).join(' '); // removing the price from the summery price
+          $summeryPrice.html(lineRecurringPrice + ' ' + newSummeryPrice)
+        })
+
+    }
+
+  })
+})(Checkout.$);
+</script>

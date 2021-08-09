@@ -1,0 +1,65 @@
+
+<div class="shopify-section---bottotm-bordered">
+  <section class="Section Section--spacingNormal">
+    <div class="Container No-padding-phone">
+      {%- capture section_content -%}
+        <div class="FeatureText__ContentWrapper">
+          <div class="FeatureText__Content">
+            {%- if title != blank -%}
+              <header class="SectionHeader">
+
+                {%- if title != blank -%}
+                  <h2 class="SectionHeader__Heading Heading u-h3">{{ title | escape }}</h2>
+                {%- endif -%}
+
+                {%- if content != blank -%}
+                  <div class="SectionHeader__Description Rte">
+                    {{ content }}
+                  </div>
+                {%- endif -%}
+              </header>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endcapture -%}
+
+      {%- capture section_image -%}
+          <div class="FeatureText__ImageWrapper">
+            {%- capture supported_sizes -%}{%- render 'image-size', sizes: '400,600,700,800,900,1000,1200', image: image -%}{%- endcapture -%}
+
+            <div class="AspectRatio hidden-phone" style="max-width: {{ image.width }}px; --aspect-ratio: {{ image.aspect_ratio }}">
+              {%- assign image_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+              <img class="Image--lazyLoad Image--slide{{ image_position | capitalize }}" data-src="{{ image_url }}" data-expand="-200" data-widths="[{{ supported_sizes }}]"
+               data-sizes="auto" alt="{{ title | escape }}">
+
+              <noscript>
+                <img src="{{ image | img_url: '800x' }}" alt="{{ title | escape }}">
+              </noscript>
+            </div>
+
+            {%- capture supported_sizes -%}{%- render 'image-size', sizes: '400,600,700,800,900,1000,1200', image: mobile_image -%}{%- endcapture -%}
+            <div class="AspectRatio hidden-tablet-and-up" style="max-width: {{ mobile_image.width }}px; --aspect-ratio: {{ mobile_image.aspect_ratio }}">
+              {%- assign image_url = mobile_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+              <img class="Image--lazyLoad Image--slide{{ image_position | capitalize }}" data-src="{{ image_url }}" data-expand="-200" data-widths="[{{ supported_sizes }}]"
+               data-sizes="auto" alt="{{ title | escape }}">
+
+              <noscript>
+                <img src="{{ image | img_url: '800x' }}" alt="{{ title | escape }}">
+              </noscript>
+            </div>
+          </div>
+      {%- endcapture -%}
+
+      <div class="FeatureText FeatureText--withImage FeatureText--image{{ image_position | capitalize }}">
+        {%- if image_position == 'left' -%}
+          {{- section_image -}}
+          {{- section_content -}}
+        {%- else -%}
+          {{- section_content -}}
+          {{- section_image -}}
+        {%- endif -%}
+      </div>
+    </div>
+
+  </section>
+</div>

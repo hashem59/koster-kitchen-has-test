@@ -1,0 +1,51 @@
+
+{%- assign url = block.settings.url -%}
+
+{%- assign image = block.settings.image -%}
+
+
+<a href="{{ url }}" {{ block.shopify_attributes }} class="CollectionItem 1/2">
+  {%- capture mobile_size -%}750x{% if image.height >= 960 %}960{% else %}{{ image.height }}{% endif %}{%- endcapture -%}
+  {%- assign image_crop = block.settings.image_alignment | split: ' ' | last -%}
+
+  <div class="CollectionItem__Wrapper CollectionItem__Wrapper--{{block.id}} CollectionItem__Wrapper--tiny" {% if image %}style="background-image: url({{ image | img_url: '1x1' }})"{% endif %}>
+    <div class="CollectionItem__ImageWrapper">
+
+      {%- assign max_width = image.width -%}
+
+        <div class="CollectionItem__Image AspectRatio" 
+            style="background: url({{ image | img_url: '1x1', format: 'jpg' }}); max-width: {{ max_width }}px; --aspect-ratio: {{ image.aspect_ratio }}">
+            <img class="Image--lazyLoad Image--fadeIn" style="object-fit: cover"
+                data-src="{{ image | img_url: mobile_size, scale: 2  }}"
+                alt="{{ image.alt | escape }}">
+
+            <span class="Image__Loader"></span>
+        </div>
+
+     
+    </div>
+
+    <div class="CollectionItem__Content CollectionItem__Content--{{ block.settings.content_position | default: 'bottomLeft' }}">
+      <header class="SectionHeader">
+          {% if block.settings.headline != blank %}
+            <h2 class="SectionHeader__Heading Heading Heading--block{{block.id}}">
+                <span class="u-h4 title_highlight">{{ block.settings.headline | escape }}</span>
+            </h2>
+          {% endif %}
+          {% if block.settings.headline_2 != blank %}
+            <h2 class="SectionHeader__Heading Heading" style="margin-bottom: 0;">
+                <span class="u-h4 title_highlight">  {{ block.settings.headline_2 | escape }}</span>
+            </h2>
+            <style>.Heading--block{{block.id}}{margin-bottom:11px;}</style>
+          {% endif %}
+      </header>
+    </div>
+
+  </div>
+  <style>
+    .CollectionItem__Wrapper--{{block.id}} .title_highlight{
+      background-color: {{ block.settings.title_highlight }};
+      color: {{ block.settings.title_color }};
+    }
+  </style>
+</a>

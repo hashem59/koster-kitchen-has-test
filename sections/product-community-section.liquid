@@ -1,0 +1,150 @@
+{%- capture flickity_options -%}
+{
+  "prevNextButtons": false,
+  "pageDots":  false,
+  "watchCSS": false,
+  "dragThreshold": 8,
+  "groupCells": 1,
+  "wrapAround": false,
+  "contain": true,
+  "freeScroll": true
+}
+{%- endcapture -%}
+<section class="Section Section_Community"  data-section-id="{{ section.id }}" data-section-type="Section_Community">
+  <div class="Section_Community_Inner">
+    {% assign community_metafields = product.metafields.tante-e %}
+    {%- if community_metafields.community-headline != balnk or community_metafields.community-text -%}
+      <header class="SectionHeader SectionHeader--center">
+        <h2 class="SectionHeader__Heading Heading u-h3">{{ community_metafields.community-headline }}</h2>
+        <div class="SectionHeader__Description Rte">
+          {{ community_metafields.community-text }}
+        </div>
+      </header>
+    {%- endif -%}
+
+
+    {% capture community_modals %}
+    {% endcapture %}
+    {% assign community_content = community_metafields.community-content | split: '|' %}
+    {%- if community_metafields.community-content != blank -%}
+      <div class="Carousel community-Carousel" data-flickity-config='{{ flickity_options }}'>
+        {%- for item in community_content -%}
+          {% assign image_id = item | split: '##' | first %}
+          {% assign image_id = image_id | strip_newlines | remove: ' ' | split: '/' | last | split: '?' | first %}
+          {% assign image = images[image_id] %}
+          <div class="community-carousel--item" data-slide-index="{{ forloop.index0 }}">
+            <div class="community-carousel--item__inner">
+              <div class="community-carousel--imagWrapper" data-action="open-modal"
+                aria-label="{{ 'home_page.featured_video.play' | t }}" aria-controls="modal-{{ section.id }}-{{forloop.index}}">
+                  {%- capture supported_sizes -%}{%- render 'image-size', sizes: '50,70,75,80,90,100,200,300,400', image: image -%}{%- endcapture -%}
+
+                  <div class="AspectRatio" style="max-width: 160px; --aspect-ratio: 1">
+                  {%- assign image_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  <img class="Image--lazyLoad"
+                   data-src="{{ image_url }}"
+
+                   data-widths="[{{ supported_sizes }}]"
+                   data-sizes="auto"
+                   alt="{{ image.alt | escape }}">
+
+                  <noscript>
+                      <img src="{{ image | img_url: '300x' }}" alt="{{ image.alt | escape }}">
+                  </noscript>
+                  </div>
+              </div>
+            </div>
+          </div>
+          {% assign video_id = item | split: '##' | last | split: 'v=' | last | split: '?' | first | split: '&' | first | strip | strip_newlines %}
+          {% capture community_modals %}
+          {{ community_modals }}
+          <div id="modal-{{ section.id }}-{{forloop.index}}" class="Modal Modal--fullScreen Modal--videoContent" aria-hidden="true" role="dialog" data-scrollable>
+            <div class="Modal__Content">
+              <div class="Container Container--narrow">
+                <div class="VideoWrapper">
+                  <iframe class="Image--lazyLoad" data-src="//www.youtube.com/embed/{{ video_id }}?autoplay=1&showinfo=0&controls=1&rel=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+
+            <button class="Modal__Close Modal__Close--outside" data-animate-bottom data-action="close-modal">{% render 'icon' with 'close' %}</button>
+          </div>
+          {% endcapture %}
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+  {{community_modals}}
+</section>
+
+<style media="screen">
+  .Section_Community {
+    background: {{ community_metafields.community-bg-color }};
+    padding: 90px 0;
+  }
+  .Carousel.community-Carousel {
+    display: flex;
+  }
+  .Carousel.community-Carousel .flickity-viewport {
+    width: 100%;
+  }
+  .Section_Community_Inner {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 50px;
+  }
+  .community-carousel--item {
+    width: 160px;
+    padding-left: 12px;
+  }
+  .community-carousel--item__inner {
+    background-color: #EB5760; /* For browsers that do not support gradients */
+    background-image: linear-gradient(#EB5760, #E857EB);
+    padding: 4px;
+  }
+  .community-carousel--item__inner .community-carousel--imagWrapper {
+    padding: 3px;
+    background: #fff;
+    cursor: pointer;
+    position: relative;
+  }
+  .community-carousel--item__inner .community-carousel--imagWrapper:hover:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 35px solid rgba(255,255,255,.75);
+    border-bottom: 20px solid transparent;
+    z-index: 20;
+    pointer-events: none;
+  }
+  .community-carousel--imagWrapper,
+  .community-carousel--imagWrapper img,
+  .community-carousel--item__inner
+   {
+    border-radius: 50%;
+  }
+  @media screen and (max-width: 1008px) {
+    .Section_Community {
+      padding: 20px;
+    }
+    .Section_Community_Inner {
+      padding: 45px 24px 30px 24px;
+    }
+    .Carousel.community-Carousel {
+      width: calc(var(--window-width) - 40px);
+      position: relative;
+      right: 5px;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    .community-carousel--item {
+      max-width: 140px;
+    }
+  }
+</style>

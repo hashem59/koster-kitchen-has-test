@@ -1,0 +1,25 @@
+
+{%- assign url = block.settings.link_url -%}
+
+{%- assign image = block.settings.link_icon -%}
+
+{%- assign title = block.settings.link_name -%}
+
+{%- capture mobile_size -%}750x{% if image.height >= 960 %}960{% else %}{{ image.height }}{% endif %}{%- endcapture -%}
+
+<div class="Collapsible">
+    <a href="{{ url }}" class="Collapsible__Button">
+
+        {%- assign max_width = image.width -%}
+        <div class="AspectRatio" 
+            style="max-width: {{ max_width }}px; --aspect-ratio: {{ image.aspect_ratio }}">
+            <img class="Image--lazyLoad Image--fadeIn" style="object-fit: cover"
+                data-src="{{ image | img_url: '100x', scale:2  }}"
+                alt="{{ image.alt | escape }}">
+        </div>
+
+        <div class=" Heading Link Link--primary u-h7 regular_font">{{ title | escape }}</div>
+
+    </a>
+
+</div>

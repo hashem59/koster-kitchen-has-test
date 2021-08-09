@@ -1,0 +1,132 @@
+{%- if section.settings.enable_bar -%}
+  {%- unless section.settings.home_page_only and template != 'index' -%}
+    <section id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="announcement-bar">
+      <div class="AnnouncementBar">
+        
+        <div class="AnnouncementBar__Wrapper trustbadgeDiv hidden-pocket">
+          {%- if section.settings.show_trustBadge -%}
+            <div id="MyCustomTrustbadge" width="21" height="21"></div>
+            {%- if section.settings.trustBadge_content != blank -%}
+            {% assign stars = section.settings.reviews_score | times: 1.00 %}
+                <div class="stars">
+                    {%- for i in (1..5) -%}
+                      {% assign half_star = i | minus: 0.5 %}
+                      {%- if stars >= i -%}
+                      <span class="clip-star star-on"></span>
+                      {% elsif stars == half_star %}
+                      <span class="clip-star star-half"></span>
+                      {% else %}
+                      <span class="clip-star star-off"></span>
+                      {%- endif -%}
+                  {%- endfor -%}
+                </div>
+              <p style="font-size: 12px; letter-spacing: 0.05em;">{{section.settings.trustBadge_content}}</p>             
+            {%- endif -%}
+          {%- endif -%}
+        </div>
+
+        <div class="AnnouncementBar__Wrapper">
+          <div class="AnnouncementBar__Content Heading" >
+            {%- if section.settings.link -%}
+              <a href="{{ section.settings.link }}">
+                {% if section.settings.icon != blank %}
+                  <img class="Image--lazyLoad hidden-phone" data-src="{{section.settings.icon | img_url: '50x'}}" /> 
+                {% endif %}
+                <p class="regular_font" style="letter-spacing: 0.07em;">{{ section.settings.content | escape }}</p>
+              </a>
+            {%- else -%}
+              {% if section.settings.icon != blank %}
+                <img class="Image--lazyLoad hidden-phone" style="margin-right: 10px;" data-src="{{section.settings.icon | img_url: '50x'}}" /> 
+              {% endif %}
+              <p class="regular_font" style="letter-spacing: 0.07em;">{{ section.settings.content | escape }}</p>
+            {%- endif -%}
+            </div>
+        </div>
+
+        <div class="AnnouncementBar__Wrapper hidden-pocket langSwitcherDesktop">
+          <span class="ly-custom-1000"></span>
+        </div>
+
+      </div>
+    </section>
+
+    <style>
+      #section-{{ section.id }} {
+        background: {{ section.settings.background }};
+        color: {{ section.settings.text_color }};
+      }
+    </style>
+
+    <script>
+      document.documentElement.style.setProperty('--announcement-bar-height', document.getElementById('shopify-section-announcement').offsetHeight + 'px');
+    </script>
+  {%- endunless -%}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Announcement bar",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_bar",
+      "label": "Enable bar",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "home_page_only",
+      "label": "Home page only",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_trustBadge",
+      "label": "Show TrustBadge",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "reviews_score",
+      "label": "Reviews rate",
+      "min": 0,
+      "max": 5,
+      "step": 0.5,
+      "default": 5
+    },
+    {
+      "type": "text",
+      "id": "trustBadge_content",
+      "label": "TrustBadge Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon",
+      "label": "icon"
+    },
+    {
+      "type": "text",
+      "id": "content",
+      "label": "Text",
+      "default": "Announce something here"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    }
+  ]
+}
+{% endschema %}

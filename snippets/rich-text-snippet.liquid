@@ -1,0 +1,77 @@
+<section class="Section Section--spacingNormal" id="section--{{block.id}}">
+    {%- capture section_content -%}
+      <div class="FeatureText__ContentWrapper FeatureText__Content--{{ block.settings.content_position }} FeatureText__Content-mobile--{{ block.settings.content_position_mob }}">
+        <div class="FeatureText__Content">
+          {%- if block.settings.subheading != blank or block.settings.title != blank or block.settings.content != blank or  block.settings.link_text != blank -%}
+            <header class="SectionHeader">
+              {%- if block.settings.subheading != blank -%}
+                <h3 class="SectionHeader__SubHeading Heading u-h6">{{ block.settings.subheading | escape }}</h3>
+              {%- endif -%}
+  
+              {%- if block.settings.title != blank -%}
+                <h2 class="SectionHeader__Heading Heading u-h4">{{ block.settings.title | escape }}</h2>
+              {%- endif -%}
+  
+              {%- if block.settings.content != blank -%}
+                <div class="SectionHeader__Description Rte">
+                  {{ block.settings.content }}
+                </div>
+              {%- endif -%}
+            </header>
+            <div class="SectionHeader__ButtonWrapper">
+                {%- if block.settings.link_text != blank -%}
+                    <a href="{{ block.settings.link_url }}" class="Button Button--primary">{{ block.settings.link_text | escape }}</a>
+                {%- endif -%}
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endcapture -%}
+
+  
+    <div class="FeatureText Container">
+        {{- section_content -}}
+    </div>
+</section>
+
+<style>
+    #section--{{block.id}} .FeatureText__Content, .SectionHeader__Description{
+        max-width: unset;
+    }
+    #section--{{block.id}} .SectionHeader__Description{
+        width: 70%;
+        margin: 0 auto;
+    }
+    #section--{{block.id}} .FeatureText__Content--left, #section--{{block.id}} .FeatureText__Content--left .FeatureText__Content{
+        text-align: left;
+    }
+    #section--{{block.id}} .FeatureText__Content--left .SectionHeader__Description{
+        margin-left: 0;
+    }
+    #section--{{block.id}} .FeatureText__Content--center, #section--{{block.id}} .FeatureText__Content--center .FeatureText__Content{
+        text-align: center;
+    }
+    #section--{{block.id}} .FeatureText__Content--right, #section--{{block.id}} .FeatureText__Content--right .FeatureText__Content{
+        text-align: right;
+    }
+    #section--{{block.id}} .FeatureText__Content--right .SectionHeader__Description{
+        margin-right: 0;
+    }
+    @media screen and (max-width: 640px){
+      #section--{{block.id}} .FeatureText__Content-mobile--left, #section--{{block.id}} .FeatureText__Content-mobile--left .FeatureText__Content{
+        text-align: left;
+      }
+      #section--{{block.id}} .FeatureText__Content-mobile--left .SectionHeader__Description{
+          margin-left: 0;
+      }
+      #section--{{block.id}} .FeatureText__Content-mobile--center, #section--{{block.id}} .FeatureText__Content-mobile--center .FeatureText__Content{
+          text-align: center;
+      }
+      #section--{{block.id}} .FeatureText__Content-mobile--right, #section--{{block.id}} .FeatureText__Content-mobile--right .FeatureText__Content{
+          text-align: right;
+      }
+      #section--{{block.id}} .FeatureText__Content-mobile--right .SectionHeader__Description{
+          margin-right: 0;
+      }
+    }
+</style>

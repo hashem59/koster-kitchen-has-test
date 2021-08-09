@@ -1,0 +1,4268 @@
+{
+  "current": {
+    "heading_color": "#2c2c2b",
+    "text_color": "#2c2c2b",
+    "text_light_color": "#4f4f4f",
+    "link_color": "#4f4f4f",
+    "background": "#ffffff",
+    "light_background": "#ffffff",
+    "product_on_sale_color": "#ff4b55",
+    "button_background": "#ffe200",
+    "button_text_color": "#2c2c2b",
+    "header_background": "#ffffff",
+    "header_heading_color": "#2c2c2b",
+    "header_light_color": "#4f4f4f",
+    "footer_background": "#f8f8f8",
+    "footer_heading_color": "#2c2c2b",
+    "footer_text_color": "#4f4f4f",
+    "navigation_background": "#f8f8f8",
+    "navigation_text_color": "#2c2c2b",
+    "newsletter_popup_background": "#f8f8f8",
+    "newsletter_popup_text_color": "#2c2c2b",
+    "secondary_elements_background": "#f8f8f8",
+    "secondary_elements_text_color": "#2c2c2b",
+    "heading_font": "montserrat_n5",
+    "use_new_headings_fonts": true,
+    "heading_new_fonts": "Brother Printed italic",
+    "heading_size": "ExtraLarge",
+    "uppercase_heading": false,
+    "text_font": "open_sans_n4",
+    "use_new_text_fonts": false,
+    "base_text_font_size": 16,
+    "show_page_transition": false,
+    "show_button_transition": true,
+    "search_mode": "product,article",
+    "product_show_price_on_hover": false,
+    "product_show_secondary_image": true,
+    "product_info_alignment": "center",
+    "product_image_size": "natural",
+    "product_list_horizontal_spacing": "medium",
+    "product_list_vertical_spacing": "small",
+    "tax_text": "<p>inkl. MwSt., <a href=\"\/pages\/zahlung-versand\" target=\"_blank\" title=\"Zahlung & Versand\">zzgl. Versand<\/a><\/p>",
+    "bottle_price_included": "inkl. 0,25€ Pfand pro Flasche",
+    "one_shot_icon": "shopify:\/\/shop_images\/Group_38.png",
+    "cart_type": "drawer",
+    "cart_enable_notes": false,
+    "cart_show_free_shipping_threshold": false,
+    "cart_free_shipping_threshold": "0",
+    "social_facebook": "https:\/\/www.facebook.com\/klosterkitchen",
+    "social_pinterest": "https:\/\/www.pinterest.de\/klosterkitchen\/",
+    "social_instagram": "https:\/\/www.instagram.com\/klosterkitchen\/",
+    "social_youtube": "https:\/\/www.youtube.com\/channel\/UCI0KzviUEOEm_-F2Jrv0xzg\/featured",
+    "favicon": "shopify:\/\/shop_images\/Kloster-Kitchen-Favicon.png",
+    "checkout_logo_image": "shopify:\/\/shop_images\/Vector.png",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "large",
+    "checkout_body_background_color": "#ffffff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_color": "#efefef",
+    "checkout_accent_color": "#2c2c2b",
+    "checkout_button_color": "#ffe200",
+    "checkout_error_color": "#ff4b55",
+    "sections": {
+      "sidebar-menu": {
+        "type": "sidebar-menu",
+        "blocks": {
+          "6d4c05ce-7927-45d6-879e-d840d83701e6": {
+            "type": "image",
+            "settings": {
+              "tab_position": "tab1",
+              "image": "shopify:\/\/shop_images\/Group_23_1.png",
+              "headline": "Superfood",
+              "headline_2": "Shots",
+              "url": "shopify:\/\/products\/bigshot-250-ml",
+              "content_position": "bottomLeft",
+              "title_highlight": "#ffe200",
+              "title_color": "#2c2c2b"
+            }
+          },
+          "82f002d2-022e-4929-9710-84e75528e994": {
+            "type": "image",
+            "settings": {
+              "tab_position": "tab1",
+              "image": "shopify:\/\/shop_images\/Group_24_1.png",
+              "headline": "Refreshments",
+              "headline_2": "SHOT+FRUIT",
+              "url": "shopify:\/\/products\/shot-fruit-330ml-3er-packs",
+              "content_position": "bottomLeft",
+              "title_highlight": "#ffe200",
+              "title_color": "#2c2c2b"
+            }
+          },
+          "aed1e06d-457b-4c15-ae68-2831dc282786": {
+            "type": "image",
+            "settings": {
+              "tab_position": "tab1",
+              "image": "shopify:\/\/shop_images\/Group_25_1.png",
+              "headline": "Probiersets",
+              "headline_2": "",
+              "url": "shopify:\/\/products\/probierset-m",
+              "content_position": "bottomLeft",
+              "title_highlight": "#ffe200",
+              "title_color": "#2c2c2b"
+            }
+          },
+          "37507a56-eb7e-4ae7-ad7f-f26adbe8f8a0": {
+            "type": "image",
+            "settings": {
+              "tab_position": "tab1",
+              "image": "shopify:\/\/shop_images\/Group_26.png",
+              "headline": "Geschenkideen",
+              "headline_2": "",
+              "url": "",
+              "content_position": "bottomLeft",
+              "title_highlight": "#ffe200",
+              "title_color": "#2c2c2b"
+            }
+          },
+          "79c06c08-18e4-48c0-8f97-f740df7cb317": {
+            "type": "image",
+            "settings": {
+              "tab_position": "tab1",
+              "image": "shopify:\/\/shop_images\/Group_27.png",
+              "headline": "Alle Produkte",
+              "headline_2": "",
+              "url": "shopify:\/\/collections\/all",
+              "content_position": "bottomLeft",
+              "title_highlight": "#ffe200",
+              "title_color": "#2c2c2b"
+            }
+          },
+          "e834eb65-6f2c-4a9a-99d2-16aa327f6e5d": {
+            "type": "image",
+            "settings": {
+              "tab_position": "tab1",
+              "image": "shopify:\/\/shop_images\/Group_28.png",
+              "headline": "Gläser",
+              "headline_2": "",
+              "url": "shopify:\/\/products\/kloster-kitchen-shot-glaser-1",
+              "content_position": "bottomLeft",
+              "title_highlight": "#ffe200",
+              "title_color": "#2c2c2b"
+            }
+          },
+          "779af6f9-10a8-4f0f-80d5-2c0db1a382fc": {
+            "type": "icon",
+            "settings": {
+              "tab_position": "tab2",
+              "link_icon": "shopify:\/\/shop_images\/Group_30_286b8a91-b2db-4f7e-b95b-e2b6be965378.png",
+              "link_name": "Konto",
+              "link_url": "shopify:\/\/pages\/kontakt"
+            }
+          },
+          "ae5dc89c-79ee-4c20-ad72-adfffff0f127": {
+            "type": "icon",
+            "settings": {
+              "tab_position": "tab2",
+              "link_icon": "shopify:\/\/shop_images\/Group_31_52b4f0f8-3ef2-4a8b-a8a5-f364436e05dc.png",
+              "link_name": "Über uns",
+              "link_url": "shopify:\/\/pages\/about-us"
+            }
+          },
+          "fd497a3a-943b-4ec9-8e3f-c75e61fd631d": {
+            "type": "icon",
+            "settings": {
+              "tab_position": "tab2",
+              "link_icon": "shopify:\/\/shop_images\/Group_29_8d08a38f-daf1-4572-b832-cc5cc5ca004a.png",
+              "link_name": "Stories",
+              "link_url": "shopify:\/\/blogs\/news"
+            }
+          },
+          "23cb90b4-3ae5-452d-912a-2c4b5a9c1b5c": {
+            "type": "icon",
+            "settings": {
+              "tab_position": "tab2",
+              "link_icon": "shopify:\/\/shop_images\/Group_35_1.png",
+              "link_name": "FAQ",
+              "link_url": "shopify:\/\/pages\/faq"
+            }
+          },
+          "5c18366a-0b1f-438e-98c0-1a7e96e4b459": {
+            "type": "icon",
+            "settings": {
+              "tab_position": "tab2",
+              "link_icon": "shopify:\/\/shop_images\/Group_34_d1b480ab-8158-409a-9c33-36a76df78afd.png",
+              "link_name": "Händler finden",
+              "link_url": "shopify:\/\/pages\/agb"
+            }
+          },
+          "5dedaffb-38ca-4722-8590-97f28a119d43": {
+            "type": "icon",
+            "settings": {
+              "tab_position": "tab2",
+              "link_icon": "shopify:\/\/shop_images\/Group_33_27bfd2b7-60ff-44e3-819a-726543a37490.png",
+              "link_name": "Händler werden",
+              "link_url": "shopify:\/\/blogs\/news"
+            }
+          },
+          "f50260fc-c02c-4699-a751-a46c67becfe2": {
+            "type": "icon",
+            "settings": {
+              "tab_position": "tab2",
+              "link_icon": "shopify:\/\/shop_images\/Group_32_388c18d4-5712-4c41-a929-8d96e1d782d5.png",
+              "link_name": "Kundensupport",
+              "link_url": "shopify:\/\/pages\/agb"
+            }
+          },
+          "b2859f5a-3db8-4099-a88c-3319ea6b00ed": {
+            "type": "icon",
+            "settings": {
+              "tab_position": "tab2",
+              "link_icon": "shopify:\/\/shop_images\/Group_30_286b8a91-b2db-4f7e-b95b-e2b6be965378.png",
+              "link_name": "Impressum",
+              "link_url": "shopify:\/\/pages\/impressum"
+            }
+          }
+        },
+        "block_order": [
+          "6d4c05ce-7927-45d6-879e-d840d83701e6",
+          "82f002d2-022e-4929-9710-84e75528e994",
+          "aed1e06d-457b-4c15-ae68-2831dc282786",
+          "37507a56-eb7e-4ae7-ad7f-f26adbe8f8a0",
+          "79c06c08-18e4-48c0-8f97-f740df7cb317",
+          "e834eb65-6f2c-4a9a-99d2-16aa327f6e5d",
+          "779af6f9-10a8-4f0f-80d5-2c0db1a382fc",
+          "ae5dc89c-79ee-4c20-ad72-adfffff0f127",
+          "fd497a3a-943b-4ec9-8e3f-c75e61fd631d",
+          "23cb90b4-3ae5-452d-912a-2c4b5a9c1b5c",
+          "5c18366a-0b1f-438e-98c0-1a7e96e4b459",
+          "5dedaffb-38ca-4722-8590-97f28a119d43",
+          "f50260fc-c02c-4699-a751-a46c67becfe2",
+          "b2859f5a-3db8-4099-a88c-3319ea6b00ed"
+        ],
+        "settings": {
+          "tab_title_1": "SHOP",
+          "primary_menu": "",
+          "secondary_menu": "",
+          "tab_title_2": "Mehr infos",
+          "primary_menu_2": "",
+          "secondary_menu_2": "",
+          "footer_text": "Folge uns auf",
+          "show_social_media": true
+        }
+      },
+      "announcement": {
+        "type": "announcement",
+        "settings": {
+          "enable_bar": true,
+          "home_page_only": false,
+          "background": "#2c2c2b",
+          "text_color": "#ffffff",
+          "show_trustBadge": true,
+          "reviews_score": 5,
+          "trustBadge_content": "4,93 \/ 5,0 Basierend auf 3.092 Bewertungen",
+          "icon": "shopify:\/\/shop_images\/Vector_1_89603449-e774-4155-bc64-bd4379d6ea33.png",
+          "content": "KOSTENLOSER VERSAND IN DEUTSCHLAND",
+          "link": ""
+        }
+      },
+      "header": {
+        "type": "header",
+        "blocks": {
+          "4f88946a-c116-4f84-9110-51c0ea95e6d0": {
+            "type": "mega_menu",
+            "settings": {
+              "navigation_mega_menu": "shop",
+              "push_1_image": "shopify:\/\/shop_images\/womenpwrdays_klosterkitchen_05_1.png",
+              "push_1_heading": "",
+              "push_1_subheading": "",
+              "push_1_url": "",
+              "push_2_heading": "Example heading",
+              "push_2_subheading": "Example sub-heading",
+              "push_2_url": ""
+            }
+          }
+        },
+        "block_order": [
+          "4f88946a-c116-4f84-9110-51c0ea95e6d0"
+        ],
+        "settings": {
+          "use_sticky_header": true,
+          "logo": "shopify:\/\/shop_images\/KK_Logo_Shopify.png",
+          "logo_max_width": 80,
+          "mobile_logo_max_width": 65,
+          "show_currency_selector": false,
+          "show_locale_selector": false,
+          "navigation_menu": "main-menu",
+          "navigation_menu_right": "main-menu-right",
+          "navigation_style": "inline",
+          "show_icons": true,
+          "show_cart_icon": true,
+          "show_search_icon": true,
+          "show_account_icon": true,
+          "enable_transparent_header": false,
+          "enable_transparent_header_collection": false,
+          "show_transparent_header_border": true,
+          "transparent_text_color": "#ffffff"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-0": {
+            "type": "text",
+            "settings": {
+              "title": "So geht Geschmack.",
+              "content": "<p><strong>Kloster Kitchen<\/strong><\/p><p>Eine Marke der curameo AG, Hersbrucker Str. 23, 91244 Reichenschwand, Deutschland<\/p>",
+              "show_social_media": true
+            }
+          },
+          "footer-1": {
+            "type": "links",
+            "settings": {
+              "menu": "footer"
+            }
+          },
+          "459a7b7e-e86f-4b7f-bb11-211f971f09b2": {
+            "type": "links",
+            "settings": {
+              "menu": "unser-service"
+            }
+          },
+          "footer-2": {
+            "type": "newsletter",
+            "settings": {
+              "title": "Newsletter",
+              "content": "<p>Abonniere unseren Newsletter und erhalte einen 5€ Gutschein für Deinen nächsten Einkauf.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "footer-0",
+          "footer-1",
+          "459a7b7e-e86f-4b7f-bb11-211f971f09b2",
+          "footer-2"
+        ],
+        "settings": {
+          "show_payment_methods": true,
+          "show_currency_selector": false,
+          "show_locale_selector": false
+        }
+      },
+      "slideshow": {
+        "type": "slideshow",
+        "blocks": {
+          "slide-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/womenpwrdays_klosterkitchen_05_1.png",
+              "mobile_image": "shopify:\/\/shop_images\/image_45_1.png",
+              "apply_overlay": false,
+              "content_position": "middleLeft",
+              "subheading": "",
+              "title": "Der Shot, <br>den du spürst. <br>",
+              "fontSizeDesktop_title": 68,
+              "fontSizeMobile_title": 45,
+              "title_highlight": "#ffe200",
+              "title_color": "#2c2c2b",
+              "title2": "",
+              "fontSizeDesktop": 46,
+              "fontSizeMobile": 36,
+              "enableLine": true,
+              "lineColor": "#ffe200",
+              "text": "Entdecke Kloster Kitchen.",
+              "fontSizeTextDesktop": 22,
+              "fontSizeTextMobile": 22,
+              "button_1_text": "Hier bestellen",
+              "button_1_link": "",
+              "button_2_text": "",
+              "button_2_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "slide-0"
+        ],
+        "settings": {
+          "show_fullscreen": true,
+          "show_arrow": false,
+          "autoplay": true,
+          "cycle_speed": 5,
+          "text_color": "#ffffff",
+          "button_color": "#2c2c2b",
+          "button_background": "#ffe200"
+        }
+      },
+      "featured-collections": {
+        "type": "featured-collections",
+        "disabled": true,
+        "blocks": {
+          "featured-collection-0": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "title": "",
+              "grid_items_count": 8,
+              "button_text": "View all products"
+            }
+          }
+        },
+        "block_order": [
+          "featured-collection-0"
+        ],
+        "settings": {
+          "title": "Featured collection",
+          "layout_mode": "grid",
+          "show_product_info": true,
+          "show_vendor": false,
+          "show_color_swatch": false,
+          "grid_mobile_items_per_row": "2",
+          "grid_desktop_items_per_row": 4
+        }
+      },
+      "collection-list": {
+        "type": "collection-list",
+        "blocks": {
+          "collection-0": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "another_link": "shopify:\/\/products\/oneshot-30-ml-1",
+              "image": "shopify:\/\/shop_images\/Rectangle_141.png",
+              "image_alignment": "center center",
+              "content_position": "bottomLeft",
+              "subheading": "Der Kleine. Für unterwegs.",
+              "title": "1SHOT",
+              "title_highlight": "#ffe200",
+              "title_color": "#2c2c2b",
+              "apply_overlay": false
+            }
+          },
+          "collection-1": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "another_link": "shopify:\/\/products\/bigshot-250-ml",
+              "image": "shopify:\/\/shop_images\/Rectangle_142.png",
+              "image_mobile": "shopify:\/\/shop_images\/Rectangle_142_1.png",
+              "image_alignment": "center center",
+              "content_position": "bottomLeft",
+              "subheading": "Der Große. Auf Vorrat.",
+              "title": "12SHOT",
+              "title_highlight": "#ffe200",
+              "title_color": "#2c2c2b",
+              "apply_overlay": false
+            }
+          },
+          "collection-2": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "another_link": "shopify:\/\/products\/shot-fruit-330ml-3er-packs",
+              "image": "shopify:\/\/shop_images\/Rectangle_143.png",
+              "image_mobile": "shopify:\/\/shop_images\/Rectangle_143_1.png",
+              "image_alignment": "center center",
+              "content_position": "bottomLeft",
+              "subheading": "Der Durstlöscher. Geht immer.",
+              "title": "SHOT+FRUIT",
+              "title_highlight": "#ffe200",
+              "title_color": "#2c2c2b",
+              "apply_overlay": false
+            }
+          }
+        },
+        "block_order": [
+          "collection-0",
+          "collection-1",
+          "collection-2"
+        ],
+        "settings": {
+          "title": "Unsere Produkte",
+          "image_size_desktop": 380,
+          "image_size_mobile": 180,
+          "add_spacing": false,
+          "expand_collection": true,
+          "stack_on_mobile": true
+        }
+      },
+      "featured-product": {
+        "type": "featured-product",
+        "disabled": true,
+        "settings": {
+          "subheading": "",
+          "title": "Featured product",
+          "show_headings_on_mobile": true,
+          "product": "",
+          "show_vendor": true,
+          "show_sku": false,
+          "show_description": true,
+          "description_below_add_to_cart": false,
+          "selector_mode": "dropdown",
+          "show_color_swatch": false,
+          "show_color_carousel": false,
+          "show_quantity_selector": true,
+          "show_inventory_quantity": false,
+          "inventory_quantity_threshold": 3,
+          "show_price_in_button": false,
+          "show_payment_button": true,
+          "show_pickup_availability": false
+        }
+      },
+      "timeline": {
+        "type": "timeline",
+        "disabled": true,
+        "blocks": {
+          "item-0": {
+            "type": "item",
+            "settings": {
+              "apply_overlay": true,
+              "title": "2000",
+              "subheading": "Sub-heading",
+              "heading": "Heading",
+              "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+            }
+          },
+          "item-1": {
+            "type": "item",
+            "settings": {
+              "apply_overlay": true,
+              "title": "2001",
+              "subheading": "Sub-heading",
+              "heading": "Heading",
+              "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+            }
+          },
+          "item-2": {
+            "type": "item",
+            "settings": {
+              "apply_overlay": true,
+              "title": "2002",
+              "subheading": "Sub-heading",
+              "heading": "Heading",
+              "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "item-0",
+          "item-1",
+          "item-2"
+        ],
+        "settings": {
+          "text_color": "#ffffff"
+        }
+      },
+      "blog-posts": {
+        "type": "blog-posts",
+        "disabled": true,
+        "blocks": {
+          "blog-0": {
+            "type": "blog",
+            "settings": {
+              "blog": "news"
+            }
+          }
+        },
+        "block_order": [
+          "blog-0"
+        ],
+        "settings": {
+          "subheading": "",
+          "title": "Featured article",
+          "show_category": false,
+          "button_text": "View all articles"
+        }
+      },
+      "shop-the-look": {
+        "type": "shop-the-look",
+        "disabled": true,
+        "blocks": {
+          "look-0": {
+            "type": "look",
+            "settings": {
+              "dot_style": "light",
+              "product_1": "",
+              "product_1_horizontal_position": 30,
+              "product_1_vertical_position": 40,
+              "product_2": "",
+              "product_2_horizontal_position": 45,
+              "product_2_vertical_position": 65,
+              "product_3": "",
+              "product_3_horizontal_position": 70,
+              "product_3_vertical_position": 50
+            }
+          },
+          "look-1": {
+            "type": "look",
+            "settings": {
+              "dot_style": "light",
+              "product_1": "",
+              "product_1_horizontal_position": 25,
+              "product_1_vertical_position": 45,
+              "product_2": "",
+              "product_2_horizontal_position": 55,
+              "product_2_vertical_position": 30,
+              "product_3": "",
+              "product_3_horizontal_position": 65,
+              "product_3_vertical_position": 60
+            }
+          }
+        },
+        "block_order": [
+          "look-0",
+          "look-1"
+        ],
+        "settings": {
+          "subheading": "Shop",
+          "title": "Our looks",
+          "show_mobile_product_info": false
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "show_collection_info": true,
+          "content_position": "middleLeft",
+          "content_position2": "bottomLeft",
+          "show_collection_image": true,
+          "apply_overlay": false,
+          "show_color_swatch": false,
+          "show_vendor": false,
+          "collection_image_size": "normal",
+          "image_size_mobile": 270,
+          "show_sort_by": false,
+          "show_layout_switch": false,
+          "toolbar_position": "top",
+          "filter_position": "sidebar",
+          "filter_mode": "hidden",
+          "show_filter_color_swatch": false,
+          "show_breadcrumbs": true,
+          "filter_menu": "",
+          "grid_items_per_page": 8,
+          "grid_mobile_items_per_row": "1",
+          "grid_desktop_items_per_row": 3
+        }
+      },
+      "recently-viewed-products": {
+        "type": "recently-viewed-products",
+        "settings": {
+          "show_section": false,
+          "title": "Recently viewed",
+          "show_product_info": true,
+          "show_vendor": false,
+          "show_color_swatch": false
+        }
+      },
+      "collection-footer": {
+        "type": "collection-footer",
+        "settings": {
+          "show_section": false,
+          "text_color": "#ffffff",
+          "apply_overlay": true,
+          "title": "Our story",
+          "content": "<p>Add your own custom content to explain your processes...<\/p>"
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "show_share_buttons": false,
+          "show_vendor": false,
+          "show_sku": false,
+          "selector_mode": "dropdown",
+          "show_color_swatch": false,
+          "show_color_carousel": false,
+          "show_quantity_selector": true,
+          "show_inventory_quantity": false,
+          "inventory_quantity_threshold": 3,
+          "show_price_in_button": false,
+          "delivery_note": "Auf Lager - In 3-5 Werktagen bei dir",
+          "payments_mothods_icon": "shopify:\/\/shop_images\/image_54_3_1.png",
+          "payments_mothods_icon_mobile": "shopify:\/\/shop_images\/image_54_3_1.png",
+          "show_payment_button": true,
+          "show_pickup_availability": false,
+          "stack_images": false,
+          "show_thumbnails": true,
+          "enable_image_zoom": true,
+          "enable_video_looping": false,
+          "tab_page_1_handle": "agb",
+          "tab_page_2_handle": "datenschutzerklarung",
+          "reviews_enabled": false,
+          "featured_image_size": "large"
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": true,
+          "heading": "Probieren am besten mit...",
+          "show_product_info": true,
+          "show_vendor": false,
+          "show_color_swatch": false
+        }
+      },
+      "popup": {
+        "type": "popup",
+        "settings": {
+          "show_popup": false,
+          "show_only_on_index": true,
+          "show_only_for_visitors": true,
+          "show_only_once": true,
+          "title": "Popup",
+          "content": "<p>You can use this popup to display some useful information to your customers.<\/p>",
+          "show_newsletter": true,
+          "apparition_delay": 5
+        }
+      },
+      "16206672300f55a451": {
+        "type": "logo",
+        "blocks": {
+          "16206672300f55a451-0": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/German_Innovation_Award_2021_bc49696c-5f12-41aa-9984-00e6b64fd03c.png",
+              "description": "",
+              "link": "",
+              "show_mobile": true
+            }
+          },
+          "16206672300f55a451-2": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Produktinnovation_in_Glas_20.png",
+              "description": "",
+              "link": "",
+              "show_mobile": true
+            }
+          },
+          "16206672300f55a451-3": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/German_Brand_Award_2020_1.png",
+              "description": "",
+              "link": "",
+              "show_mobile": true
+            }
+          },
+          "16206672300f55a451-1": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/German_Brand_Award_2020_bf64e76b-de3c-4979-8747-05f1480b130d.png",
+              "description": "",
+              "link": "",
+              "show_mobile": false
+            }
+          }
+        },
+        "block_order": [
+          "16206672300f55a451-0",
+          "16206672300f55a451-2",
+          "16206672300f55a451-3",
+          "16206672300f55a451-1"
+        ],
+        "settings": {
+          "title": "",
+          "subheading": "",
+          "logo_size": 176,
+          "logo_size_mobile": 104,
+          "font_size_desktop": 22,
+          "font_size_mobile": 12
+        }
+      },
+      "1620669123a83bc26a": {
+        "type": "logo",
+        "blocks": {
+          "1620669123a83bc26a-0": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icon-echte-ingwerstuecke.png",
+              "description": "Mit Ingwerstückchen",
+              "link": "",
+              "show_mobile": true
+            }
+          },
+          "1620669123a83bc26a-1": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icon-klosterrezeptur.png",
+              "description": "Alte Kloster Rezeptur",
+              "link": "",
+              "show_mobile": true
+            }
+          },
+          "1620669123a83bc26a-2": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icon-bio-logo.png",
+              "description": "Bio und vegan aus Überzeugung",
+              "link": "",
+              "show_mobile": true
+            }
+          },
+          "59b7c29e-2020-492b-822e-3c73b06af8f1": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icon-cent-pro-shot.png",
+              "description": "Ab 0,52€ pro Shot",
+              "link": "",
+              "show_mobile": false
+            }
+          }
+        },
+        "block_order": [
+          "1620669123a83bc26a-0",
+          "1620669123a83bc26a-1",
+          "1620669123a83bc26a-2",
+          "59b7c29e-2020-492b-822e-3c73b06af8f1"
+        ],
+        "settings": {
+          "title": "Das Original mit den Ingwerstückchen.",
+          "subheading": "<p>Eine alte Klosterrezeptur - neu gedacht. Pure Sinnspiration für deinen gesunden Lebensstil.<\/p>",
+          "logo_size": 182,
+          "logo_size_mobile": 88,
+          "font_size_desktop": 22,
+          "font_size_mobile": 11
+        }
+      },
+      "16207299549c8fc9ff": {
+        "type": "icons_info",
+        "blocks": {
+          "16207299549c8fc9ff-0": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icon-klosterrezeptur_f0997436-9ab5-4843-ab0b-264a4ee9e5de.png",
+              "image_heading": "Wertvolles Klosterrezept",
+              "description": "Ein altes Rezeptbuch aus der Klosterküche und eine besondere Rezeptur, die unsere Neugier weckte",
+              "link": "shopify:\/\/collections",
+              "show_mobile": true
+            }
+          },
+          "16207299549c8fc9ff-1": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icon-bio-blatt.png",
+              "image_heading": "Einzigartige Qualität",
+              "description": "Das Geheimnis der Klosterküche liegt vor allem in ihrem wertvollen Erfahrungsschatz und der besonderen Zubereitung.",
+              "link": "",
+              "show_mobile": true
+            }
+          },
+          "16207299549c8fc9ff-2": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icon-shake-to-activate.png",
+              "image_heading": "Getränkeinnovationen",
+              "description": "Mit frischen Ideen und neuartigen, eigens entwickelten Technologien kreieren wir leckere Getränkeinnovationen",
+              "link": "",
+              "show_mobile": true
+            }
+          },
+          "16207299549c8fc9ff-3": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icon-morgenroutine.png",
+              "image_heading": "Booster am Morgen",
+              "description": "Das ist unsere einzigartige Markenrezeptur für Bio-Getränke, in denen immer ein Stückchen mehr steckt",
+              "link": "",
+              "show_mobile": true
+            }
+          },
+          "16207299549c8fc9ff-4": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icon-bio-logo_2a46702e-a558-4db6-809d-2aea3a97ffd9.png",
+              "image_heading": "100% Bio & Vegan",
+              "description": "Ein Big Shot enthält 12 x 20ml Portionen. Ideal zum Teilen, oder einfach um täglich zu trinken!",
+              "link": "",
+              "show_mobile": true
+            }
+          },
+          "16207299549c8fc9ff-5": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icon-testsieger.png",
+              "image_heading": "Testsieger!",
+              "description": "Unser Original, der IngwerTRINK ist der beste Ingwershot im großen WDR Markt Verbrauchercheck",
+              "link": "",
+              "show_mobile": true
+            }
+          }
+        },
+        "block_order": [
+          "16207299549c8fc9ff-0",
+          "16207299549c8fc9ff-1",
+          "16207299549c8fc9ff-2",
+          "16207299549c8fc9ff-3",
+          "16207299549c8fc9ff-4",
+          "16207299549c8fc9ff-5"
+        ],
+        "settings": {
+          "title": "Liebe auf den ersten Kick.",
+          "desktop_length": "3",
+          "mobile_length": "2",
+          "font_size_desktop": 14,
+          "font_size_mobile": 12,
+          "show_description_mobile": false,
+          "btn_link": "shopify:\/\/collections\/all",
+          "btn_text": "Zum Shop"
+        }
+      },
+      "list-collections-template": {
+        "type": "list-collections-template",
+        "settings": {
+          "collections_to_show": "all",
+          "image_size": "normal",
+          "add_spacing": true,
+          "expand_collection": false,
+          "apply_overlay": true,
+          "text_color": "#ffffff",
+          "button_color": "#363636"
+        }
+      },
+      "16213426029a19f357": {
+        "type": "logos_section",
+        "blocks": {
+          "0558f420-3573-493c-929c-11c59361f8be": {
+            "type": "logo_text",
+            "settings": {
+              "title": "bekannt aus",
+              "show_mobile": false
+            }
+          },
+          "162134260286fd6d94-0": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Bild_3257f0cf-b4ba-4b66-af33-ef3c964ec552.png",
+              "link": "shopify:\/\/collections",
+              "show_mobile": false
+            }
+          },
+          "162134260286fd6d94-1": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Brigitte_a7974fe7-22c2-4554-823f-cece8d14fc88.png",
+              "link": "",
+              "show_mobile": false
+            }
+          },
+          "162134260286fd6d94-2": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Cosmopolitan.png",
+              "link": "",
+              "show_mobile": false
+            }
+          },
+          "162134260286fd6d94-3": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/essenundtrinken_47355158-2d38-4c4e-8c75-e4ade8529763.png",
+              "link": "",
+              "show_mobile": true
+            }
+          },
+          "162134260286fd6d94-4": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Gala_e8237e83-5341-45e6-8f2d-26cd4f7efd38.png",
+              "link": "",
+              "show_mobile": true
+            }
+          },
+          "162134260286fd6d94-5": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/stern_d674e3fd-1436-4c3a-9558-79d1f90f8976.png",
+              "link": "",
+              "show_mobile": true
+            }
+          }
+        },
+        "block_order": [
+          "0558f420-3573-493c-929c-11c59361f8be",
+          "162134260286fd6d94-0",
+          "162134260286fd6d94-1",
+          "162134260286fd6d94-2",
+          "162134260286fd6d94-3",
+          "162134260286fd6d94-4",
+          "162134260286fd6d94-5"
+        ],
+        "settings": {
+          "title": "bekannt aus",
+          "logo_size": 140,
+          "logo_size_mobile": 80
+        }
+      },
+      "162143039477262be1": {
+        "type": "collection-list",
+        "blocks": {
+          "162143039477262be1-0": {
+            "type": "collection",
+            "settings": {
+              "collection": "frontpage",
+              "another_link": "shopify:\/\/products\/probierset-m",
+              "image": "shopify:\/\/shop_images\/image_6.png",
+              "image_alignment": "center center",
+              "content_position": "bottomLeft",
+              "subheading": "",
+              "title": "Probiersets",
+              "title_highlight": "#2c2c2b",
+              "title_color": "#ffffff",
+              "apply_overlay": false
+            }
+          },
+          "162143039477262be1-1": {
+            "type": "collection",
+            "settings": {
+              "collection": "superfoods",
+              "another_link": "shopify:\/\/collections\/all",
+              "image": "shopify:\/\/shop_images\/image_30.png",
+              "image_alignment": "center center",
+              "content_position": "bottomLeft",
+              "subheading": "",
+              "title": "Topseller",
+              "title_highlight": "#2c2c2b",
+              "title_color": "#ffffff",
+              "apply_overlay": false
+            }
+          },
+          "162143039477262be1-2": {
+            "type": "collection",
+            "settings": {
+              "collection": "zubehor",
+              "another_link": "shopify:\/\/products\/kloster-kitchen-shot-glaser-1",
+              "image": "shopify:\/\/shop_images\/image_32.png",
+              "image_alignment": "center center",
+              "content_position": "bottomLeft",
+              "subheading": "",
+              "title": "Zubehör",
+              "title_highlight": "#2c2c2b",
+              "title_color": "#ffffff",
+              "apply_overlay": true
+            }
+          }
+        },
+        "block_order": [
+          "162143039477262be1-0",
+          "162143039477262be1-1",
+          "162143039477262be1-2"
+        ],
+        "settings": {
+          "title": "Weitere Highlights",
+          "image_size_desktop": 300,
+          "image_size_mobile": 190,
+          "add_spacing": true,
+          "expand_collection": false,
+          "stack_on_mobile": false
+        }
+      },
+      "1621446291b0e7bc3f": {
+        "type": "custom-text-with-image",
+        "blocks": {
+          "4e0c10aa-8d90-4780-80d0-d54d8038a33d": {
+            "type": "logo_image",
+            "disabled": true,
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Frame_10.png"
+            }
+          },
+          "0f38a04f-5909-410e-b1be-473e234d569a": {
+            "type": "logo_image",
+            "disabled": true,
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Frame_9.png"
+            }
+          },
+          "2634051c-11d3-4346-9362-dff7c33ebc02": {
+            "type": "logo_image",
+            "disabled": true,
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Frame_10.png"
+            }
+          },
+          "1c46cd31-2996-4454-a3f5-4425554333d9": {
+            "type": "logo_image",
+            "settings": {}
+          }
+        },
+        "block_order": [
+          "4e0c10aa-8d90-4780-80d0-d54d8038a33d",
+          "0f38a04f-5909-410e-b1be-473e234d569a",
+          "2634051c-11d3-4346-9362-dff7c33ebc02",
+          "1c46cd31-2996-4454-a3f5-4425554333d9"
+        ],
+        "settings": {
+          "subheading": "",
+          "title": "Unser Geheimrezept: eine Rezeptur",
+          "image": "shopify:\/\/shop_images\/Group_33_1.png",
+          "image_mobile": "shopify:\/\/shop_images\/Group_11_1.png",
+          "image_position": "left",
+          "content": "<p>Nach einer überlieferten Klosterrezeptur, bieten wir dir echte Bio-Ingwershots. Die sind so pur und natürlich wie es in einer Zeit ohne künstliche Aromen und Konservierungsstoffe nun mal war. Hier erfährst du mehr darüber was unsere Produkte ausmacht.<br\/><\/p>",
+          "link_text": "",
+          "link_url": "",
+          "background_section": "#efefef",
+          "background_section_mobile": "#dadada",
+          "section_width": 940
+        }
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "show_shipping_estimator": false,
+          "shipping_estimator_default_country": "Deutschland"
+        }
+      },
+      "page-contact-template": {
+        "type": "page-contact-template",
+        "blocks": {
+          "page-contact-template-0": {
+            "type": "text",
+            "settings": {
+              "title": "Handynummer (optional)",
+              "use_long_text": false,
+              "is_required": false
+            }
+          }
+        },
+        "block_order": [
+          "page-contact-template-0"
+        ],
+        "settings": {
+          "subheading": "",
+          "title": "<p>Fill the form, <\/p><p>it’s easy<\/p>",
+          "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>",
+          "image_position": "right",
+          "content1": "<p>Announce something here<\/p>",
+          "content2": "<p>Announce something here<\/p>",
+          "subheading1": "",
+          "title1": "Wir sind für dich da!",
+          "image": "shopify:\/\/shop_images\/Rectangle_77.png",
+          "name": "Marcus",
+          "text": "",
+          "button_link": "",
+          "button_text": "",
+          "name2": "",
+          "text2": "",
+          "name3": "",
+          "text3": "",
+          "name4": "",
+          "text4": ""
+        }
+      },
+      "1621862412f424b19d": {
+        "type": "reviews-section",
+        "blocks": {
+          "dd7d635a-8023-4987-8f64-be274a52824d": {
+            "type": "testimonial",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/AnnikaR_Bild.png",
+              "name": "Annika R.",
+              "subheading": "",
+              "reviews_score": 4.5,
+              "title": "Super Kick für zwischendrin!",
+              "quote": "<p>Ich liebe das wohlig warme Gefühl im Mund durch die natürliche Schärfe. Durch die Stückchen schmeckt man, dass das vom Ingwer kommt und von nichts anderem. <\/p>"
+            }
+          },
+          "303ee725-af59-409e-961d-5295b98e916e": {
+            "type": "testimonial",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/JanR_Bild.png",
+              "name": "Jan R.",
+              "subheading": "",
+              "reviews_score": 4.5,
+              "title": "Harter Tag steht an?",
+              "quote": "<p>Da hilft mir ein Shot für die extra Energie - lecker, leicht scharf mit den Stückchen fürs Mundgefühl! Espresso dazu und los gehts!<\/p>"
+            }
+          },
+          "53c27f2e-1883-4891-b8ec-b99cd9866d63": {
+            "type": "testimonial",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/ElkeS_Bild_7bad4e72-1080-4299-a124-c9b93e23c7c0.png",
+              "name": "Elke S.",
+              "subheading": "",
+              "reviews_score": 5,
+              "title": "Absolut empfehlenswert",
+              "quote": "<p>Ich favorisiere den IngwerTRINK und den GranatapfelTRINK, weil lecker im Geschmack mit Ingwerstückchen und dazu noch bio und vegan. <\/p>"
+            }
+          },
+          "2a33c129-f1e3-4d6b-8e51-c3aa21906c47": {
+            "type": "testimonial",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/NatalieR_Bild.png",
+              "name": "Natalie R.",
+              "subheading": "",
+              "reviews_score": 5,
+              "title": "It's shot o'clock",
+              "quote": "<p>Meine Favoriten sind die Ingwer und Granatapfel Shots. Es ist die perfekte Abwechslung und gehört mittlerweile zu meiner Morgenroutine. Als nächstes probiere ich die neuen SHOT+ FRUIT. <\/p>"
+            }
+          },
+          "791cb572-ea18-444b-b153-1787ed964511": {
+            "type": "testimonial",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/VeitM_Bild.png",
+              "name": "Veit M.",
+              "subheading": "",
+              "reviews_score": 5,
+              "title": "Gehört zum Frühstück dazu",
+              "quote": "<p>Der IngwerTRINK gehört für mich einfach zum Frühstück dazu. Durch die Ingwerstückchen ist der Shot der perfekte Powerbooster für den Start in den Tag!<\/p>"
+            }
+          },
+          "f92482de-92e2-4257-8e77-0b957fd58159": {
+            "type": "testimonial",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/MichaelS_Bild.png",
+              "name": "Michael S.",
+              "subheading": "",
+              "reviews_score": 5,
+              "title": "Hat einen festen Platz im Kühlschrank",
+              "quote": "<p>Klein und fein für unterwegs oder für daheim in der großen Portion. Super lecker und dazu auch noch mega gesund! Was will man mehr? <\/p>"
+            }
+          },
+          "7ecc6752-bb9f-480f-bbfe-974dd0fcfac1": {
+            "type": "testimonial",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Bewertung_TobiasDoering_Bild.png",
+              "name": "Tobi D.",
+              "subheading": "",
+              "reviews_score": 5,
+              "title": "Super Unterstützung auf dem Weg zu einem gesunden Lebensstil.",
+              "quote": "<p>Ich habe direkt den Kaffee in meiner Morgenroutine durch eure superleckeren Shots ersetzt. Funktioniert wunderbar, schmeckt wunderbar und ist gesund! Außerdem bin ich als Ex-Raucher dankbar, dass der Ingwer meine Lunge im Selbstheilungsprozess unterstützt.<\/p>"
+            }
+          },
+          "0ebb52c7-d233-46e2-9af0-0de7746b22bf": {
+            "type": "testimonial",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Bewertung_HansGerdPlaep_Bild.png",
+              "name": "Hans-Gerd P.",
+              "subheading": "",
+              "reviews_score": 5,
+              "title": "Übersichtlich, einfach, zuverlässig",
+              "quote": "<p>5 Sterne Bewertung für den übersichtlichen, einfachen Webshop und der zuverlässigen, pünktlichen und sicheren Lieferung direkt nach Hause über den Webshop klosterkitchen.com. Perfekt!!!<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "dd7d635a-8023-4987-8f64-be274a52824d",
+          "303ee725-af59-409e-961d-5295b98e916e",
+          "53c27f2e-1883-4891-b8ec-b99cd9866d63",
+          "2a33c129-f1e3-4d6b-8e51-c3aa21906c47",
+          "791cb572-ea18-444b-b153-1787ed964511",
+          "f92482de-92e2-4257-8e77-0b957fd58159",
+          "7ecc6752-bb9f-480f-bbfe-974dd0fcfac1",
+          "0ebb52c7-d233-46e2-9af0-0de7746b22bf"
+        ],
+        "settings": {
+          "autoplay": true,
+          "cycle_speed": 5,
+          "text_subheading": "",
+          "text_title": "Was unsere  Kunden sagen",
+          "text_size_desktop": 44,
+          "text_size_mobile": 24,
+          "text_content": "",
+          "text_link_text": "",
+          "text_link_url": "",
+          "reviews_score": 5,
+          "reviews_subheading": "4.93 Sterne",
+          "reviews_subheading2": "(3.088 Bewertungen)",
+          "reviews_title": "",
+          "reviews_content": "",
+          "reviews_link_text": "Alle Bewertungen ansehen",
+          "reviews_link_url": "shopify:\/\/pages\/faq",
+          "image_position": "right",
+          "show_mobile": false,
+          "section_size": "small",
+          "image": "shopify:\/\/shop_images\/EEK00594_1.png",
+          "text_color": "#ffffff",
+          "overlay_color": "#000000",
+          "overlay_opacity": 0,
+          "subheading": "",
+          "title": "",
+          "content": ""
+        }
+      },
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "show_rss": false,
+          "show_tags": false,
+          "show_featured_article": true,
+          "show_category": false
+        }
+      },
+      "shop-now": {
+        "type": "shop-now",
+        "settings": {
+          "show_section": false,
+          "title": "Shop now",
+          "collection": "",
+          "grid_items_count": 6,
+          "show_product_info": true,
+          "show_vendor": false,
+          "show_color_swatch": false
+        }
+      },
+      "extra-template-1": {
+        "type": "extra-template-1",
+        "blocks": {
+          "47a2fb28-b4b3-42dc-b616-14d42ee1ed4f": {
+            "type": "image_text_overlay",
+            "settings": {
+              "section_size": "large",
+              "image": "shopify:\/\/shop_images\/Rectangle_174.png",
+              "newImageMobile": "shopify:\/\/shop_images\/Rectangle_174_1.png",
+              "text_color": "#ffffff",
+              "overlay_color": "#000000",
+              "overlay_opacity": 37,
+              "showPageName": false,
+              "content_position": "middleCenter",
+              "subheading": "",
+              "title": "Über uns",
+              "content": ""
+            }
+          },
+          "7f5d39cd-04a5-4a4d-8fdb-ecfe7966144d": {
+            "type": "rich_text_image",
+            "settings": {
+              "subheading": "",
+              "title": "About us.",
+              "image": "shopify:\/\/shop_images\/Rectangle_167_2.png",
+              "mobile_image": "shopify:\/\/shop_images\/Rectangle_168_1.png",
+              "image_position": "right",
+              "content": "<p>2016 klein begonnen, sind wir heute mit über 35 leidenschaftlichen Mitarbeitern zu einem echten Unternehmen geworden. Warum es uns gibt, was uns bewegt und wo wir in Zukunft hinwollen, erzählt dir unser Gründer Mario in seiner Gründerstory.<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "d9d4a795-2def-4170-93b0-26689d641591": {
+            "type": "rich_text_image",
+            "settings": {
+              "subheading": "",
+              "title": "Was uns antreibt.",
+              "image": "shopify:\/\/shop_images\/Rectangle_168_1.png",
+              "image_position": "left",
+              "content": "<p>Wer Ingwer mag und unsere Produkte probiert, hat in der Regel immer den gleichen Ausdruck im Gesicht: ein überraschtes Lächeln, gefolgt von einem Nicken des Kopfes. Erst wenn wir diesen Ausdruck sehen, sind wir zufrieden. Das treibt uns täglich an.<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "510c9040-693a-45f8-bba7-a5775570dc21": {
+            "type": "rich_text_image",
+            "settings": {
+              "subheading": "",
+              "title": "Made in Germany.",
+              "image": "shopify:\/\/shop_images\/Rectangle_169_3.png",
+              "mobile_image": "shopify:\/\/shop_images\/Rectangle_169.png",
+              "image_position": "right",
+              "content": "<p>Unser Hauptsitz ist im fränkischen Reichenschwand. Produziert werden unsere Produkte an zwei Standorten in Deutschland und Österreich.<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "094d491b-f5d3-476e-8f21-7311afe38ec1": {
+            "type": "rich_text_image",
+            "settings": {
+              "subheading": "",
+              "title": "Nicht nur geschmacklich ausgezeichnet.",
+              "image": "shopify:\/\/shop_images\/German_Innovation_Award_2021_bc49696c-5f12-41aa-9984-00e6b64fd03c.png",
+              "image_position": "left",
+              "content": "<p>Wir gewinnen für unsere Arbeit regelmäßig Preise. Darauf sind wir schon stolz. Viel stolzer machen uns aber die vielen tollen Bewertungen bei Trusted Shops, die uns zeigen, dass wir mit unseren Produkten schon heute jeden Tag Menschen glücklich machen.<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "ea26a610-d523-467c-8dc3-0154662a7ba8": {
+            "type": "rich_text_image",
+            "settings": {
+              "subheading": "",
+              "title": "News und Presse.",
+              "image": "shopify:\/\/shop_images\/KK_Logo_Shopify.png",
+              "image_position": "right",
+              "content": "<p>Neue Produkte, neue Mitarbeiter, Presseanfragen: bei uns passiert viel. Schau doch mal hier in unseren Newsblog und lass dich informieren. Zu unserem Presseportal und den richtigen Ansprechpartnern für Anfragen kommst du übrigens hier.<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "bd780a13-4955-4e27-aebe-244d4f8b8844": {
+            "type": "rich_text_image",
+            "settings": {
+              "subheading": "",
+              "title": "Ein bunter Haufen Leidenschaft.",
+              "image": "shopify:\/\/shop_images\/KK_Rezeptur_Motiv2.jpg",
+              "image_position": "left",
+              "content": "<p>Ob Lager, Logistik, Buchhaltung, Vertrieb oder Marketing: ohne unser tolles – ingwerverrücktes – Team, wäre das was wir tun, nicht möglich. Und weil die Menschen dahinter am wichtigsten sind, stellen wir jeden einfach kurz vor.<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "0786b968-78ab-44dd-8445-fea31107d561": {
+            "type": "rich_text_image",
+            "settings": {
+              "subheading": "",
+              "title": "Wir stellen ein.",
+              "image": "shopify:\/\/shop_images\/KK_Rezeptur_Motiv3.jpg",
+              "image_position": "right",
+              "content": "<p>Weil wir wachsen. National, aber auch international. Dazu suchen wir regelmäßig passionierte Mitarbeiter. Hier findest du unsere aktuellen Stellenangebote.<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "a9407fec-36f7-4838-b4f3-bea3c72287ae": {
+            "type": "rich_text_image",
+            "settings": {
+              "subheading": "",
+              "title": "Wo man uns kaufen kann.",
+              "image": "shopify:\/\/shop_images\/KK_Rezeptur_Motiv4.jpg",
+              "image_position": "left",
+              "content": "<p>Unsere Produkte sind bei vielen Händlern gelistet. Gerne kannst du auch unseren Storefinder nutzen, um den nächsten Händler in deiner Nähe zu finden. Leider können wir dir nicht in jedem Store eine automatische Warenverfügbarkeit garantieren (mehr dazu in den FAQs). Am besten bestellst du hier einfach direkt online.<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "c4867b28-31d0-46a5-853f-9052f37af6b5": {
+            "type": "rich_text_image",
+            "settings": {
+              "subheading": "",
+              "title": "Du hast noch Fragen?",
+              "image": "shopify:\/\/shop_images\/KK_Rezeptur_Motiv1.jpg",
+              "image_position": "right",
+              "content": "<p>Hier findest du unsere FAQs mit vielen Antworten. Wenn du darüber hinaus noch weitere Fragen hast, schreib uns gerne eine Nachricht über unser Kontaktformular.<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "7a95e831-55e2-4483-ac34-bdd38517e410": {
+            "type": "featured_video",
+            "disabled": true,
+            "settings": {
+              "heading": "Einzigartige Organic Power Drinks",
+              "background_color": "#f8f8f8",
+              "section_size": "large",
+              "section_height": 200,
+              "text_color": "#ffffff",
+              "subheading": "",
+              "title": "",
+              "image": "shopify:\/\/shop_images\/Rectangle_192.png",
+              "video_url": "https:\/\/www.youtube.com\/watch?v=hOe6dy9enHg"
+            }
+          },
+          "8dcc4316-3049-46fa-aff8-2b6fd18b5630": {
+            "type": "testimonial",
+            "disabled": true,
+            "settings": {
+              "autoplay": true,
+              "cycle_speed": 5,
+              "background": "#f8f8f8",
+              "text_color": "#2c2c2b",
+              "quote": "<p>“Der IngwerTRINK von Kloster Kitchen ist derzeit sprichwörtlich in aller Munde. “<\/p>",
+              "name": "VOGUE Deutschland",
+              "quote1": "<p>“Share what your customers are saying about your products, your company...“<\/p>",
+              "name1": "Name",
+              "quote2": "<p>“Share what your customers are saying about your products, your company...“<\/p>",
+              "name2": "Magazine Name",
+              "quote3": "<p>Share what your customers are saying about your products, your company...<\/p>",
+              "name3": "",
+              "quote4": "<p>Share what your customers are saying about your products, your company...<\/p>",
+              "name4": "",
+              "quote5": "",
+              "name5": ""
+            }
+          },
+          "1e10848f-96ba-4a6c-91f6-deb3a935fde7": {
+            "type": "icon_list",
+            "settings": {
+              "title": "Wir sind Testsieger!",
+              "logo_size": 158,
+              "logo_size_mobile": 128,
+              "font_size_desktop": 22,
+              "font_size_mobile": 12,
+              "image": "shopify:\/\/shop_images\/German_Innovation_Award_2021_bc49696c-5f12-41aa-9984-00e6b64fd03c.png",
+              "description": "",
+              "link": "shopify:\/\/pages\/impressum",
+              "show_mobile": true,
+              "image1": "shopify:\/\/shop_images\/Produktinnovation_in_Glas_20.png",
+              "description1": "",
+              "link1": "",
+              "show_mobile1": true,
+              "image2": "shopify:\/\/shop_images\/German_Brand_Award_2020_1.png",
+              "description2": "",
+              "link2": "",
+              "show_mobile2": true,
+              "image3": "shopify:\/\/shop_images\/German_Brand_Award_2020_bf64e76b-de3c-4979-8747-05f1480b130d.png",
+              "description3": "",
+              "link3": "",
+              "show_mobile3": true,
+              "description4": "",
+              "link4": "",
+              "show_mobile4": false,
+              "description5": "",
+              "link5": "",
+              "show_mobile5": false
+            }
+          },
+          "f23655e9-2e08-47e3-8bd7-c5cd923c076d": {
+            "type": "logo_list",
+            "disabled": true,
+            "settings": {
+              "header": "",
+              "logo_size": 130,
+              "logo_size_mobile": 98,
+              "title": "BEKANNT AUS",
+              "link": "",
+              "show_mobile": false,
+              "title1": "",
+              "image1": "shopify:\/\/shop_images\/Group_24_2abc5bd8-c658-43a5-b6f2-981b8a4f4e35.png",
+              "link1": "",
+              "show_mobile1": true,
+              "title2": "",
+              "image2": "shopify:\/\/shop_images\/Group_24_2abc5bd8-c658-43a5-b6f2-981b8a4f4e35.png",
+              "link2": "",
+              "show_mobile2": true,
+              "title3": "",
+              "image3": "shopify:\/\/shop_images\/Group_24_2abc5bd8-c658-43a5-b6f2-981b8a4f4e35.png",
+              "link3": "",
+              "show_mobile3": true,
+              "title4": "",
+              "image4": "shopify:\/\/shop_images\/Group_24_2abc5bd8-c658-43a5-b6f2-981b8a4f4e35.png",
+              "link4": "",
+              "show_mobile4": false,
+              "title5": "",
+              "image5": "shopify:\/\/shop_images\/Group_24_2abc5bd8-c658-43a5-b6f2-981b8a4f4e35.png",
+              "link5": "",
+              "show_mobile5": false,
+              "title6": "",
+              "image6": "shopify:\/\/shop_images\/Group_24_2abc5bd8-c658-43a5-b6f2-981b8a4f4e35.png",
+              "link6": "",
+              "show_mobile6": false
+            }
+          },
+          "0a382f6d-c1e0-48dc-b04a-521dcc46d95f": {
+            "type": "collection",
+            "settings": {
+              "header": "",
+              "layout_mode": "carousel",
+              "show_product_info": true,
+              "show_vendor": false,
+              "show_color_swatch": false,
+              "grid_mobile_items_per_row": "1",
+              "grid_desktop_items_per_row": 3,
+              "collection": "sets",
+              "title": "Topseller Sets",
+              "grid_items_count": 3,
+              "button_text": ""
+            }
+          },
+          "9e36ab60-0ecc-4d34-b53d-1538c42d1c60": {
+            "type": "team_members",
+            "disabled": true,
+            "settings": {
+              "subheading": "",
+              "title": "Unser Team",
+              "image": "shopify:\/\/shop_images\/image_29_1.png",
+              "name": "Maxime Mustermann",
+              "text": "<p>Wohltuende SHOTs, SHOT+ FRUIT, Bioteaque Tee & doppelwandiges Teeglas <\/p>",
+              "button_link": "#",
+              "button_text": ""
+            }
+          },
+          "086e053a-9e1b-46bc-83e8-abf349734012": {
+            "type": "team_members",
+            "disabled": true,
+            "settings": {
+              "subheading": "",
+              "title": "",
+              "image": "shopify:\/\/shop_images\/image_31_1.png",
+              "name": "Maxime Mustermann",
+              "text": "<p>Wohltuende SHOTs, SHOT+ FRUIT, Bioteaque Tee & doppelwandiges Teeglas <\/p>",
+              "button_link": "",
+              "button_text": ""
+            }
+          },
+          "29db0f4a-e957-43e2-9907-ca0cfeebf8b1": {
+            "type": "team_members",
+            "disabled": true,
+            "settings": {
+              "subheading": "",
+              "title": "",
+              "image": "shopify:\/\/shop_images\/image_36_1.png",
+              "name": "Max Mustermann",
+              "text": "<p>Wohltuende SHOTs, SHOT+ FRUIT, Bioteaque Tee & doppelwandiges Teeglas <\/p>",
+              "button_link": "",
+              "button_text": ""
+            }
+          },
+          "5644e115-18ed-4b17-8dfa-b06aa1200b2f": {
+            "type": "team_members",
+            "disabled": true,
+            "settings": {
+              "subheading": "",
+              "title": "",
+              "image": "shopify:\/\/shop_images\/image_30_1.png",
+              "name": "Maxime Mustermann",
+              "text": "<p>Wohltuende SHOTs, SHOT+ FRUIT, Bioteaque Tee & doppelwandiges Teeglas <\/p>",
+              "button_link": "",
+              "button_text": ""
+            }
+          },
+          "bbadcfb6-b9e2-45c3-bdc5-75b57f72bb1c": {
+            "type": "team_members",
+            "disabled": true,
+            "settings": {
+              "subheading": "",
+              "title": "",
+              "image": "shopify:\/\/shop_images\/image_32_1.png",
+              "name": "Max Mustermann",
+              "text": "<p>Wohltuende SHOTs, SHOT+ FRUIT, Bioteaque Tee & doppelwandiges Teeglas <\/p>",
+              "button_link": "",
+              "button_text": ""
+            }
+          },
+          "0435f224-78df-46a0-88f3-f6aac1b58aa3": {
+            "type": "team_members",
+            "disabled": true,
+            "settings": {
+              "subheading": "",
+              "title": "",
+              "image": "shopify:\/\/shop_images\/image_35_1.png",
+              "name": "Max Mustermann",
+              "text": "<p>Wohltuende SHOTs, SHOT+ FRUIT, Bioteaque Tee & doppelwandiges Teeglas <\/p>",
+              "button_link": "",
+              "button_text": ""
+            }
+          },
+          "1238c322-5f10-4175-95ef-1d096479d898": {
+            "type": "team_members",
+            "disabled": true,
+            "settings": {
+              "subheading": "",
+              "title": "",
+              "image": "shopify:\/\/shop_images\/image_34_1.png",
+              "name": "Max Mustermann",
+              "text": "<p>Wohltuende SHOTs, SHOT+ FRUIT, Bioteaque Tee & doppelwandiges Teeglas <\/p>",
+              "button_link": "",
+              "button_text": ""
+            }
+          },
+          "3e19e527-4f09-4d78-a9b9-e52ad38e73b7": {
+            "type": "team_members",
+            "disabled": true,
+            "settings": {
+              "subheading": "",
+              "title": "",
+              "image": "shopify:\/\/shop_images\/image_33_1.png",
+              "name": "Max Mustermann",
+              "text": "<p>Wohltuende SHOTs, SHOT+ FRUIT, Bioteaque Tee & doppelwandiges Teeglas <\/p>",
+              "button_link": "",
+              "button_text": ""
+            }
+          },
+          "bdcbfffb-cc33-449a-8ab2-4f6019fe8a60": {
+            "type": "team_members",
+            "disabled": true,
+            "settings": {
+              "subheading": "",
+              "title": "",
+              "image": "shopify:\/\/shop_images\/image_30_1.png",
+              "name": "Max Mustermann",
+              "text": "<p>Wohltuende SHOTs, SHOT+ FRUIT, Bioteaque Tee & doppelwandiges Teeglas <\/p>",
+              "button_link": "",
+              "button_text": ""
+            }
+          },
+          "3f4435b1-92f4-4ea7-bd8e-e77314ffbb54": {
+            "type": "team_members",
+            "disabled": true,
+            "settings": {
+              "subheading": "",
+              "title": "",
+              "image": "shopify:\/\/shop_images\/image_35_1.png",
+              "name": "Max Mustermann",
+              "text": "<p>Wohltuende SHOTs, SHOT+ FRUIT, Bioteaque Tee & doppelwandiges Teeglas <\/p>",
+              "button_link": "",
+              "button_text": ""
+            }
+          },
+          "465a2dd7-1bef-4c00-afb2-3d1fcdc10bae": {
+            "type": "team_members",
+            "disabled": true,
+            "settings": {
+              "subheading": "",
+              "title": "",
+              "image": "shopify:\/\/shop_images\/image_36_1.png",
+              "name": "Max Mustermann",
+              "text": "<p>Wohltuende SHOTs, SHOT+ FRUIT, Bioteaque Tee & doppelwandiges Teeglas <\/p>",
+              "button_link": "",
+              "button_text": ""
+            }
+          },
+          "35fb482b-c7c9-42de-a826-b109dcf648ce": {
+            "type": "team_members",
+            "disabled": true,
+            "settings": {
+              "subheading": "",
+              "title": "",
+              "image": "shopify:\/\/shop_images\/image_32_1.png",
+              "name": "Max Mustermann",
+              "text": "<p>Wohltuende SHOTs, SHOT+ FRUIT, Bioteaque Tee & doppelwandiges Teeglas <\/p>",
+              "button_link": "",
+              "button_text": ""
+            }
+          },
+          "605bfa7e-916d-4b2c-b232-c1581c2c6f13": {
+            "type": "team_members",
+            "disabled": true,
+            "settings": {
+              "subheading": "",
+              "title": "",
+              "image": "shopify:\/\/shop_images\/image_33_1.png",
+              "name": "Max Mustermann",
+              "text": "<p>Wohltuende SHOTs, SHOT+ FRUIT, Bioteaque Tee & doppelwandiges Teeglas <\/p>",
+              "button_link": "",
+              "button_text": ""
+            }
+          },
+          "dfd61b59-f11f-43ec-924e-bda856182085": {
+            "type": "team_members",
+            "disabled": true,
+            "settings": {
+              "subheading": "",
+              "title": "",
+              "image": "shopify:\/\/shop_images\/image_29_1.png",
+              "name": "Max Mustermann",
+              "text": "<p>Wohltuende SHOTs, SHOT+ FRUIT, Bioteaque Tee & doppelwandiges Teeglas <\/p>",
+              "button_link": "",
+              "button_text": ""
+            }
+          },
+          "3fb14c7a-1e9a-4adc-ae72-908532ae6ffa": {
+            "type": "team_members",
+            "disabled": true,
+            "settings": {
+              "subheading": "",
+              "title": "",
+              "image": "shopify:\/\/shop_images\/Rectangle_174_1.png",
+              "name": "Max Mustermann",
+              "text": "<p>Wohltuende SHOTs, SHOT+ FRUIT, Bioteaque Tee & doppelwandiges Teeglas<\/p>",
+              "button_link": "",
+              "button_text": ""
+            }
+          },
+          "dd07d398-3eaa-4c10-8726-82244af873ce": {
+            "type": "team_members",
+            "disabled": true,
+            "settings": {
+              "subheading": "",
+              "title": "",
+              "image": "shopify:\/\/shop_images\/image_34_1.png",
+              "name": "Max Mustermann",
+              "text": "<p>Wohltuende SHOTs, SHOT+ FRUIT, Bioteaque Tee & doppelwandiges Teeglas <\/p>",
+              "button_link": "",
+              "button_text": ""
+            }
+          },
+          "c0091b79-11a1-4f0f-9898-12417edfae37": {
+            "type": "team_members",
+            "disabled": true,
+            "settings": {
+              "subheading": "",
+              "title": "",
+              "image": "shopify:\/\/shop_images\/image_33_1.png",
+              "name": "Max Mustermann",
+              "text": "<p>Wohltuende SHOTs, SHOT+ FRUIT, Bioteaque Tee & doppelwandiges Teeglas <\/p>",
+              "button_link": "",
+              "button_text": ""
+            }
+          },
+          "d09d6394-d7d6-4015-b8ac-14f5fd9cab20": {
+            "type": "team_members",
+            "disabled": true,
+            "settings": {
+              "subheading": "",
+              "title": "",
+              "image": "shopify:\/\/shop_images\/image_29_1.png",
+              "name": "Maxime Mustermann",
+              "text": "<p>test test test <\/p>",
+              "button_link": "",
+              "button_text": ""
+            }
+          },
+          "4dbae612-f979-4cad-a993-dbb4bfd4d8a7": {
+            "type": "instagram",
+            "settings": {
+              "subheading": "",
+              "title": "Folge uns auf Instagram",
+              "gallery_layout": "teaser"
+            }
+          }
+        },
+        "block_order": [
+          "47a2fb28-b4b3-42dc-b616-14d42ee1ed4f",
+          "7f5d39cd-04a5-4a4d-8fdb-ecfe7966144d",
+          "d9d4a795-2def-4170-93b0-26689d641591",
+          "510c9040-693a-45f8-bba7-a5775570dc21",
+          "094d491b-f5d3-476e-8f21-7311afe38ec1",
+          "ea26a610-d523-467c-8dc3-0154662a7ba8",
+          "bd780a13-4955-4e27-aebe-244d4f8b8844",
+          "0786b968-78ab-44dd-8445-fea31107d561",
+          "a9407fec-36f7-4838-b4f3-bea3c72287ae",
+          "c4867b28-31d0-46a5-853f-9052f37af6b5",
+          "7a95e831-55e2-4483-ac34-bdd38517e410",
+          "8dcc4316-3049-46fa-aff8-2b6fd18b5630",
+          "1e10848f-96ba-4a6c-91f6-deb3a935fde7",
+          "f23655e9-2e08-47e3-8bd7-c5cd923c076d",
+          "0a382f6d-c1e0-48dc-b04a-521dcc46d95f",
+          "9e36ab60-0ecc-4d34-b53d-1538c42d1c60",
+          "086e053a-9e1b-46bc-83e8-abf349734012",
+          "29db0f4a-e957-43e2-9907-ca0cfeebf8b1",
+          "5644e115-18ed-4b17-8dfa-b06aa1200b2f",
+          "bbadcfb6-b9e2-45c3-bdc5-75b57f72bb1c",
+          "0435f224-78df-46a0-88f3-f6aac1b58aa3",
+          "1238c322-5f10-4175-95ef-1d096479d898",
+          "3e19e527-4f09-4d78-a9b9-e52ad38e73b7",
+          "bdcbfffb-cc33-449a-8ab2-4f6019fe8a60",
+          "3f4435b1-92f4-4ea7-bd8e-e77314ffbb54",
+          "465a2dd7-1bef-4c00-afb2-3d1fcdc10bae",
+          "35fb482b-c7c9-42de-a826-b109dcf648ce",
+          "605bfa7e-916d-4b2c-b232-c1581c2c6f13",
+          "dfd61b59-f11f-43ec-924e-bda856182085",
+          "3fb14c7a-1e9a-4adc-ae72-908532ae6ffa",
+          "dd07d398-3eaa-4c10-8726-82244af873ce",
+          "c0091b79-11a1-4f0f-9898-12417edfae37",
+          "d09d6394-d7d6-4015-b8ac-14f5fd9cab20",
+          "4dbae612-f979-4cad-a993-dbb4bfd4d8a7"
+        ],
+        "settings": {}
+      },
+      "1624892614c65a21cb": {
+        "type": "instagram-section",
+        "settings": {
+          "subheading": "",
+          "title": "Folge uns auf Instagram",
+          "gallery_layout": "teaser"
+        }
+      },
+      "product-template-mixmatch": {
+        "type": "product-template-mixmatch",
+        "settings": {
+          "mixmatch_usp_1_icon": "<svg width=\"31\" height=\"31\" viewbox=\"0 0 31 31\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M18.4525 4.85918C18.112 4.85933 17.7758 4.93469 17.4682 5.07983C17.4476 4.48399 17.1992 3.91837 16.7735 3.49829C16.3479 3.0782 15.7771 2.83526 15.1774 2.81899C14.5778 2.80272 13.9945 3.01434 13.5464 3.41071C13.0984 3.80709 12.8192 4.35838 12.766 4.95222C12.4061 4.7731 12.006 4.6887 11.6039 4.70709C11.2018 4.72548 10.8112 4.84604 10.4694 5.05724C10.1275 5.26845 9.84591 5.56326 9.65139 5.91349C9.45688 6.26372 9.35597 6.65768 9.35832 7.05772V17.104C9.35832 17.2803 9.42877 17.4493 9.55418 17.574C9.67958 17.6986 9.84967 17.7686 10.027 17.7686C10.2044 17.7686 10.3744 17.6986 10.4998 17.574C10.6253 17.4493 10.6957 17.2803 10.6957 17.104V7.05772C10.6957 6.78838 10.8034 6.53008 10.995 6.33963C11.1866 6.14918 11.4465 6.04219 11.7175 6.04219C11.9885 6.04219 12.2483 6.14918 12.44 6.33963C12.6316 6.53008 12.7392 6.78838 12.7392 7.05772V14.31C12.7392 14.4862 12.8097 14.6553 12.9351 14.7799C13.0605 14.9046 13.2306 14.9746 13.4079 14.9746C13.5853 14.9746 13.7553 14.9046 13.8808 14.7799C14.0062 14.6553 14.0766 14.4862 14.0766 14.31V5.18351C14.0766 4.91417 14.1843 4.65587 14.3759 4.46542C14.5675 4.27497 14.8274 4.16798 15.0984 4.16798C15.3694 4.16798 15.6292 4.27497 15.8209 4.46542C16.0125 4.65587 16.1201 4.91417 16.1201 5.18351V14.2701C16.1201 14.4464 16.1906 14.6154 16.316 14.7401C16.4414 14.8647 16.6115 14.9347 16.7888 14.9347C16.9662 14.9347 17.1362 14.8647 17.2617 14.7401C17.3871 14.6154 17.4575 14.4464 17.4575 14.2701V7.1614C17.4575 6.90334 17.5606 6.65586 17.7442 6.47339C17.9278 6.29091 18.1768 6.1884 18.4365 6.1884C18.6961 6.1884 18.9451 6.29091 19.1287 6.47339C19.3123 6.65586 19.4154 6.90334 19.4154 7.1614V14.4456C19.4154 14.6218 19.4859 14.7909 19.6113 14.9155C19.7367 15.0402 19.9068 15.1102 20.0841 15.1102C20.2615 15.1102 20.4316 15.0402 20.557 14.9155C20.6824 14.7909 20.7528 14.6218 20.7528 14.4456V9.29879C20.7528 9.06048 20.8481 8.83193 21.0176 8.66342C21.1872 8.49491 21.4171 8.40024 21.6569 8.40024C21.8967 8.40024 22.1266 8.49491 22.2962 8.66342C22.4657 8.83193 22.561 9.06048 22.561 9.29879V15.2777C22.561 15.4539 22.6314 15.623 22.7568 15.7476C22.8822 15.8722 23.0523 15.9423 23.2296 15.9423C23.407 15.9423 23.5771 15.8722 23.7025 15.7476C23.8279 15.623 23.8983 15.4539 23.8983 15.2777V9.29879C23.897 8.92996 23.8034 8.56725 23.626 8.24327C23.4487 7.9193 23.193 7.64423 22.8822 7.44282C22.5713 7.2414 22.2149 7.11995 21.8451 7.08938C21.4753 7.05882 21.1036 7.12011 20.7635 7.26774V7.1614C20.7628 6.55194 20.5193 5.96758 20.0862 5.53613C19.6531 5.10468 19.0657 4.86128 18.4525 4.85918ZM3.47365 19.6189L4.20921 20.1931C4.39472 20.3401 4.55078 20.5205 4.66927 20.7248L6.5416 23.8777C7.28279 25.1264 8.33868 26.1614 9.60512 26.8808C10.8716 27.6001 12.3048 27.9789 13.7635 27.9797H16.9732C17.1505 27.9797 17.3206 27.9097 17.446 27.7851C17.5714 27.6604 17.6419 27.4914 17.6419 27.3151C17.6419 27.1389 17.5714 26.9698 17.446 26.8452C17.3206 26.7205 17.1505 26.6505 16.9732 26.6505H13.7635C12.536 26.6493 11.33 26.3299 10.2647 25.7239C9.19945 25.1178 8.31166 24.2459 7.68908 23.1945L5.81674 20.0416C5.61098 19.6983 5.34246 19.3962 5.02501 19.151L4.27608 18.5741C4.23506 18.5419 4.20106 18.5018 4.17615 18.4561C4.15124 18.4104 4.13594 18.3602 4.13119 18.3085C4.12644 18.2568 4.13232 18.2046 4.1485 18.1552C4.16467 18.1058 4.19079 18.0602 4.22526 18.0212C4.37541 17.8503 4.55865 17.7114 4.76405 17.6125C4.96945 17.5136 5.19278 17.4569 5.42072 17.4458C5.64866 17.4346 5.87652 17.4692 6.0907 17.5475C6.30489 17.6258 6.501 17.7462 6.66732 17.9015L10.075 21.6234C10.1961 21.7468 10.3609 21.8186 10.5343 21.8236C10.7078 21.8286 10.8764 21.7664 11.0046 21.65C11.1327 21.5337 11.2104 21.3724 11.2211 21.2003C11.2318 21.0281 11.1747 20.8586 11.062 20.7275L7.63558 17.0056L7.60349 16.9737C7.30836 16.6941 6.95957 16.4764 6.57794 16.3336C6.19632 16.1909 5.78966 16.126 5.38226 16.1429C4.97485 16.1598 4.57504 16.258 4.20668 16.4318C3.83832 16.6056 3.50897 16.8514 3.23827 17.1545C3.08593 17.3294 2.97085 17.5333 2.89997 17.7536C2.82909 17.974 2.80389 18.2064 2.82589 18.4367C2.84789 18.667 2.91663 18.8905 3.02797 19.0937C3.1393 19.2969 3.29091 19.4756 3.47365 19.6189ZM12.6348 17.9734H12.6696C13.6642 17.9806 14.6241 18.3383 15.3783 18.9828C16.1326 19.6273 16.6323 20.5169 16.7887 21.4932C16.8047 21.5806 16.8029 21.6703 16.7835 21.757C16.764 21.8436 16.7273 21.9256 16.6754 21.9979C16.6236 22.0702 16.5577 22.1315 16.4816 22.1781C16.4055 22.2247 16.3208 22.2556 16.2325 22.2691C16.1442 22.2826 16.054 22.2784 15.9674 22.2567C15.8807 22.235 15.7993 22.1963 15.728 22.1428C15.6567 22.0893 15.5969 22.0221 15.5521 21.9452C15.5073 21.8684 15.4785 21.7834 15.4674 21.6953C15.3608 21.0302 15.0198 20.4244 14.5054 19.9861C13.9909 19.5479 13.3364 19.3056 12.6589 19.3026H12.6348H12.0142C11.8369 19.3026 11.6668 19.2326 11.5414 19.108C11.416 18.9833 11.3456 18.8143 11.3456 18.638C11.3456 18.4618 11.416 18.2927 11.5414 18.1681C11.6668 18.0434 11.8369 17.9734 12.0142 17.9734H12.6348ZM23.2398 17.229C22.1505 17.2296 21.0859 17.5512 20.1804 18.153C19.2749 18.7548 18.5692 19.6098 18.1524 20.6101C17.7357 21.6104 17.6266 22.711 17.8389 23.7728C18.0512 24.8347 18.5754 25.8102 19.3453 26.5761C19.986 27.2134 20.7749 27.6837 21.6421 27.9455C22.5094 28.2073 23.4282 28.2524 24.3172 28.0768C25.2062 27.9012 26.0379 27.5103 26.7385 26.9389C27.4392 26.3674 27.9872 25.633 28.334 24.8007C28.6808 23.9684 28.8156 23.0639 28.7266 22.1674C28.6375 21.2709 28.3274 20.4101 27.8235 19.6612C27.3197 18.9124 26.6378 18.2986 25.8382 17.8744C25.0387 17.4501 24.1462 17.2284 23.2398 17.229ZM26.182 25.6377C25.7948 26.023 25.3348 26.3287 24.8286 26.5373C24.3224 26.7459 23.7798 26.8532 23.2318 26.8532C22.6838 26.8532 22.1411 26.7459 21.6349 26.5373C21.1287 26.3287 20.6688 26.023 20.2815 25.6377C19.6979 25.0577 19.3004 24.3187 19.1394 23.5142C18.9783 22.7097 19.0609 21.8759 19.3767 21.118C19.6925 20.3602 20.2273 19.7124 20.9135 19.2567C21.5997 18.801 22.4065 18.5577 23.2318 18.5577C24.0571 18.5577 24.8638 18.801 25.55 19.2567C26.2362 19.7124 26.771 20.3602 27.0868 21.118C27.4026 21.8759 27.4852 22.7097 27.3242 23.5142C27.1631 24.3187 26.7656 25.0577 26.182 25.6377ZM25.6823 21.6144L24.7507 20.6884L22.5814 22.8444L21.7297 21.9979L20.798 22.9239L22.5814 24.6964L25.6823 21.6144Z\" fill=\"#4F4F4F\"><\/path>\n  <\/svg>",
+          "mixmatch_usp_1_text": "Jederzeit kündbar",
+          "mixmatch_usp_1_subtext": "inkl. MwSt., zzgl. Versand",
+          "mixmatch_usp_2_icon": "<svg width=\"31\" height=\"31\" viewbox=\"0 0 31 31\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M21.0789 10.9627C21.2435 11.1263 21.4596 11.2085 21.6757 11.2085C21.8919 11.2085 22.108 11.1263 22.2726 10.9627L25.6493 7.60662C25.9793 7.27856 25.9793 6.7483 25.6493 6.42025L22.2726 3.06416C21.9425 2.7361 21.409 2.7361 21.0789 3.06416C20.7488 3.39222 20.7488 3.92248 21.0789 4.25054L23.8588 7.01343L21.0789 9.77633C20.7488 10.1044 20.7488 10.6347 21.0789 10.9627ZM9.26058 29.345C9.42519 29.5086 9.6413 29.5908 9.85741 29.5908C10.0735 29.5908 10.2896 29.5094 10.4542 29.345C10.7843 29.0169 10.7843 28.4867 10.4542 28.1586L7.67439 25.3957L10.4542 22.6328C10.7843 22.3048 10.7843 21.7745 10.4542 21.4464C10.1242 21.1184 9.59065 21.1184 9.26058 21.4464L5.88391 24.8025C5.55384 25.1306 5.55384 25.6609 5.88391 25.9889L9.26058 29.345ZM15.3372 17.0816H11.1236C8.09813 17.0816 5.63653 14.635 5.63653 11.628C5.63653 8.62092 8.09813 6.17433 11.1236 6.17433H13.2341C13.7 6.17433 14.0782 6.55021 14.0782 7.01335C14.0782 7.47649 13.7 7.85237 13.2341 7.85237H11.1236C9.02925 7.85237 7.32487 9.54636 7.32487 11.628C7.32487 13.7096 9.02925 15.4036 11.1236 15.4036H16.1886L16.1958 15.4036H20.4095C23.435 15.4036 25.8966 17.8502 25.8966 20.8572C25.8966 23.8643 23.435 26.3109 20.4095 26.3109H18.2991C17.8323 26.3109 17.4549 25.9358 17.4549 25.4719C17.4549 25.0079 17.8323 24.6328 18.2991 24.6328H20.4095C22.5039 24.6328 24.2083 22.9389 24.2083 20.8572C24.2083 18.7756 22.5039 17.0816 20.4095 17.0816H15.3445L15.3372 17.0816ZM16.6107 7.85237C17.0769 7.85237 17.4549 7.47673 17.4549 7.01335C17.4549 6.54997 17.0769 6.17433 16.6107 6.17433C16.1445 6.17433 15.7665 6.54997 15.7665 7.01335C15.7665 7.47673 16.1445 7.85237 16.6107 7.85237ZM20.8316 7.01335C20.8316 7.47673 20.4537 7.85237 19.9874 7.85237C19.5212 7.85237 19.1433 7.47673 19.1433 7.01335C19.1433 6.54997 19.5212 6.17433 19.9874 6.17433C20.4537 6.17433 20.8316 6.54997 20.8316 7.01335ZM11.5457 26.3109C12.0119 26.3109 12.3899 25.9353 12.3899 25.4719C12.3899 25.0085 12.0119 24.6329 11.5457 24.6329C11.0795 24.6329 10.7015 25.0085 10.7015 25.4719C10.7015 25.9353 11.0795 26.3109 11.5457 26.3109ZM15.7666 25.4719C15.7666 25.9353 15.3887 26.3109 14.9224 26.3109C14.4562 26.3109 14.0783 25.9353 14.0783 25.4719C14.0783 25.0085 14.4562 24.6329 14.9224 24.6329C15.3887 24.6329 15.7666 25.0085 15.7666 25.4719Z\" fill=\"#4F4F4F\"><\/path>\n  <\/svg>",
+          "mixmatch_usp_2_text": "Jederzeit änderbar",
+          "mixmatch_usp_2_subtext": "auch den Lieferzeitplan",
+          "one_time_usp_icon": "<svg id=\"Layer_1\" x=\"0px\" y=\"0px\" width=\"56px\" height=\"56px\" viewbox=\"-3.75 -3.75 56 56\" enable-background=\"new -3.75 -3.75 56 56\" xml:space=\"preserve\">\n<path fill=\"#2C2C2B\" d=\"M40.39,5.944c-4.585-3.966-10.483-6.083-16.545-5.937c-6.062,0.146-11.851,2.544-16.24,6.727v-2.18\n\tc0.012-0.208-0.018-0.416-0.089-0.611C7.445,3.747,7.335,3.568,7.192,3.417C7.05,3.265,6.877,3.145,6.687,3.062\n\tS6.29,2.937,6.082,2.937S5.668,2.979,5.477,3.062C5.286,3.145,5.113,3.265,4.971,3.417C4.828,3.568,4.718,3.747,4.647,3.943\n\tC4.576,4.138,4.546,4.346,4.559,4.554v6.109c0.001,0.404,0.163,0.791,0.449,1.075c0.286,0.285,0.673,0.445,1.077,0.445h6.092\n\tc0.389-0.023,0.753-0.194,1.02-0.477c0.267-0.283,0.415-0.657,0.415-1.046c0-0.389-0.148-0.763-0.415-1.046\n\tc-0.267-0.283-0.631-0.454-1.02-0.477H9.452c3.834-3.751,8.938-5.926,14.299-6.092c5.361-0.167,10.59,1.687,14.649,5.193\n\tc2.121,1.818,3.857,4.042,5.111,6.539c1.252,2.497,1.996,5.219,2.186,8.006c0.028,0.404,0.216,0.78,0.521,1.046\n\ts0.704,0.399,1.108,0.371c0.403-0.028,0.78-0.216,1.046-0.521s0.398-0.704,0.371-1.108c-0.221-3.187-1.072-6.298-2.507-9.153\n\tS42.815,8.022,40.39,5.944z M3.049,25.879c0.069,0.93,0.196,1.854,0.382,2.768c0.041,0.197,0.043,0.4,0.005,0.599\n\tS3.322,29.632,3.211,29.8C3.1,29.969,2.957,30.113,2.79,30.226c-0.167,0.112-0.355,0.19-0.552,0.23\n\tc-0.101,0.021-0.203,0.032-0.306,0.032c-0.351,0-0.691-0.122-0.964-0.344c-0.272-0.223-0.459-0.532-0.529-0.877\n\tC0.225,28.24,0.08,27.198,0.003,26.15C0,26.1,0,26.049,0.003,25.998c-0.012-0.196,0.015-0.393,0.08-0.578\n\tc0.064-0.187,0.166-0.357,0.297-0.504s0.29-0.265,0.468-0.35c0.178-0.085,0.37-0.133,0.566-0.143\n\tc0.204-0.016,0.408,0.01,0.602,0.075c0.193,0.065,0.372,0.169,0.524,0.305c0.153,0.136,0.276,0.301,0.364,0.485\n\tS3.041,25.674,3.049,25.879z M25.898,45.731c0.92-0.044,1.832-0.178,2.726-0.397c0.196-0.043,0.399-0.046,0.598-0.009\n\ts0.386,0.113,0.554,0.225s0.312,0.255,0.422,0.423c0.111,0.168,0.188,0.356,0.225,0.555c0.079,0.396-0.002,0.808-0.226,1.145\n\ts-0.571,0.572-0.968,0.653c-1.036,0.208-2.084,0.35-3.139,0.425h-0.131c-0.199,0.004-0.396-0.032-0.582-0.105\n\tc-0.185-0.074-0.354-0.184-0.495-0.323c-0.142-0.14-0.255-0.306-0.332-0.489s-0.117-0.381-0.117-0.58\n\tc-0.006-0.197,0.026-0.394,0.097-0.577s0.178-0.352,0.314-0.493c0.137-0.143,0.3-0.255,0.481-0.332\n\tC25.508,45.771,25.702,45.732,25.898,45.731z M12.581,42.189c-0.781-0.513-1.525-1.077-2.229-1.689\n\tc-0.306-0.266-0.704-0.398-1.108-0.37s-0.78,0.217-1.045,0.522s-0.398,0.704-0.37,1.107c0.029,0.404,0.217,0.779,0.522,1.045\n\tc0.806,0.697,1.656,1.342,2.545,1.93c0.248,0.168,0.54,0.256,0.839,0.256c0.329,0.001,0.649-0.104,0.914-0.299\n\tc0.265-0.196,0.459-0.472,0.554-0.787c0.095-0.314,0.086-0.652-0.026-0.961S12.855,42.369,12.581,42.189z M4.361,33.201\n\tc0.375,0.115,0.692,0.372,0.884,0.715c0.416,0.842,0.885,1.655,1.406,2.437c0.214,0.327,0.294,0.724,0.223,1.108\n\ts-0.288,0.728-0.605,0.957c-0.25,0.174-0.546,0.267-0.85,0.267c-0.25,0-0.496-0.062-0.717-0.18c-0.22-0.118-0.409-0.288-0.548-0.496\n\tc-0.605-0.87-1.152-1.78-1.635-2.725c-0.161-0.358-0.177-0.766-0.045-1.136c0.132-0.371,0.402-0.676,0.753-0.853\n\tC3.58,33.119,3.985,33.086,4.361,33.201z M20.286,45.344c-0.923-0.176-1.833-0.412-2.725-0.708c-0.384-0.128-0.803-0.1-1.165,0.081\n\tc-0.362,0.18-0.639,0.497-0.767,0.881s-0.1,0.803,0.081,1.165c0.181,0.362,0.498,0.638,0.881,0.767\n\tc1.02,0.34,2.061,0.611,3.117,0.813c0.096,0.008,0.193,0.008,0.289,0c0.38,0,0.747-0.141,1.028-0.396s0.457-0.606,0.493-0.984\n\tc0.036-0.379-0.07-0.756-0.298-1.061c-0.228-0.304-0.561-0.512-0.934-0.584V45.344z M43.14,35.514c0.396-0.08,0.81,0,1.146,0.223\n\tc0.168,0.11,0.312,0.252,0.425,0.418c0.112,0.167,0.19,0.354,0.23,0.55s0.041,0.399,0.002,0.596\n\tc-0.038,0.197-0.115,0.384-0.227,0.552c-0.589,0.887-1.235,1.735-1.935,2.539c-0.128,0.163-0.287,0.299-0.469,0.397\n\tc-0.182,0.1-0.382,0.161-0.587,0.181c-0.207,0.02-0.414-0.003-0.611-0.066c-0.197-0.063-0.38-0.166-0.536-0.301\n\tc-0.155-0.137-0.282-0.303-0.372-0.489c-0.091-0.187-0.142-0.389-0.15-0.596c-0.01-0.206,0.023-0.413,0.097-0.606\n\ts0.186-0.371,0.329-0.52c0.61-0.704,1.175-1.446,1.689-2.224C42.395,35.83,42.743,35.595,43.14,35.514z M36.303,42.086\n\tc-0.771,0.523-1.575,0.994-2.409,1.411c-0.337,0.194-0.587,0.51-0.699,0.882c-0.112,0.373-0.077,0.774,0.097,1.123\n\tc0.174,0.348,0.475,0.615,0.84,0.75c0.365,0.134,0.768,0.123,1.125-0.03c0.955-0.483,1.876-1.028,2.758-1.635\n\tc0.166-0.112,0.309-0.257,0.419-0.424s0.187-0.354,0.225-0.552s0.036-0.398-0.004-0.596c-0.04-0.196-0.118-0.383-0.231-0.549\n\tc-0.111-0.166-0.256-0.309-0.423-0.418c-0.167-0.111-0.354-0.188-0.552-0.225c-0.197-0.039-0.399-0.037-0.596,0.003\n\ts-0.383,0.118-0.549,0.231V42.086z M46.529,27.258c0.197-0.039,0.399-0.039,0.596-0.001c0.199,0.036,0.389,0.11,0.559,0.22\n\tc0.169,0.109,0.315,0.251,0.43,0.418c0.113,0.166,0.193,0.354,0.234,0.551s0.043,0.401,0.004,0.6\n\tc-0.21,1.047-0.488,2.079-0.834,3.09c-0.129,0.383-0.406,0.7-0.769,0.88s-0.782,0.208-1.166,0.079s-0.7-0.406-0.88-0.769\n\tc-0.18-0.363-0.209-0.782-0.079-1.166c0.296-0.883,0.532-1.784,0.708-2.698c0.039-0.196,0.115-0.384,0.227-0.551\n\ts0.254-0.311,0.421-0.423C46.146,27.375,46.332,27.298,46.529,27.258z M18.687,35.181c-0.479-0.204-0.689-0.536-0.687-0.996\n\tc0.007-1.478,0.007-2.954,0.007-4.433c0-0.492,0-0.984,0-1.477c0.001-0.457,0.003-0.914,0.005-1.37\n\tc0.005-1.073,0.009-2.146-0.006-3.22c-0.016-1.042,0.333-1.983,0.905-2.884c0.044-0.07,0.09-0.14,0.136-0.21\n\tc0.268-0.413,0.538-0.828,0.611-1.316c0.035-0.231-0.003-0.455-0.046-0.674c-0.029-0.152-0.222-0.244-0.385-0.314\n\tc-0.193-0.083-0.295-0.205-0.28-0.391c0.004-0.043-0.019-0.08-0.04-0.114c-0.016-0.024-0.03-0.048-0.034-0.072\n\tc-0.008-0.056-0.021-0.113-0.033-0.171c-0.041-0.191-0.082-0.387,0.007-0.551c0.174-0.32,0.301-0.625,0.219-0.98\n\tc-0.038-0.161,0.077-0.277,0.187-0.385c0.165-0.162,0.156-0.302-0.026-0.444c-0.149-0.116-0.198-0.256-0.143-0.428\n\tc0.05-0.157,0.006-0.302-0.062-0.458c-0.126-0.292-0.097-0.598,0.059-0.878c0.094-0.17,0.289-0.238,0.511-0.26\n\tc0.461-0.044,0.924-0.059,1.387-0.072c0.227-0.007,0.454-0.014,0.681-0.024c0.507-0.023,1.013-0.03,1.52-0.036\n\tc0.293-0.003,0.587-0.007,0.881-0.014c1.293-0.03,2.584,0.032,3.874,0.119c0.075,0.005,0.151,0.008,0.228,0.012\n\tc0.129,0.005,0.26,0.011,0.388,0.026c0.352,0.042,0.517,0.212,0.589,0.51c0.087,0.353,0.043,0.667-0.256,0.935\n\tc-0.135,0.121-0.137,0.252-0.047,0.396c0.176,0.279,0.225,0.552-0.032,0.824c-0.081,0.086-0.069,0.203,0.015,0.288\n\tc0.232,0.236,0.318,0.539,0.396,0.816c0.005,0.017,0.01,0.033,0.015,0.05c0.063,0.218,0.034,0.498-0.028,0.761\n\tc-0.091,0.379-0.357,0.554-0.691,0.721c-0.084,0.042-0.086,0.111-0.089,0.18c-0.001,0.021-0.002,0.041-0.005,0.061\n\tc-0.115,0.81,0.237,1.509,0.693,2.182c0.565,0.836,0.882,1.726,0.844,2.705c-0.008,0.203,0.002,0.406,0.012,0.61\n\tc0.01,0.202,0.02,0.403,0.013,0.602c-0.012,0.297-0.015,0.594-0.017,0.892c-0.004,0.409-0.007,0.817-0.033,1.226\n\tc-0.037,0.563-0.021,1.125-0.005,1.689l0.001,0.058c0.006,0.204-0.002,0.408-0.01,0.612c-0.009,0.207-0.018,0.414-0.012,0.62\n\tc0.005,0.165,0.002,0.329-0.002,0.493c-0.01,0.391-0.018,0.781,0.085,1.168c0.034,0.129,0.001,0.256-0.032,0.383\n\tc-0.023,0.089-0.046,0.178-0.046,0.268c0,0.459,0.002,0.919,0.03,1.377c0.016,0.25-0.011,0.496-0.036,0.742\n\tc-0.007,0.067-0.014,0.135-0.021,0.202c-0.02,0.218-0.154,0.396-0.373,0.501c-0.211,0.102-0.188,0.178-0.017,0.287\n\tc-5.37,1.523-10.939,0.003-10.939,0.003c0.02-0.008,0.042-0.013,0.063-0.019c0.054-0.014,0.109-0.029,0.147-0.08\n\tc-0.009-0.006-0.018-0.012-0.025-0.017C18.721,35.199,18.704,35.188,18.687,35.181z\"><\/path>\n<\/svg>",
+          "one_time_usp_text": "Du könntest mit einem Abo sparen",
+          "one_time_usp_subtext": "Du hast einen einmaligen Kauf ausgewählt. Warum nicht zu einem flexiblen Abo wechseln und 10 % sparen?",
+          "savings_icon": "shopify:\/\/shop_images\/savings-modal-icon.png",
+          "savings_title": "Sparen, sparen, sparen!",
+          "savings_text": "Je mehr du bestellst, desto günstiger wird deine Bestellung. Hier siehst du deine möglichen Ersparnisse.",
+          "show_vendor": false,
+          "show_sku": false,
+          "show_color_carousel": false,
+          "show_quantity_selector": true,
+          "show_inventory_quantity": false,
+          "inventory_quantity_threshold": 0,
+          "show_price_in_button": false,
+          "delivery_note": "Auf Lager - In 3-5 Werktagen bei dir",
+          "show_payment_button": true,
+          "show_pickup_availability": false,
+          "stack_images": false,
+          "show_thumbnails": true,
+          "enable_image_zoom": true,
+          "enable_video_looping": false,
+          "tab_page_1_handle": "",
+          "tab_page_2_handle": "",
+          "reviews_enabled": false,
+          "featured_image_size": "large"
+        }
+      },
+      "product-description": {
+        "type": "product-description",
+        "settings": {}
+      },
+      "product-logos_section": {
+        "type": "product-logos_section",
+        "settings": {
+          "title": "Logo list",
+          "logo_size": 30,
+          "logo_size_mobile": 30
+        }
+      },
+      "product-reviews-section": {
+        "type": "product-reviews-section",
+        "settings": {
+          "enable_section": true
+        }
+      },
+      "product-instagram-section": {
+        "type": "product-instagram-section",
+        "settings": {
+          "show_section": true,
+          "subheading": "",
+          "title": "Folge uns auf Instagram",
+          "show_test": true
+        }
+      },
+      "product-community-section": {
+        "type": "product-community-section",
+        "settings": {}
+      },
+      "product-image-with-text": {
+        "type": "product-image-with-text",
+        "settings": {}
+      },
+      "product-product-focus": {
+        "type": "product-product-focus",
+        "settings": {}
+      },
+      "product-faq": {
+        "type": "product-faq",
+        "settings": {}
+      },
+      "1626262649501e2281": {
+        "type": "featured-product",
+        "settings": {
+          "subheading": "",
+          "title": "Unser Liebling :)",
+          "show_headings_on_mobile": true,
+          "product": "probierset-m",
+          "show_vendor": false,
+          "show_sku": false,
+          "Extra_text": "",
+          "show_description": false,
+          "description_below_add_to_cart": false,
+          "selector_mode": "dropdown",
+          "show_color_swatch": false,
+          "show_color_carousel": false,
+          "show_quantity_selector": false,
+          "show_inventory_quantity": false,
+          "inventory_quantity_threshold": 0,
+          "show_price_in_button": false,
+          "show_payment_button": true,
+          "show_pickup_availability": false,
+          "btnColor": "#000000",
+          "btnBackColor": "#ffffff",
+          "btnColor2": "#ffffff",
+          "btnBackColor2": "#000000"
+        }
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {
+          "show_article_image": true,
+          "show_date": false,
+          "show_category": false,
+          "show_author": false,
+          "show_share_buttons": false
+        }
+      },
+      "extra-template-2": {
+        "type": "extra-template-2",
+        "blocks": {
+          "5794c84c-c518-45ab-91a2-1ae6bad6db62": {
+            "type": "rich_text_image",
+            "settings": {
+              "subheading": "",
+              "title": "Wie alles begann...",
+              "image": "shopify:\/\/shop_images\/KK_Rezeptur_Head.jpg",
+              "image_position": "right",
+              "content": "<p>Wir schreiben das Jahr 2016. Unser Gründer Mario kam im Österreich-Urlaub gerade vom einem Mountainbike-Ausflug zurück als ihm seine Frau Vera ein Bauernmarkt-Mitbringsel in einem Shotglas unter die Nase hielt. Er winkte direkt ab. Alkohol ist auch nach dem Sport keine Lösung.<\/p><p>Vera bestand darauf, dass er probieren solle. Das tat er dann widerwillig. Mit jedem Schluck wurden seine Augen größer. Und er fing plötzlich an unkontrolliert zu lächeln. Was dann kam, war wie der Urschrei des ersten Franken auf dem Planeten: „Boah, des is fei gscheid legger. Davon muss jeder wiss'n“.<br\/><br\/>Der Rest ist Geschichte, die Mario hier selbst erzählt, wir dir aber auch kurz zusammengefasst haben.<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "4596ea98-f857-485b-9084-6ea01cbdfb44": {
+            "type": "rich_text_image",
+            "settings": {
+              "subheading": "",
+              "title": "Unser Herzstück: die alte Klosterrezeptur.",
+              "image": "shopify:\/\/shop_images\/KK_Rezeptur_Motiv1.jpg",
+              "image_position": "left",
+              "content": "<p>Ja, da sind wir pingelig und müssen das einfach klar stellen:<br\/>unsere Produkte basieren nicht auf irgendeinem Ingwer-Mix-Rezept, sondern auf einer alten, überlieferten Rezeptur aus der Klosterküche. Diese stammt von besagtem Bauernmarkt und musste einfach in die Welt hinausgetragen werden.<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "735ea2e5-bd49-4637-af4d-161ec9f91dc8": {
+            "type": "rich_text_image",
+            "settings": {
+              "subheading": "",
+              "title": "Mit Stückchen.",
+              "image": "shopify:\/\/shop_images\/KK_Rezeptur_Motiv2.jpg",
+              "image_position": "right",
+              "content": "<p>Der Unterschied ist einfach: während andere hauptsächlich irgendeinen Saft mit ein wenig Ingwerkonzentrat mischen, bringen wir für unsere Ingwershots echte Stückchen in die Flasche. Die sorgen nicht nur für einen außergewöhnlich leckerintensiven Geschmack, sondern auch für ein spürbares Trinkgefühl.<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "06b884d8-579e-493b-9db2-a8db1b8d6083": {
+            "type": "rich_text_image",
+            "settings": {
+              "subheading": "",
+              "title": "Eine Ingwerfindung.",
+              "image": "shopify:\/\/shop_images\/KK_Rezeptur_Motiv3.jpg",
+              "image_position": "left",
+              "content": "<p>Angetrieben von der Kraft des Ingwers und wie eine Mischung aus Daniel Düsentrieb und Thomas Edison, hat Mario sehr lange getüftelt, bis ein Herstellungsverfahren herausgekommen ist, mit dem man mehr von diesem leckeren Getränk herstellen konnte, ohne auf die so wichtige schonende Verarbeitung und den feinen Schnitt des Ingwers zu verzichten. Heute produzieren wir an zwei Standorten und haben bereits über 35 Mio. Portionen dieses einmaligen Ingwershots in die Welt hinausgetragen.<br\/><br\/>Warum es so wichtig ist den Ingwer möglichst fein zu schneiden erfährst du übrigens hier.<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "94ec31a0-03f2-4866-9710-b48e25386c6f": {
+            "type": "rich_text",
+            "settings": {
+              "content_position": "center",
+              "content_position_mob": "center",
+              "subheading": "",
+              "title": "Bio und vegan für Natur pur.",
+              "content": "<p>Auch wenn wir unsere Produkte möglichst vielen Menschen nahe bringen wollen, war eines von Anfang an klar: ein so natürliches Produkt braucht die besten Zutaten. Und weil Mario dann doch nicht alles in seinem eigenen Garten anbauen kann, beziehen wir unsere Produkte von selektierten Bio-Lieferanten. Zudem findest du in unseren Produkten weder Konservierungsstoffe, noch künstliche Zutaten.<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "0c9c9bb2-a97b-4f68-8fd8-e3f2c0dc0d6a": {
+            "type": "rich_text_image",
+            "settings": {
+              "subheading": "",
+              "title": "So cool und doch ungekühlt.",
+              "image": "shopify:\/\/shop_images\/KK_Rezeptur_Motiv4.jpg",
+              "image_position": "right",
+              "content": "<p>Unser Herstellungsverfahren macht es möglich, dass unsere Produkte bis zur Öffnung ungekühlt bleiben können. So können wir auf Kühlung im Versand verzichten und ein wenig Positives zur CO2-Bilanz beitragen. Hast du ein Produkt geöffnet, solltest du es dann jedoch kühl lagern. Wir trinken die Shots eh am liebsten knackig kalt.<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "fbb9e91b-0de0-49f5-aef8-32c64fd1e3e9": {
+            "type": "rich_text",
+            "settings": {
+              "content_position": "center",
+              "content_position_mob": "center",
+              "subheading": "",
+              "title": "Eine Kategorie für sich.",
+              "content": "<p>Viele sich am Kopf kratzende Supermarkt-Manager:innen fragen sich immer wieder: Ein Ingwershot mit echten Stückchen? Stell ich das neben die Ingwerknollen in der Gemüseabteilung? Doch zu den Säften? Oder zu den Smoothies im Kühlschrank, obwohl ich das nicht kühlen muss? Die Antwort ist einfach: Ja. Es passt alles.<br\/><br\/>Weil wir aber nicht in allen Abteilungen gleichzeitig stehen können, muss man uns manchmal ein wenig suchen. Unser Tipp: einfach hier versandkostenfrei online bestellen und sich von DHL finden lassen, statt lange selber suchen.<br\/><br\/>Wer unsere Produkte doch gerne im Supermarkt kauft, findet hier <a href=\"\/pages\/store-locator\" target=\"_blank\" title=\"Store Locator\">eine Übersicht wo man uns kaufen kann<\/a>. Für alle weiteren Fragen dürft ihr uns gerne jeder Zeit hier oder über unsere Social-Media Kanäle anschreiben. Wir freuen uns drauf.<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "72eafee0-5ff1-4925-be8b-c9630c7e672d": {
+            "type": "logo_list",
+            "settings": {
+              "header": "Wir sind Testsieger!",
+              "logo_size": 200,
+              "logo_size_mobile": 30,
+              "title": "",
+              "image": "shopify:\/\/shop_images\/German_Innovation_Award_2020_SL.png",
+              "link": "",
+              "show_mobile": false,
+              "title1": "",
+              "image1": "shopify:\/\/shop_images\/German_Brand_Award_2020.png",
+              "link1": "",
+              "show_mobile1": false,
+              "title2": "",
+              "image2": "shopify:\/\/shop_images\/German_Innovation_Award_2021.png",
+              "link2": "",
+              "show_mobile2": false,
+              "title3": "",
+              "link3": "",
+              "show_mobile3": false,
+              "title4": "",
+              "link4": "",
+              "show_mobile4": false,
+              "title5": "",
+              "link5": "",
+              "show_mobile5": false,
+              "title6": "",
+              "link6": "",
+              "show_mobile6": false
+            }
+          }
+        },
+        "block_order": [
+          "5794c84c-c518-45ab-91a2-1ae6bad6db62",
+          "4596ea98-f857-485b-9084-6ea01cbdfb44",
+          "735ea2e5-bd49-4637-af4d-161ec9f91dc8",
+          "06b884d8-579e-493b-9db2-a8db1b8d6083",
+          "94ec31a0-03f2-4866-9710-b48e25386c6f",
+          "0c9c9bb2-a97b-4f68-8fd8-e3f2c0dc0d6a",
+          "fbb9e91b-0de0-49f5-aef8-32c64fd1e3e9",
+          "72eafee0-5ff1-4925-be8b-c9630c7e672d"
+        ],
+        "settings": {}
+      },
+      "extra-template-3": {
+        "type": "extra-template-3",
+        "blocks": {
+          "40132c2d-fcd4-4c3f-b58d-af7acdc5e268": {
+            "type": "slideBanner",
+            "settings": {
+              "show_fullscreen": false,
+              "show_arrow": false,
+              "text_color": "#ffffff",
+              "button_color": "#363636",
+              "button_background": "#ffffff",
+              "image": "shopify:\/\/shop_images\/Produkttester-Kloster-Kitchen-Banner.jpg",
+              "apply_overlay": false,
+              "content_position": "bottomLeft",
+              "subheading": "",
+              "title": "Werde Neuheiten-Produkttester!",
+              "fontSizeDesktop_title": 40,
+              "fontSizeMobile_title": 30,
+              "title_highlight": "#ffe200",
+              "title_color": "#2c2c2b",
+              "title2": "",
+              "fontSizeDesktop": 40,
+              "fontSizeMobile": 30,
+              "enableLine": false,
+              "lineColor": "#ffffff",
+              "text": "",
+              "fontSizeTextDesktop": 47,
+              "fontSizeTextMobile": 30,
+              "button_1_text": "",
+              "button_1_link": "",
+              "button_2_text": "",
+              "button_2_link": ""
+            }
+          },
+          "c5012731-cbcf-4b6d-9230-adc3fa28b99b": {
+            "type": "rich_text",
+            "settings": {
+              "content_position": "center",
+              "content_position_mob": "center",
+              "subheading": "",
+              "title": "Und hol dir jetzt den besten Geschmack!",
+              "content": "<p>Du möchtest DIE Geschmacks-Innovation mit <strong>Ingwerstückchen<\/strong> probieren und uns dein Feedback dazu geben? Dann bewirb dich als Produkttester und teile deinen WOW-Moment mit uns!<\/p><p>Diesmal: Teste als Erste*r unsere brandheiße Neuheit im Sortiment!!<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "3fdc4392-3dc4-49a4-8538-f98805c4d01e": {
+            "type": "rich_text",
+            "settings": {
+              "content_position": "center",
+              "content_position_mob": "center",
+              "subheading": "",
+              "title": "Geschmacksstufe rot! Sei jetzt Neuheiten-Tester!",
+              "content": "<p>Diese Bewerbungsrunde ist etwas ganz Besonderes! Denn Ende November erhalten unsere Organic Power Drinks Zuwachs. <strong>Und DU kannst eine*r der Ersten sein<\/strong>, der die neue Geschmackspower probiert. Yay!!<\/p><p>Und ab 23.11. kannst du unsere <strong>rote, geschmackvolle Neuheit<\/strong> dann in Händler-Filialen wie EDEKA, REWE oder Kaufland sowie in unserem <a href=\"https:\/\/www.klosterkitchen.com\/de\/shop\/\" target=\"_blank\" title=\"Zum Shop von Kloster Kitchen!\"><span style=\"text-decoration:underline\"><strong>Onlineshop<\/strong><\/span><\/a> ergattern. Was meinst du, welcher Geschmack trifft nun ganz neu auf unsere echten Ingwerstückchen? Hol sie dir!<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "56b98785-abc1-474c-95af-a63700804260": {
+            "type": "logo_list",
+            "settings": {
+              "header": "Logo list",
+              "logo_size": 30,
+              "logo_size_mobile": 30,
+              "title": "",
+              "link": "",
+              "show_mobile": false,
+              "title1": "",
+              "link1": "",
+              "show_mobile1": false,
+              "title2": "",
+              "link2": "",
+              "show_mobile2": false,
+              "title3": "",
+              "link3": "",
+              "show_mobile3": false,
+              "title4": "",
+              "link4": "",
+              "show_mobile4": false,
+              "title5": "",
+              "link5": "",
+              "show_mobile5": false,
+              "title6": "",
+              "link6": "",
+              "show_mobile6": false
+            }
+          },
+          "3ee83b63-c1f7-4d04-a3a6-eaf04d97bac1": {
+            "type": "rich_text",
+            "settings": {
+              "content_position": "center",
+              "content_position_mob": "center",
+              "subheading": "Übrigens:",
+              "title": "",
+              "content": "<p>Qualifizierter Produkttester bist du für uns auch als Privatperson. Ebenso ist ein Instagram-Kanal optional und kein Muss! Alles was du für deine Bewerbung brauchst, sind deine neugierigen Geschmacksknospen sowie ein paar Minuten Zeit für den Fragebogen.<\/p><p>Auf die Plätze, fertig, <strong>shake to activate<\/strong>!<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "2a68fb1a-3eb9-4856-b098-ff35bbc7e61a": {
+            "type": "rich_text_image",
+            "settings": {
+              "subheading": "",
+              "title": "Anmelden",
+              "image": "shopify:\/\/shop_images\/pt-icon1.png",
+              "image_position": "left",
+              "content": "<p>Sag uns wer du bist! Über den Bewerberbutton kommst du zur Anmeldung.<br\/><br\/><br\/><br\/><\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "213d8ea8-a48d-407d-a5f6-04df4fa5fb9c": {
+            "type": "rich_text_image",
+            "settings": {
+              "subheading": "",
+              "title": "Rückmeldung abwarten",
+              "image": "shopify:\/\/shop_images\/pt-icon2.png",
+              "image_position": "right",
+              "content": "<p>Warte auf unsere Rückmeldung per Mail. Teilnahmeschluss für diese Runde ist der 22. November 2020.<br\/><br\/><br\/><br\/><\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "082c94ef-a594-4050-bbbd-ab67e1b6f353": {
+            "type": "rich_text_image",
+            "settings": {
+              "subheading": "",
+              "title": "Ausgewählt werden",
+              "image": "shopify:\/\/shop_images\/pt-icon3.png",
+              "image_position": "left",
+              "content": "<p>Du wurdest ausgewählt? Dann erhältst du bald unsere ingwerstarken <strong>Organic Power Drinks<\/strong> zum Test!<br\/><br\/><br\/><br\/><\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "0701c4e9-6e3c-4587-9484-9ca8351c93a0": {
+            "type": "rich_text_image",
+            "settings": {
+              "subheading": "",
+              "title": "Feedback geben",
+              "image": "shopify:\/\/shop_images\/pt-icon4.png",
+              "image_position": "right",
+              "content": "<p>Deine Meinung ist uns wichtig. Fülle den Feedback-Fragebogen online aus und hilf uns dabei, unsere Produkte noch besser zu machen.<br\/><br\/><br\/><br\/><\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "ce7f4de7-c941-4141-852c-a6de0aae8a95": {
+            "type": "instagram",
+            "settings": {
+              "subheading": "",
+              "title": "Sehen wir uns auf Instagram?",
+              "gallery_layout": "teaser"
+            }
+          }
+        },
+        "block_order": [
+          "40132c2d-fcd4-4c3f-b58d-af7acdc5e268",
+          "c5012731-cbcf-4b6d-9230-adc3fa28b99b",
+          "3fdc4392-3dc4-49a4-8538-f98805c4d01e",
+          "56b98785-abc1-474c-95af-a63700804260",
+          "3ee83b63-c1f7-4d04-a3a6-eaf04d97bac1",
+          "2a68fb1a-3eb9-4856-b098-ff35bbc7e61a",
+          "213d8ea8-a48d-407d-a5f6-04df4fa5fb9c",
+          "082c94ef-a594-4050-bbbd-ab67e1b6f353",
+          "0701c4e9-6e3c-4587-9484-9ca8351c93a0",
+          "ce7f4de7-c941-4141-852c-a6de0aae8a95"
+        ],
+        "settings": {}
+      },
+      "extra-template-4": {
+        "type": "extra-template-4",
+        "blocks": {
+          "b0fdb391-9b26-43b5-93db-fd6bcdb0177c": {
+            "type": "slideBanner",
+            "settings": {
+              "show_fullscreen": false,
+              "show_arrow": false,
+              "text_color": "#ffffff",
+              "button_color": "#363636",
+              "button_background": "#ffffff",
+              "image": "shopify:\/\/shop_images\/Shopbanner-stayhome-04-2021-Landingpage.jpg",
+              "apply_overlay": true,
+              "content_position": "bottomLeft",
+              "subheading": "Das Original mit Ingwerstückchen",
+              "title": "Organic Power Drinks",
+              "fontSizeDesktop_title": 40,
+              "fontSizeMobile_title": 30,
+              "title_highlight": "#ffe200",
+              "title_color": "#2c2c2b",
+              "title2": "",
+              "fontSizeDesktop": 40,
+              "fontSizeMobile": 30,
+              "enableLine": false,
+              "lineColor": "#ffffff",
+              "text": "",
+              "fontSizeTextDesktop": 40,
+              "fontSizeTextMobile": 30,
+              "button_1_text": "",
+              "button_1_link": "",
+              "button_2_text": "",
+              "button_2_link": ""
+            }
+          },
+          "974b1044-06e7-409e-a259-8bc677618018": {
+            "type": "rich_text",
+            "settings": {
+              "content_position": "right",
+              "content_position_mob": "right",
+              "subheading": "Nieder-Olm, 9. März 2021",
+              "title": "Eckes-Granini steigt beim Ingwershot Start-up Kloster Kitchen ein",
+              "content": "<p>Die Eckes-Granini Group GmbH, führender Anbieter von Fruchtsäften und fruchthaltigen Getränken in Europa, erwirbt eine Minderheitsbeteiligung (49 Prozent) an dem fränkischen Ingwershot Start-up Curameo AG und ihrer Marke Kloster Kitchen. Die bisherigen Gesellschafter, bestehend aus den Gründern und der INTRO Gruppe um den Unternehmer Hans Rudolf Wöhrl bleiben beteiligt. Der Gründer und CEO Mario Fürst zeichnet weiterhin strategisch und operativ verantwortlich für das Start-up. Auch organisatorische Änderungen sind nicht vorgesehen. Kloster Kitchen wird weiterhin unabhängig und eigenständig am Markt auftreten.<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "7aaf044d-2d45-4f92-a960-2d7cd2da61af": {
+            "type": "rich_text_image",
+            "settings": {
+              "subheading": "",
+              "title": "Marktführer im deutschen Shotmarkt",
+              "image": "shopify:\/\/shop_images\/Eckes-Granini-KK.jpg",
+              "image_position": "right",
+              "content": "<p>Das Ende 2015 gegründete Unternehmen Kloster Kitchen ist heute Marktführer im deutschen Shotmarkt. Kloster Kitchen produziert Ingwershots mit echten Ingwerstückchen in Bio-Qualität. Die Nürnberger gelten mit ihrem attraktiven Produktportfolio als Vorreiter der neuen Getränkekategorie „Organic Power Drinks“ und haben sich in den vergangenen Jahren dieses Premiumsegment erfolgreich erschlossen. Dabei konnte das Unternehmen neben dem stationären Handel insbesondere im E-Commerce ein starkes Wachstum verbuchen.<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "cd9b1a49-6bd2-4de1-9653-f3c34e2151ee": {
+            "type": "rich_text",
+            "settings": {
+              "content_position": "right",
+              "content_position_mob": "right",
+              "subheading": "",
+              "title": "Startup Kloster Kitchen erfolgreich ohne \"Höhle der Löwen\"",
+              "content": "<p>„Mit unserem Einstieg bei Kloster Kitchen wollen wir am künftigen Erfolg des Unternehmens partizipieren und werden es konstruktiv als Minderheitsgesellschafter begleiten. Das heißt, dass wir Mario Fürst und seinem Team selbstverständlich mit unserem Know-how zur Seite stehen“<\/p><p>betont Tim Berger, CEO der Eckes-Granini Gruppe<\/p><p>„Durch die Beteiligung von Eckes-Granini gewinnen wir nicht nur einen starken Partner, sondern profitieren künftig auch von der langjährigen Erfahrung und Expertise des europäischen Marktführers. So können wir unseren Wachstumskurs im Segment der Organic Power Drinks weiter vorantreiben“<\/p><p>erklärt Mario Fürst, Gründer von Kloster Kitchen.<\/p><p>„Die INTRO versteht sich als Turbo, um junge Unternehmen durch fachliche Unterstützung und Liquidität vom Start-up zu nachhaltiger Profitabilität zu verhelfen. Wenn ein Produkt wie Kloster Kitchen reif für den Weltmarkt ist, suchen wir die Partnerschaft mit international aufgestellten Unternehmen, wie in diesem Fall. Dafür können wir uns keinen besseren Partner als Eckes-Granini vorstellen“<\/p><p>erklärt Hans Rudolf Wöhrl, Inhaber der INTRO Gruppe.<\/p>",
+              "link_text": "Zum Shop",
+              "link_url": "shopify:\/\/collections\/all"
+            }
+          },
+          "68709e7c-103c-402d-93da-aeb9b0d2a34a": {
+            "type": "rich_text",
+            "settings": {
+              "content_position": "center",
+              "content_position_mob": "center",
+              "subheading": "",
+              "title": "USP der überzeugt – Ingwerstückchen",
+              "content": "<p>Hans Rudolf Wöhrl war kein Ingwerfan erster Stunde. Es war die Kombination und Einzigartigkeit des Getränks und der Gründergeist, die ihn motivierten, einen siebenstelligen Betrag zu investieren. Denn die Ingwershots von Kloster Kitchen sind spürbar ein Stückchen anders und unterscheiden sich klar von ihren Mitbewerbern. In ihnen steckt die Kraft des Bio-Ingwers in Form echter Stückchen. Dadurch bleiben die wertvollen Wirkstoffe und Spurenelemente bestmöglich erhalten. Schmeckt wie selbstgemacht – hochwertige Bio-Zutaten, der Verzicht auf raffinierten Zucker, Farb- und Konservierungsstoffe sowie künstliche Aromen sorgen für ein natürliches Geschmackserlebnis.<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "14cf191a-48e0-45a6-a3eb-c1d54dcb64af": {
+            "type": "rich_text",
+            "settings": {
+              "content_position": "left",
+              "content_position_mob": "left",
+              "subheading": "",
+              "title": "Die Hard Facts im Überblick:",
+              "content": "<p>• 44 Mitarbeiter <br\/>• Mehr als 30 Millionen verkaufte SHOT-Portionen seit Gründung<br\/>• Umsatz 2020: 6,7 Millionen € (fast verfünffacht im Vgl. 2018)<br\/>• Vertrieb im klassischen Handel, eigenen Webshop und Amazon<br\/>• 2020: Start des digitalen (internationalen) Verkaufs über Amazon Launchpad<br\/>• 2-fach ausgezeichnet mit German Brand Award GOLD WINNER und WINNER Award 2020<br\/>• Mehrfach ausgezeichnet für Produktinnovation 2021<br\/>• TV-Testsieger im WDR Verbrauchertest „Ingwershots“ 2020<br\/>• Langfristiges Ziel: internationale Marktpenetration mit einem Umsatz von 100 Millionen Euro<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "e230388f-6a0b-4316-9db4-b8d6ffbc35b5": {
+            "type": "icon_list",
+            "settings": {
+              "title": "",
+              "logo_size": 200,
+              "logo_size_mobile": 30,
+              "font_size_desktop": 22,
+              "font_size_mobile": 12,
+              "image": "shopify:\/\/shop_images\/icon-echte-ingwerstuecke.png",
+              "description": "Mit Ingwerstückchen",
+              "link": "",
+              "show_mobile": false,
+              "image1": "shopify:\/\/shop_images\/icon-klosterrezeptur_f0997436-9ab5-4843-ab0b-264a4ee9e5de.png",
+              "description1": "Alte Klosterrezeptur",
+              "link1": "",
+              "show_mobile1": false,
+              "image2": "shopify:\/\/shop_images\/icon-bio-logo_2a46702e-a558-4db6-809d-2aea3a97ffd9.png",
+              "description2": "Bio und vegan aus Überzeugung",
+              "link2": "",
+              "show_mobile2": false,
+              "description3": "",
+              "link3": "",
+              "show_mobile3": false,
+              "description4": "",
+              "link4": "",
+              "show_mobile4": false,
+              "description5": "",
+              "link5": "",
+              "show_mobile5": false
+            }
+          }
+        },
+        "block_order": [
+          "b0fdb391-9b26-43b5-93db-fd6bcdb0177c",
+          "974b1044-06e7-409e-a259-8bc677618018",
+          "7aaf044d-2d45-4f92-a960-2d7cd2da61af",
+          "cd9b1a49-6bd2-4de1-9653-f3c34e2151ee",
+          "68709e7c-103c-402d-93da-aeb9b0d2a34a",
+          "14cf191a-48e0-45a6-a3eb-c1d54dcb64af",
+          "e230388f-6a0b-4316-9db4-b8d6ffbc35b5"
+        ],
+        "settings": {}
+      },
+      "extra-template-5": {
+        "type": "extra-template-5",
+        "blocks": {
+          "6b11079f-4562-4b8a-b919-619e2976f089": {
+            "type": "slideBanner",
+            "settings": {
+              "show_fullscreen": false,
+              "show_arrow": false,
+              "text_color": "#ffffff",
+              "button_color": "#363636",
+              "button_background": "#ffffff",
+              "image": "shopify:\/\/shop_images\/Familie_Woehrl.jpg",
+              "apply_overlay": true,
+              "content_position": "bottomLeft",
+              "subheading": "Das geheime Ingwer Investment",
+              "title": "der Familie Wöhrl",
+              "fontSizeDesktop_title": 33,
+              "fontSizeMobile_title": 20,
+              "title_highlight": "#ffe200",
+              "title_color": "#2c2c2b",
+              "title2": "",
+              "fontSizeDesktop": 40,
+              "fontSizeMobile": 48,
+              "enableLine": false,
+              "lineColor": "#ffffff",
+              "text": "",
+              "fontSizeTextDesktop": 40,
+              "fontSizeTextMobile": 30,
+              "button_1_text": "",
+              "button_1_link": "",
+              "button_2_text": "",
+              "button_2_link": ""
+            }
+          },
+          "192fb313-840e-4feb-8d3b-33c085454ac9": {
+            "type": "rich_text_image",
+            "settings": {
+              "subheading": "",
+              "title": "Business Angel eilt zur Rettung",
+              "image": "shopify:\/\/shop_images\/GermanInnovationAwardGewinner_2.jpg",
+              "image_position": "right",
+              "content": "<p>Als die Banken dem <strong>Gründer Mario Fürst<\/strong> 2018 keine Kredite für weiteres Wachstum geben wollten, kam der heute als Business Angel fungierende Herr Wöhrl ins Spiel. Ihm war sofort klar, dass der Gründer die Produktverfügbarkeit sicherstellen musste, um weiter zu wachsen und ein verlässlicher Partner sein zu können. Und so investierte Hans Rudolf Wöhrl einen siebenstelligen Betrag bei <strong>Kloster Kitchen<\/strong>.<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "305d29ab-703c-4fcd-bfcb-e39f7bb12455": {
+            "type": "icon_list",
+            "settings": {
+              "title": "",
+              "logo_size": 200,
+              "logo_size_mobile": 30,
+              "font_size_desktop": 20,
+              "font_size_mobile": 12,
+              "image": "shopify:\/\/shop_images\/icon-echte-ingwerstuecke.png",
+              "description": "",
+              "link": "",
+              "show_mobile": false,
+              "image1": "shopify:\/\/shop_images\/icon-klosterrezeptur_f0997436-9ab5-4843-ab0b-264a4ee9e5de.png",
+              "description1": "",
+              "link1": "",
+              "show_mobile1": false,
+              "image2": "shopify:\/\/shop_images\/icon-bio-logo_2a46702e-a558-4db6-809d-2aea3a97ffd9.png",
+              "description2": "",
+              "link2": "",
+              "show_mobile2": false,
+              "image3": "shopify:\/\/shop_images\/icon-cent-pro-shot.png",
+              "description3": "",
+              "link3": "",
+              "show_mobile3": false,
+              "description4": "",
+              "link4": "",
+              "show_mobile4": false,
+              "description5": "",
+              "link5": "",
+              "show_mobile5": false
+            }
+          },
+          "7e959956-1ad5-45b2-904a-dcad31d34817": {
+            "type": "testimonial",
+            "settings": {
+              "autoplay": true,
+              "cycle_speed": 5,
+              "background": "#eaeaea",
+              "text_color": "#1c1b1b",
+              "quote": "<p>Share what your customers are saying about your products, your company...<\/p>",
+              "name": "",
+              "quote1": "<p>Share what your customers are saying about your products, your company...<\/p>",
+              "name1": "",
+              "quote2": "<p>Share what your customers are saying about your products, your company...<\/p>",
+              "name2": "",
+              "quote3": "<p>Share what your customers are saying about your products, your company...<\/p>",
+              "name3": "",
+              "quote4": "<p>Share what your customers are saying about your products, your company...<\/p>",
+              "name4": "",
+              "quote5": "<p>Share what your customers are saying about your products, your company...<\/p>",
+              "name5": ""
+            }
+          }
+        },
+        "block_order": [
+          "6b11079f-4562-4b8a-b919-619e2976f089",
+          "192fb313-840e-4feb-8d3b-33c085454ac9",
+          "305d29ab-703c-4fcd-bfcb-e39f7bb12455",
+          "7e959956-1ad5-45b2-904a-dcad31d34817"
+        ],
+        "settings": {}
+      },
+      "extra-template-6": {
+        "type": "extra-template-6",
+        "blocks": {
+          "360d7828-939f-4e99-8db6-6fc145e233df": {
+            "type": "slideBanner",
+            "settings": {
+              "show_fullscreen": false,
+              "show_arrow": false,
+              "text_color": "#ffffff",
+              "button_color": "#363636",
+              "button_background": "#ffffff",
+              "image": "shopify:\/\/shop_images\/30-Mio-Ingwershots.jpg",
+              "apply_overlay": true,
+              "content_position": "bottomLeft",
+              "subheading": "Fränkisches Startup verkauft mehr als 30 Mio.",
+              "title": "Ingwer Shots",
+              "fontSizeDesktop_title": 31,
+              "fontSizeMobile_title": 12,
+              "title_highlight": "#ffe200",
+              "title_color": "#2c2c2b",
+              "title2": "",
+              "fontSizeDesktop": 40,
+              "fontSizeMobile": 30,
+              "enableLine": false,
+              "lineColor": "#ffffff",
+              "text": "",
+              "fontSizeTextDesktop": 40,
+              "fontSizeTextMobile": 30,
+              "button_1_text": "",
+              "button_1_link": "",
+              "button_2_text": "",
+              "button_2_link": ""
+            }
+          },
+          "6daaf596-524b-437b-afd8-5b4ad5f66478": {
+            "type": "rich_text_image",
+            "settings": {
+              "subheading": "",
+              "title": "Mit Vollgas an die Spitze: Kloster Kitchen erzielt Rekordumsatz und verkauft mehr als 30 Mio. Portionen Ingwer Shots",
+              "image": "shopify:\/\/shop_images\/GermanInnovationAwardGewinner_2.jpg",
+              "image_position": "right",
+              "content": "<p>Es ist die Ingwer-Erfolgsstory des Gründers Mario Fürst und seinem 6-köpfigen Führungsteam, die zusammen mit dem prominenten Investor Hans Rudolf Wöhrl ganz klare Ziele haben: Kloster Kitchen soll in jedem deutschen Supermarkt erhältlich sein und Category Leader unter den Organic Power Drinks werden.<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "5a338d83-a15e-411b-b465-f164dbe54761": {
+            "type": "icon_list",
+            "settings": {
+              "title": "",
+              "logo_size": 200,
+              "logo_size_mobile": 30,
+              "font_size_desktop": 22,
+              "font_size_mobile": 12,
+              "image": "shopify:\/\/shop_images\/icon-echte-ingwerstuecke.png",
+              "description": "",
+              "link": "",
+              "show_mobile": false,
+              "image1": "shopify:\/\/shop_images\/icon-klosterrezeptur_f0997436-9ab5-4843-ab0b-264a4ee9e5de.png",
+              "description1": "",
+              "link1": "",
+              "show_mobile1": false,
+              "image2": "shopify:\/\/shop_images\/icon-bio-logo_2a46702e-a558-4db6-809d-2aea3a97ffd9.png",
+              "description2": "",
+              "link2": "",
+              "show_mobile2": false,
+              "image3": "shopify:\/\/shop_images\/icon-cent-pro-shot.png",
+              "description3": "",
+              "link3": "",
+              "show_mobile3": false,
+              "description4": "",
+              "link4": "",
+              "show_mobile4": false,
+              "description5": "",
+              "link5": "",
+              "show_mobile5": false
+            }
+          }
+        },
+        "block_order": [
+          "360d7828-939f-4e99-8db6-6fc145e233df",
+          "6daaf596-524b-437b-afd8-5b4ad5f66478",
+          "5a338d83-a15e-411b-b465-f164dbe54761"
+        ],
+        "settings": {}
+      },
+      "extra-template-7": {
+        "type": "extra-template-7",
+        "blocks": {
+          "29f274e5-0d24-4a5b-82e7-9f92076a10f3": {
+            "type": "slideBanner",
+            "settings": {
+              "show_fullscreen": false,
+              "show_arrow": false,
+              "text_color": "#ffffff",
+              "button_color": "#363636",
+              "button_background": "#ffffff",
+              "image": "shopify:\/\/shop_images\/Produkttest_Lieferung.jpg",
+              "apply_overlay": true,
+              "content_position": "bottomLeft",
+              "subheading": "Family",
+              "title": "Friends Deals",
+              "fontSizeDesktop_title": 40,
+              "fontSizeMobile_title": 30,
+              "title_highlight": "#ffe200",
+              "title_color": "#2c2c2b",
+              "title2": "",
+              "fontSizeDesktop": 40,
+              "fontSizeMobile": 30,
+              "enableLine": false,
+              "lineColor": "#ffffff",
+              "text": "",
+              "fontSizeTextDesktop": 40,
+              "fontSizeTextMobile": 30,
+              "button_1_text": "",
+              "button_1_link": "",
+              "button_2_text": "",
+              "button_2_link": ""
+            }
+          },
+          "33c5b2d5-fa90-46f1-8b56-ee2d41ced10d": {
+            "type": "icon_list",
+            "settings": {
+              "title": "",
+              "logo_size": 200,
+              "logo_size_mobile": 60,
+              "font_size_desktop": 22,
+              "font_size_mobile": 12,
+              "image": "shopify:\/\/shop_images\/ECKES_granini-bildmaterial_1280x1280_2x_fe886e55-0bda-406c-ac9e-199c4e4e608c.jpg",
+              "description": "",
+              "link": "",
+              "show_mobile": false,
+              "description1": "",
+              "link1": "",
+              "show_mobile1": false,
+              "description2": "",
+              "link2": "",
+              "show_mobile2": false,
+              "description3": "",
+              "link3": "",
+              "show_mobile3": false,
+              "description4": "",
+              "link4": "",
+              "show_mobile4": false,
+              "description5": "",
+              "link5": "",
+              "show_mobile5": false
+            }
+          },
+          "d424d539-fafd-4bcd-933a-786dcf7e2db5": {
+            "type": "icon_list",
+            "settings": {
+              "title": "",
+              "logo_size": 200,
+              "logo_size_mobile": 60,
+              "font_size_desktop": 22,
+              "font_size_mobile": 12,
+              "image": "shopify:\/\/shop_images\/icon-testsieger.png",
+              "description": "Geschmacks-Testsieger",
+              "link": "",
+              "show_mobile": false,
+              "image1": "shopify:\/\/shop_images\/icon-bio-logo_2a46702e-a558-4db6-809d-2aea3a97ffd9.png",
+              "description1": "Aus Überzeugung bio und vegan",
+              "link1": "",
+              "show_mobile1": false,
+              "image2": "shopify:\/\/shop_images\/icon-morgenroutine.png",
+              "description2": "Perfekt für die Morgenroutine",
+              "link2": "",
+              "show_mobile2": false,
+              "description3": "",
+              "link3": "",
+              "show_mobile3": false,
+              "description4": "",
+              "link4": "",
+              "show_mobile4": false,
+              "description5": "",
+              "link5": "",
+              "show_mobile5": false
+            }
+          },
+          "e03d5628-11ef-4945-94d4-e868576e556e": {
+            "type": "rich_text_image",
+            "settings": {
+              "subheading": "",
+              "title": "Paketinhalt",
+              "image": "shopify:\/\/shop_images\/Kloster-Kitchen-Family-and-Friends-052021_Slide-2.jpg",
+              "image_position": "left",
+              "content": "<p>1x IngwerTRINK BIGSHOT 250ml (<br\/>1x KurkumaTRINK BIGSHOT 250ml <br\/>1x GranatapfelTRINK BIGSHOT 250ml <br\/>1x IngwerTRINK ONESHOT 30ml <br\/>1x KurkumaTRINK ONESHOT 30ml <br\/>1x GranatapfelTRINK ONESHOT 30ml <br\/>3x Kloster Kitchen SHOT Portionglas<\/p><p><strong>Gutscheincode:<\/strong> #willstdumitmirgehen<\/p>",
+              "link_text": "Zur Superfoodbox",
+              "link_url": "https:\/\/www.klosterkitchen.com\/de\/friends#:~:text=Gutscheincode%3A%20%23willstdumitmirgehen-,ZUR%20SUPERFOODBOX,-Gutscheincode%3A%20%23jaichwill"
+            }
+          },
+          "f41efee7-8d68-48bd-9f8d-e42acf53f8c4": {
+            "type": "rich_text_image",
+            "settings": {
+              "subheading": "",
+              "title": "30% auf alles",
+              "image": "shopify:\/\/shop_images\/Kloster-Kitchen-Family-and-Friends-052021_Slide-3.jpg",
+              "image_position": "right",
+              "content": "<p><strong>Gutscheincode:<\/strong> #jaichwill<\/p>",
+              "link_text": "Zum Shop",
+              "link_url": ""
+            }
+          },
+          "be4cc0d9-b579-4c7c-8b88-52e06dd2bee8": {
+            "type": "rich_text",
+            "settings": {
+              "content_position": "center",
+              "content_position_mob": "center",
+              "subheading": "",
+              "title": "Facts, facts, facts",
+              "content": "<p> ✔ <strong>keine Versandkosten<\/strong> innerhalb Deutschlands<\/p><p>✔ Lieferung <strong>innerhalb von 1-2 Tagen<\/strong><\/p><p>✔ mit<strong> Ingwerstückchen!<\/strong> <\/p><p>✔ Geschmacks-<strong>TESTSIEGER<\/strong><\/p><p>✔ German Innovation Award Winner 2021<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          }
+        },
+        "block_order": [
+          "29f274e5-0d24-4a5b-82e7-9f92076a10f3",
+          "33c5b2d5-fa90-46f1-8b56-ee2d41ced10d",
+          "d424d539-fafd-4bcd-933a-786dcf7e2db5",
+          "e03d5628-11ef-4945-94d4-e868576e556e",
+          "f41efee7-8d68-48bd-9f8d-e42acf53f8c4",
+          "be4cc0d9-b579-4c7c-8b88-52e06dd2bee8"
+        ],
+        "settings": {}
+      },
+      "extra-template-8": {
+        "type": "extra-template-8",
+        "blocks": {
+          "c77096cd-caa8-47a6-a6e3-27330e76fea8": {
+            "type": "slideBanner",
+            "settings": {
+              "show_fullscreen": false,
+              "show_arrow": false,
+              "text_color": "#ffffff",
+              "button_color": "#363636",
+              "button_background": "#ffffff",
+              "image": "shopify:\/\/shop_images\/LP-Banner_Probierpaket_2425x780_2021etQD7CcNj0gtw.jpg",
+              "apply_overlay": true,
+              "content_position": "bottomLeft",
+              "subheading": "",
+              "title": "",
+              "fontSizeDesktop_title": 40,
+              "fontSizeMobile_title": 30,
+              "title_highlight": "#ffffff",
+              "title_color": "#ffffff",
+              "title2": "",
+              "fontSizeDesktop": 40,
+              "fontSizeMobile": 30,
+              "enableLine": false,
+              "lineColor": "#ffffff",
+              "text": "",
+              "fontSizeTextDesktop": 40,
+              "fontSizeTextMobile": 30,
+              "button_1_text": "",
+              "button_1_link": "",
+              "button_2_text": "",
+              "button_2_link": ""
+            }
+          },
+          "9c2e0ceb-25d5-4dfd-b4d4-0eba862e78bb": {
+            "type": "icon_list",
+            "settings": {
+              "title": "",
+              "logo_size": 200,
+              "logo_size_mobile": 30,
+              "font_size_desktop": 22,
+              "font_size_mobile": 12,
+              "image": "shopify:\/\/shop_images\/icon-echte-ingwerstuecke.png",
+              "description": "Mit Ingwerstückchen",
+              "link": "",
+              "show_mobile": false,
+              "image1": "shopify:\/\/shop_images\/icon-klosterrezeptur_f0997436-9ab5-4843-ab0b-264a4ee9e5de.png",
+              "description1": "Alte Kloster Rezeptur",
+              "link1": "",
+              "show_mobile1": false,
+              "image2": "shopify:\/\/shop_images\/icon-bio-logo_2a46702e-a558-4db6-809d-2aea3a97ffd9.png",
+              "description2": "Bio & vegan aus Überzeugung",
+              "link2": "",
+              "show_mobile2": false,
+              "image3": "shopify:\/\/shop_images\/icon-cent-pro-shot.png",
+              "description3": "ab 0,52 € pro <br> Shot",
+              "link3": "",
+              "show_mobile3": false,
+              "description4": "",
+              "link4": "",
+              "show_mobile4": false,
+              "description5": "",
+              "link5": "",
+              "show_mobile5": false
+            }
+          },
+          "7f7d9b30-7445-4620-beea-c70f37166a1c": {
+            "type": "rich_text",
+            "settings": {
+              "content_position": "center",
+              "content_position_mob": "center",
+              "subheading": "36 Shots + 4 Gläser für nur 27,90€ (statt 42,80€)",
+              "title": "Teste jetzt unsere Ingwer Shots!",
+              "content": "<p>Mit unserem Probierpaket erhältst du 36 Ingwer Shots in 3x250ml Glasflaschen und bekommst kostenlos 4 original Kloster Kitchen Shot Gläser (im Wert von 14,90€) dazu. <\/p><p>Perfekt für deine tägliche Routine und den leckeren Ingwer Frischekick für zwischendurch!<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "02b3773b-b3c8-43ae-9c27-0db7b679c5d3": {
+            "type": "rich_text_image",
+            "settings": {
+              "subheading": "",
+              "title": "BIGSHOT",
+              "image": "shopify:\/\/shop_images\/3erFaecherBIGSHOT_1280x1280_2x_bf561cef-5c60-4999-adfd-522488a58fc5.jpg",
+              "image_position": "left",
+              "content": "<p>✔ 36 Shots für 36 Wohlfühlmomente<\/p><p>✔ nur 0,77€ pro Ingwershot<\/p><p>✔ <strong>keine Versandkosten<\/strong> innerhalb Deutschlands<\/p><p>✔ bequeme Lieferung nach Hause <strong>innerhalb von 1-2 Tagen<\/strong><\/p><p>✔ <strong>leckerintensive Ingwerstückchen!<\/strong> <\/p><p>✔ Geschmacks-<strong>TESTSIEGER<\/strong><\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "a2d71e91-ebcb-446a-b3bc-a598b1902f23": {
+            "type": "collection",
+            "settings": {
+              "header": "",
+              "layout_mode": "carousel",
+              "show_product_info": true,
+              "show_vendor": false,
+              "show_color_swatch": false,
+              "grid_mobile_items_per_row": "2",
+              "grid_desktop_items_per_row": 4,
+              "collection": "superfoods",
+              "title": "",
+              "grid_items_count": 8,
+              "button_text": "View all products"
+            }
+          },
+          "59de755e-9f8f-414c-9d46-acd3b2969b5e": {
+            "type": "testimonial",
+            "settings": {
+              "autoplay": true,
+              "cycle_speed": 5,
+              "background": "#eaeaea",
+              "text_color": "#1c1b1b",
+              "logo": "shopify:\/\/shop_images\/JanR_Bild.png",
+              "quote": "<p>Da hilft mir ein Shot für die extra Energie - lecker, leicht scharf mit den Stückchen fürs Mundgefühl! Espresso dazu und los gehts!<\/p>",
+              "name": "Jan R.",
+              "logo1": "shopify:\/\/shop_images\/NatalieR_Bild.png",
+              "quote1": "<p>Meine Favoriten sind die Ingwer und Granatapfel Shots. Es ist die perfekte Abwechslung und gehört mittlerweile zu meiner Morgenroutine. Als nächstes probiere ich die neuen SHOT+ FRUIT. <\/p>",
+              "name1": "Natalie R.",
+              "logo2": "shopify:\/\/shop_images\/ElkeS_Bild_7bad4e72-1080-4299-a124-c9b93e23c7c0.png",
+              "quote2": "<p>Ich favorisiere den IngwerTRINK und den GranatapfelTRINK, weil lecker im Geschmack mit Ingwerstückchen und dazu noch bio und vegan.<\/p>",
+              "name2": "Elke S.",
+              "logo3": "shopify:\/\/shop_images\/MichaelS_Bild.png",
+              "quote3": "<p>Klein und fein für unterwegs oder für daheim in der großen Portion. Super lecker und dazu auch noch mega gesund! Was will man mehr? Hat einen festen Platz im Kühlschrank!<\/p>",
+              "name3": "Michael S.",
+              "logo4": "shopify:\/\/shop_images\/VeitM_Bild.png",
+              "quote4": "<p>Der IngwerTRINK gehört für mich einfach zum Frühstück dazu. Durch die Ingwerstückchen ist der Shot der perfekte Powerbooster für den Start in den Tag!<\/p>",
+              "name4": "Veit M.",
+              "logo5": "shopify:\/\/shop_images\/Bewertung_TobiasDoering_Bild_V2.png",
+              "quote5": "<p>Ich habe direkt den Kaffee in meiner Morgenroutine durch eure superleckeren Shots ersetzt. Funktioniert wunderbar, schmeckt wunderbar und ist gesund! Außerdem bin ich als Ex-Raucher dankbar, dass der Ingwer meine Lunge im Selbstheilungsprozess unterstützt.<\/p>",
+              "name5": "Tobi D."
+            }
+          }
+        },
+        "block_order": [
+          "c77096cd-caa8-47a6-a6e3-27330e76fea8",
+          "9c2e0ceb-25d5-4dfd-b4d4-0eba862e78bb",
+          "7f7d9b30-7445-4620-beea-c70f37166a1c",
+          "02b3773b-b3c8-43ae-9c27-0db7b679c5d3",
+          "a2d71e91-ebcb-446a-b3bc-a598b1902f23",
+          "59de755e-9f8f-414c-9d46-acd3b2969b5e"
+        ],
+        "settings": {}
+      },
+      "linktree-page": {
+        "type": "linktree-page",
+        "blocks": {
+          "c0810b24-3e18-4c60-8fd3-1be361250377": {
+            "type": "button",
+            "settings": {
+              "button_text": "Online Shop",
+              "link": "https:\/\/www.klosterkitchen.de"
+            }
+          },
+          "91f382ef-9ea7-4854-b7a4-39fc21664541": {
+            "type": "button",
+            "settings": {
+              "button_text": "Sommergewinnspiel",
+              "link": ""
+            }
+          },
+          "ffb58f22-a704-4b8b-93d4-aeb061b7c44f": {
+            "type": "button",
+            "settings": {
+              "button_text": "Newsletter abonnieren - 5€ Gutschein sichern",
+              "link": ""
+            }
+          },
+          "62da6580-b823-42b5-8712-be3b2d600587": {
+            "type": "button",
+            "settings": {
+              "button_text": "",
+              "link": ""
+            }
+          },
+          "d4f30b7f-c230-436f-a791-6ae7210f1ff6": {
+            "type": "button",
+            "settings": {
+              "button_text": "Händlersuche",
+              "link": "shopify:\/\/pages\/store-locator"
+            }
+          },
+          "c472b429-182c-41a1-b725-2de4b58ea256": {
+            "type": "button",
+            "settings": {
+              "button_text": "Kraftvolle Stellenangebote",
+              "link": ""
+            }
+          },
+          "ab785d16-c2c8-47b7-b42d-b9163b7e487d": {
+            "type": "button",
+            "settings": {
+              "button_text": "Teilnahmebedingungen Instagram",
+              "link": "shopify:\/\/blogs\/teilnahmebedingungen"
+            }
+          },
+          "34dae085-4b65-444a-8e71-1ccb9b356133": {
+            "type": "button",
+            "settings": {
+              "button_text": "Datenschutz",
+              "link": "shopify:\/\/pages\/datenschutzerklarung"
+            }
+          },
+          "881d127a-661e-4abb-8754-3ce1ee827866": {
+            "type": "button",
+            "settings": {
+              "button_text": "Impressum",
+              "link": "shopify:\/\/pages\/impressum"
+            }
+          }
+        },
+        "block_order": [
+          "c0810b24-3e18-4c60-8fd3-1be361250377",
+          "91f382ef-9ea7-4854-b7a4-39fc21664541",
+          "ffb58f22-a704-4b8b-93d4-aeb061b7c44f",
+          "62da6580-b823-42b5-8712-be3b2d600587",
+          "d4f30b7f-c230-436f-a791-6ae7210f1ff6",
+          "c472b429-182c-41a1-b725-2de4b58ea256",
+          "ab785d16-c2c8-47b7-b42d-b9163b7e487d",
+          "34dae085-4b65-444a-8e71-1ccb9b356133",
+          "881d127a-661e-4abb-8754-3ce1ee827866"
+        ],
+        "settings": {
+          "title": ""
+        }
+      },
+      "extra-template-9": {
+        "type": "extra-template-9",
+        "blocks": {
+          "cebc0f27-9dce-45fc-bbf1-59fa6be28e72": {
+            "type": "slideBanner",
+            "settings": {
+              "show_fullscreen": false,
+              "show_arrow": false,
+              "text_color": "#ffffff",
+              "button_color": "#363636",
+              "button_background": "#ffffff",
+              "image": "shopify:\/\/shop_images\/Sinnfluencer_Banner.jpg",
+              "apply_overlay": true,
+              "content_position": "bottomRight",
+              "subheading": "",
+              "title": "Sinnfluencer",
+              "fontSizeDesktop_title": 50,
+              "fontSizeMobile_title": 30,
+              "title_highlight": "#ffe200",
+              "title_color": "#2c2c2b",
+              "title2": "",
+              "fontSizeDesktop": 40,
+              "fontSizeMobile": 30,
+              "enableLine": true,
+              "lineColor": "#ffffff",
+              "text": "Echte Powerfrauen verraten, was sie antreibt und wie sie motiviert bleiben!",
+              "fontSizeTextDesktop": 25,
+              "fontSizeTextMobile": 30,
+              "button_1_text": "",
+              "button_1_link": "",
+              "button_2_text": "",
+              "button_2_link": ""
+            }
+          },
+          "45e90af7-24d7-4e45-8128-2c62df17da09": {
+            "type": "rich_text",
+            "settings": {
+              "content_position": "center",
+              "content_position_mob": "center",
+              "subheading": "Den Sinn finden",
+              "title": "Sinnspiration",
+              "content": "<p>Immer das Beste geben, erfolgreich sein, Leistung bringen – das wollen wahrscheinlich die meisten. Aber oft genug kommt etwas zwischen uns und unseren Erfolg. Kleine Alltagsproblemchen rauben uns den letzten Nerv, Zeit hat sowieso niemand und wo soll man eigentlich die Motivation für alles herbekommen?  <br\/>Hier kommt die <strong>Sinnspiration<\/strong> ins Spiel! <br\/><br\/>Wir möchten dir heute <strong>zwei sinnspirierende Powerfrauen vorstellen<\/strong>, die sich immer neu motivieren und an ihre Grenzen gehen und das Ganze außerdem authentisch und echt mit ihren Followern teilen. Die beiden Mädels teilen hier ihre Story, die dich hoffentlich genauso inspirieren wie uns!<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "ffb3f371-5ad9-4ed9-b984-f22fedb1bac6": {
+            "type": "rich_text_image",
+            "settings": {
+              "subheading": "Schwimmen, Laufen, Radfahren, Wandern, Bouldern: JA!",
+              "title": "Sarah Pappusch",
+              "image": "shopify:\/\/shop_images\/Sarah_Sinnfluencer.png",
+              "image_position": "right",
+              "content": "<p>Sarah ist eine <strong>leidenschaftliche Hobbysportlerin<\/strong>: egal ob Schwimmen, Laufen, Radfahren, Wandern oder Bouldern! <br\/><br\/>Sarah ist schon immer sportbegeistert, hatte zwischenzeitlich aber ein <strong>Motivationstief<\/strong>. Dadurch hat sie eine Weile sogar komplett mit dem Sport aufgehört. Mit ihrem athletischen Papa als Vorbild <strong>fand sie aber wieder zu sich selbst<\/strong> und startete erneut voll durch. Ihre Community nimmt sie inzwischen mit auf ihre Abenteuer – egal ob über Stock oder Stein! <br\/><br\/>Im Interview mit uns erzählt sie noch mehr über ihren <strong>bewussten Lebensstil <\/strong>und gibt <strong>Motivationstipps<\/strong>! <\/p><p>↓<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "21158649-c25e-4264-99fd-a8ccb2b3d1d1": {
+            "type": "featured_video",
+            "settings": {
+              "heading": "",
+              "background_color": "#ffe200",
+              "section_size": "large",
+              "section_height": 200,
+              "text_color": "#2c2c2b",
+              "subheading": "",
+              "title": "Interview mit Sinnfluencerin Sarah",
+              "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            }
+          },
+          "7291314d-33dc-4990-8817-27b1d35621d7": {
+            "type": "rich_text_image",
+            "settings": {
+              "subheading": "Leidenschaftlich dabei, egal ob Berg- oder Wassersport",
+              "title": "Annika Vossen",
+              "image": "shopify:\/\/shop_images\/Annika_Sinnfluencer_5d41522d-0243-424f-bdd4-6d033fb56492.png",
+              "image_position": "left",
+              "content": "<p>Annika ist eine <strong>echte Sportskanone<\/strong>. Egal ob in den Berge oder im Wasser – sie ist überall in ihrem Element! <\/p><p>Annika genießt vor allem die Zeit, die sie durch <strong>Outdoorsport in der Natur<\/strong> verbringt. Sie hat einen <strong>bewussten Lebensstil <\/strong>und dieser zieht sich durch ihr gesamtes Leben. Denn neben Sport und Selbstständigkeit hat die Powerfrau sich jetzt ein neues Ziel gesteckt: das Studium zur veganen Ernährungsberaterin. <\/p><p>Im Interview erzählt sie uns mehr über <strong>ihre Beweggründe<\/strong> und auch Annika hat einige <strong>Tipps für dich<\/strong>, wie es mit der <strong>Motivation<\/strong> klappen kann! <br\/>↓<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "527e82c8-ccef-41e8-9f4a-b8d31459cd13": {
+            "type": "featured_video",
+            "settings": {
+              "heading": "",
+              "background_color": "#ffe200",
+              "section_size": "large",
+              "section_height": 200,
+              "text_color": "#2c2c2b",
+              "subheading": "",
+              "title": "Interview mit Sinnfluencerin Annika",
+              "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            }
+          },
+          "9206dc02-72f5-41ca-a580-239da50bf15d": {
+            "type": "rich_text_image",
+            "settings": {
+              "subheading": "Kloster Kitchens SHOTs",
+              "title": "Dein Frischekick für's Motivationstief",
+              "image": "shopify:\/\/shop_images\/Sinnfluencer_Abschluss.jpg",
+              "image_position": "left",
+              "content": "<p>Unsere Organic Power Drinks sind der perfekte Begleiter für alle deinen aktiven Abenteurer.  <\/p><p>✔ das Original! <br\/>✔ mit Ingwerstückchen <br\/>✔ bio und vegan – aus Überzeugung<br\/>✔ alte überlieferte Klosterrezeptur<\/p>",
+              "link_text": "",
+              "link_url": ""
+            }
+          },
+          "5295a40c-592b-4de6-a5c0-95b2aa0f417e": {
+            "type": "icon_list",
+            "settings": {
+              "title": "",
+              "logo_size": 200,
+              "logo_size_mobile": 30,
+              "font_size_desktop": 12,
+              "font_size_mobile": 12,
+              "image": "shopify:\/\/shop_images\/icon-echte-ingwerstuecke.png",
+              "description": "",
+              "link": "",
+              "show_mobile": false,
+              "image1": "shopify:\/\/shop_images\/icon-klosterrezeptur_f0997436-9ab5-4843-ab0b-264a4ee9e5de.png",
+              "description1": "",
+              "link1": "",
+              "show_mobile1": false,
+              "image2": "shopify:\/\/shop_images\/icon-bio-logo_2a46702e-a558-4db6-809d-2aea3a97ffd9.png",
+              "description2": "",
+              "link2": "",
+              "show_mobile2": false,
+              "description3": "",
+              "link3": "",
+              "show_mobile3": false,
+              "description4": "",
+              "link4": "",
+              "show_mobile4": false,
+              "description5": "",
+              "link5": "",
+              "show_mobile5": false
+            }
+          }
+        },
+        "block_order": [
+          "cebc0f27-9dce-45fc-bbf1-59fa6be28e72",
+          "45e90af7-24d7-4e45-8128-2c62df17da09",
+          "ffb3f371-5ad9-4ed9-b984-f22fedb1bac6",
+          "21158649-c25e-4264-99fd-a8ccb2b3d1d1",
+          "7291314d-33dc-4990-8817-27b1d35621d7",
+          "527e82c8-ccef-41e8-9f4a-b8d31459cd13",
+          "9206dc02-72f5-41ca-a580-239da50bf15d",
+          "5295a40c-592b-4de6-a5c0-95b2aa0f417e"
+        ],
+        "settings": {}
+      },
+      "extra-template-10": {
+        "type": "extra-template-10",
+        "settings": {}
+      }
+    },
+    "content_for_index": [
+      "slideshow",
+      "16213426029a19f357",
+      "1620669123a83bc26a",
+      "collection-list",
+      "16206672300f55a451",
+      "162143039477262be1",
+      "1621862412f424b19d",
+      "1626262649501e2281",
+      "1621446291b0e7bc3f",
+      "16207299549c8fc9ff",
+      "1624892614c65a21cb"
+    ]
+  },
+  "presets": {
+    "Allure": {
+      "heading_color": "#1c1b1b",
+      "text_color": "#1c1b1b",
+      "text_light_color": "#6a6a6a",
+      "link_color": "#6a6a6a",
+      "background": "#efefef",
+      "light_background": "#ffffff",
+      "product_on_sale_color": "#f94c43",
+      "button_background": "#1c1b1b",
+      "button_text_color": "#ffffff",
+      "header_background": "#ffffff",
+      "header_heading_color": "#1c1b1b",
+      "header_light_color": "#6a6a6a",
+      "footer_background": "#ffffff",
+      "footer_heading_color": "#1c1b1b",
+      "footer_text_color": "#6a6a6a",
+      "newsletter_popup_background": "#1c1b1b",
+      "newsletter_popup_text_color": "#ffffff",
+      "secondary_elements_background": "#1c1b1b",
+      "secondary_elements_text_color": "#ffffff",
+      "navigation_background": "#1c1b1b",
+      "navigation_text_color": "#ffffff",
+      "heading_font": "montserrat_n5",
+      "heading_size": "small",
+      "uppercase_heading": true,
+      "text_font": "nunito_sans_n4",
+      "base_text_font_size": 14,
+      "show_page_transition": false,
+      "search_mode": "product,article",
+      "product_show_price_on_hover": false,
+      "product_show_secondary_image": false,
+      "product_info_alignment": "center",
+      "product_image_size": "natural",
+      "product_list_horizontal_spacing": "medium",
+      "product_list_vertical_spacing": "small",
+      "cart_type": "drawer",
+      "cart_enable_notes": true,
+      "cart_show_free_shipping_threshold": false,
+      "cart_free_shipping_threshold": "50",
+      "checkout_logo_position": "center",
+      "checkout_logo_size": "small",
+      "checkout_body_background_color": "#ffffff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_color": "#efefef",
+      "checkout_accent_color": "#1c1b1b",
+      "checkout_button_color": "#1c1b1b",
+      "sections": {
+        "sidebar-menu": {
+          "type": "sidebar-menu",
+          "settings": {
+            "primary_menu": "main-menu",
+            "show_social_media": true
+          }
+        },
+        "announcement": {
+          "type": "announcement",
+          "settings": {
+            "background": "#000000",
+            "text_color": "#ffffff",
+            "content": "Announce something here"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "use_sticky_header": true,
+            "logo_max_width": 140,
+            "navigation_menu": "main-menu",
+            "navigation_style": "inline",
+            "enable_transparent_header": true,
+            "transparent_text_color": "#ffffff"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-0": {
+              "type": "text",
+              "settings": {
+                "title": "About the shop",
+                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>",
+                "show_social_media": true
+              }
+            },
+            "footer-1": {
+              "type": "links",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "footer-2": {
+              "type": "newsletter",
+              "settings": {
+                "title": "Newsletter",
+                "content": "<p>Subscribe to receive updates, access to exclusive deals, and more.<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "footer-0",
+            "footer-1",
+            "footer-2"
+          ],
+          "settings": {
+            "show_payment_methods": true
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slide-0": {
+              "type": "image",
+              "settings": {
+                "apply_overlay": true,
+                "content_position": "bottomLeft",
+                "subheading": "Slide title",
+                "title": "Tell your story"
+              }
+            },
+            "slide-1": {
+              "type": "image",
+              "settings": {
+                "apply_overlay": true,
+                "content_position": "bottomLeft",
+                "subheading": "Slide title",
+                "title": "Tell your story"
+              }
+            }
+          },
+          "block_order": [
+            "slide-0",
+            "slide-1"
+          ],
+          "settings": {
+            "show_fullscreen": true,
+            "show_arrow": false,
+            "autoplay": true,
+            "cycle_speed": 5,
+            "text_color": "#ffffff",
+            "button_color": "#363636"
+          }
+        },
+        "featured-collections": {
+          "type": "featured-collections",
+          "blocks": {
+            "featured-collection-0": {
+              "type": "collection",
+              "settings": {
+                "grid_items_count": 8,
+                "button_text": "View all products"
+              }
+            }
+          },
+          "block_order": [
+            "featured-collection-0"
+          ],
+          "settings": {
+            "title": "Featured collection",
+            "layout_mode": "grid",
+            "show_product_info": true,
+            "grid_mobile_items_per_row": "2",
+            "grid_desktop_items_per_row": 4
+          }
+        },
+        "collection-list": {
+          "type": "collection-list",
+          "blocks": {
+            "collection-0": {
+              "type": "collection",
+              "settings": {
+                "image_alignment": "center center",
+                "subheading": "Sub-heading",
+                "apply_overlay": true
+              }
+            },
+            "collection-1": {
+              "type": "collection",
+              "settings": {
+                "image_alignment": "center center",
+                "subheading": "Sub-heading",
+                "apply_overlay": true
+              }
+            },
+            "collection-2": {
+              "type": "collection",
+              "settings": {
+                "image_alignment": "center center",
+                "subheading": "Sub-heading",
+                "apply_overlay": true
+              }
+            }
+          },
+          "block_order": [
+            "collection-0",
+            "collection-1",
+            "collection-2"
+          ],
+          "settings": {
+            "add_spacing": true,
+            "expand_collection": false
+          }
+        },
+        "featured-product": {
+          "type": "featured-product",
+          "settings": {
+            "title": "Featured product",
+            "show_vendor": true,
+            "show_description": true,
+            "show_color_swatch": false,
+            "show_color_carousel": false,
+            "show_quantity_selector": true,
+            "show_inventory_quantity": false,
+            "inventory_quantity_threshold": 3
+          }
+        },
+        "timeline": {
+          "type": "timeline",
+          "blocks": {
+            "item-0": {
+              "type": "item",
+              "settings": {
+                "apply_overlay": true,
+                "title": "2000",
+                "subheading": "Sub-heading",
+                "heading": "Heading",
+                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+              }
+            },
+            "item-1": {
+              "type": "item",
+              "settings": {
+                "apply_overlay": true,
+                "title": "2001",
+                "subheading": "Sub-heading",
+                "heading": "Heading",
+                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+              }
+            },
+            "item-2": {
+              "type": "item",
+              "settings": {
+                "apply_overlay": true,
+                "title": "2002",
+                "subheading": "Sub-heading",
+                "heading": "Heading",
+                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "item-0",
+            "item-1",
+            "item-2"
+          ],
+          "settings": {
+            "text_color": "#ffffff"
+          }
+        },
+        "blog-posts": {
+          "type": "blog-posts",
+          "blocks": {
+            "blog-0": {
+              "type": "blog",
+              "settings": {
+                "blog": "news"
+              }
+            }
+          },
+          "block_order": [
+            "blog-0"
+          ],
+          "settings": {
+            "title": "Featured article",
+            "show_category": false,
+            "button_text": "View all articles"
+          }
+        },
+        "shop-the-look": {
+          "type": "shop-the-look",
+          "blocks": {
+            "look-0": {
+              "type": "look",
+              "settings": {
+                "dot_style": "light",
+                "product_1_horizontal_position": 30,
+                "product_1_vertical_position": 40,
+                "product_2_horizontal_position": 45,
+                "product_2_vertical_position": 65,
+                "product_3_horizontal_position": 70,
+                "product_3_vertical_position": 50
+              }
+            },
+            "look-1": {
+              "type": "look",
+              "settings": {
+                "dot_style": "light",
+                "product_1_horizontal_position": 25,
+                "product_1_vertical_position": 45,
+                "product_2_horizontal_position": 55,
+                "product_2_vertical_position": 30,
+                "product_3_horizontal_position": 65,
+                "product_3_vertical_position": 60
+              }
+            }
+          },
+          "block_order": [
+            "look-0",
+            "look-1"
+          ],
+          "settings": {
+            "subheading": "Shop",
+            "title": "Our looks"
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "show_collection_info": true,
+            "show_collection_image": false,
+            "show_sort_by": true,
+            "show_layout_switch": false,
+            "toolbar_position": "bottom",
+            "filter_position": "sidebar",
+            "filter_mode": "tag",
+            "show_filter_color_swatch": true,
+            "grid_items_per_page": 16,
+            "grid_mobile_items_per_row": "2",
+            "grid_desktop_items_per_row": 4
+          }
+        },
+        "recently-viewed-products": {
+          "type": "recently-viewed-products",
+          "settings": {
+            "show_section": true,
+            "title": "Recently viewed",
+            "show_product_info": true
+          }
+        },
+        "collection-footer": {
+          "type": "collection-footer",
+          "settings": {
+            "show_section": false,
+            "text_color": "#ffffff",
+            "apply_overlay": true,
+            "title": "Our story",
+            "content": "<p>Add your own custom content to explain your processes...<\/p>"
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_share_buttons": true,
+            "show_vendor": true,
+            "show_color_swatch": false,
+            "show_color_carousel": false,
+            "show_quantity_selector": true,
+            "show_inventory_quantity": false,
+            "inventory_quantity_threshold": 3,
+            "stack_images": true,
+            "show_thumbnails": false,
+            "enable_image_zoom": true,
+            "reviews_enabled": false
+          }
+        },
+        "product-recommendations": {
+          "type": "product-recommendations",
+          "settings": {
+            "show_product_recommendations": true,
+            "show_product_info": true
+          }
+        }
+      },
+      "content_for_index": [
+        "slideshow",
+        "featured-collections",
+        "collection-list",
+        "featured-product",
+        "timeline",
+        "blog-posts",
+        "shop-the-look"
+      ]
+    },
+    "Couture": {
+      "heading_color": "#5c5c5c",
+      "text_color": "#5c5c5c",
+      "text_light_color": "#939393",
+      "link_color": "#323232",
+      "background": "#ffffff",
+      "light_background": "#ffffff",
+      "product_on_sale_color": "#f94c43",
+      "button_background": "#5c5c5c",
+      "button_text_color": "#ffffff",
+      "header_background": "#ffffff",
+      "header_heading_color": "#5c5c5c",
+      "header_light_color": "#939393",
+      "footer_background": "#ffffff",
+      "footer_heading_color": "#5c5c5c",
+      "footer_text_color": "#939393",
+      "newsletter_popup_background": "#ffffff",
+      "newsletter_popup_text_color": "#1c1b1b",
+      "secondary_elements_background": "#5c5c5c",
+      "secondary_elements_text_color": "#ffffff",
+      "navigation_background": "#ffffff",
+      "navigation_text_color": "#5c5c5c",
+      "heading_font": "futura_n4",
+      "heading_size": "large",
+      "uppercase_heading": false,
+      "text_font": "century_gothic_n4",
+      "base_text_font_size": 15,
+      "show_page_transition": false,
+      "search_mode": "product,article",
+      "product_show_price_on_hover": true,
+      "product_show_secondary_image": false,
+      "product_info_alignment": "left",
+      "product_image_size": "natural",
+      "product_list_horizontal_spacing": "small",
+      "product_list_vertical_spacing": "small",
+      "cart_type": "drawer",
+      "cart_enable_notes": true,
+      "cart_show_free_shipping_threshold": false,
+      "cart_free_shipping_threshold": "50",
+      "checkout_logo_position": "center",
+      "checkout_logo_size": "small",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_accent_color": "#323232",
+      "checkout_button_color": "#5c5c5c",
+      "sections": {
+        "sidebar-menu": {
+          "type": "sidebar-menu",
+          "settings": {
+            "primary_menu": "main-menu",
+            "show_social_media": true
+          }
+        },
+        "announcement": {
+          "type": "announcement",
+          "settings": {
+            "background": "#f3f3f3",
+            "text_color": "#5c5c5c",
+            "content": "Announce something here"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "use_sticky_header": true,
+            "logo_max_width": 140,
+            "navigation_menu": "main-menu",
+            "navigation_style": "center",
+            "enable_transparent_header": true,
+            "transparent_text_color": "#ffffff"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-0": {
+              "type": "text",
+              "settings": {
+                "title": "About the shop",
+                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>",
+                "show_social_media": true
+              }
+            },
+            "footer-1": {
+              "type": "links",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "footer-2": {
+              "type": "newsletter",
+              "settings": {
+                "title": "Newsletter",
+                "content": "<p>Subscribe to receive updates, access to exclusive deals, and more.<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "footer-0",
+            "footer-1",
+            "footer-2"
+          ],
+          "settings": {
+            "show_payment_methods": true
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slide-0": {
+              "type": "image",
+              "settings": {
+                "apply_overlay": true,
+                "content_position": "bottomLeft",
+                "subheading": "Slide title",
+                "title": "Tell your story"
+              }
+            },
+            "slide-1": {
+              "type": "image",
+              "settings": {
+                "apply_overlay": true,
+                "content_position": "bottomLeft",
+                "subheading": "Slide title",
+                "title": "Tell your story"
+              }
+            }
+          },
+          "block_order": [
+            "slide-0",
+            "slide-1"
+          ],
+          "settings": {
+            "show_fullscreen": true,
+            "show_arrow": false,
+            "autoplay": true,
+            "cycle_speed": 5,
+            "text_color": "#ffffff",
+            "button_color": "#363636"
+          }
+        },
+        "featured-collections": {
+          "type": "featured-collections",
+          "blocks": {
+            "featured-collection-0": {
+              "type": "collection",
+              "settings": {
+                "grid_items_count": 8,
+                "button_text": "View all products"
+              }
+            }
+          },
+          "block_order": [
+            "featured-collection-0"
+          ],
+          "settings": {
+            "title": "Featured collection",
+            "layout_mode": "grid",
+            "show_product_info": true,
+            "grid_mobile_items_per_row": "2",
+            "grid_desktop_items_per_row": 4
+          }
+        },
+        "collection-list": {
+          "type": "collection-list",
+          "blocks": {
+            "collection-0": {
+              "type": "collection",
+              "settings": {
+                "image_alignment": "center center",
+                "subheading": "Sub-heading",
+                "apply_overlay": true
+              }
+            },
+            "collection-1": {
+              "type": "collection",
+              "settings": {
+                "image_alignment": "center center",
+                "subheading": "Sub-heading",
+                "apply_overlay": true
+              }
+            },
+            "collection-2": {
+              "type": "collection",
+              "settings": {
+                "image_alignment": "center center",
+                "subheading": "Sub-heading",
+                "apply_overlay": true
+              }
+            }
+          },
+          "block_order": [
+            "collection-0",
+            "collection-1",
+            "collection-2"
+          ],
+          "settings": {
+            "add_spacing": true,
+            "expand_collection": false
+          }
+        },
+        "featured-product": {
+          "type": "featured-product",
+          "settings": {
+            "title": "Featured product",
+            "show_vendor": true,
+            "show_description": true,
+            "show_color_swatch": false,
+            "show_color_carousel": false,
+            "show_quantity_selector": true,
+            "show_inventory_quantity": false,
+            "inventory_quantity_threshold": 3
+          }
+        },
+        "timeline": {
+          "type": "timeline",
+          "blocks": {
+            "item-0": {
+              "type": "item",
+              "settings": {
+                "apply_overlay": true,
+                "title": "2000",
+                "subheading": "Sub-heading",
+                "heading": "Heading",
+                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+              }
+            },
+            "item-1": {
+              "type": "item",
+              "settings": {
+                "apply_overlay": true,
+                "title": "2001",
+                "subheading": "Sub-heading",
+                "heading": "Heading",
+                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+              }
+            },
+            "item-2": {
+              "type": "item",
+              "settings": {
+                "apply_overlay": true,
+                "title": "2002",
+                "subheading": "Sub-heading",
+                "heading": "Heading",
+                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "item-0",
+            "item-1",
+            "item-2"
+          ],
+          "settings": {
+            "text_color": "#ffffff"
+          }
+        },
+        "blog-posts": {
+          "type": "blog-posts",
+          "blocks": {
+            "blog-0": {
+              "type": "blog",
+              "settings": {
+                "blog": "news"
+              }
+            }
+          },
+          "block_order": [
+            "blog-0"
+          ],
+          "settings": {
+            "title": "Featured article",
+            "show_category": false,
+            "button_text": "View all articles"
+          }
+        },
+        "shop-the-look": {
+          "type": "shop-the-look",
+          "blocks": {
+            "look-0": {
+              "type": "look",
+              "settings": {
+                "dot_style": "light",
+                "product_1_horizontal_position": 30,
+                "product_1_vertical_position": 40,
+                "product_2_horizontal_position": 45,
+                "product_2_vertical_position": 65,
+                "product_3_horizontal_position": 70,
+                "product_3_vertical_position": 50
+              }
+            },
+            "look-1": {
+              "type": "look",
+              "settings": {
+                "dot_style": "light",
+                "product_1_horizontal_position": 25,
+                "product_1_vertical_position": 45,
+                "product_2_horizontal_position": 55,
+                "product_2_vertical_position": 30,
+                "product_3_horizontal_position": 65,
+                "product_3_vertical_position": 60
+              }
+            }
+          },
+          "block_order": [
+            "look-0",
+            "look-1"
+          ],
+          "settings": {
+            "subheading": "Shop",
+            "title": "Our looks"
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "show_collection_info": true,
+            "show_collection_image": false,
+            "show_sort_by": true,
+            "show_layout_switch": false,
+            "toolbar_position": "bottom",
+            "filter_position": "sidebar",
+            "filter_mode": "tag",
+            "show_filter_color_swatch": true,
+            "grid_items_per_page": 16,
+            "grid_mobile_items_per_row": "2",
+            "grid_desktop_items_per_row": 4
+          }
+        },
+        "recently-viewed-products": {
+          "type": "recently-viewed-products",
+          "settings": {
+            "show_section": true,
+            "title": "Recently viewed",
+            "show_product_info": true
+          }
+        },
+        "collection-footer": {
+          "type": "collection-footer",
+          "settings": {
+            "show_section": false,
+            "text_color": "#ffffff",
+            "apply_overlay": true,
+            "title": "Our story",
+            "content": "<p>Add your own custom content to explain your processes...<\/p>"
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_share_buttons": true,
+            "show_vendor": true,
+            "show_color_swatch": false,
+            "show_color_carousel": false,
+            "show_quantity_selector": true,
+            "show_inventory_quantity": false,
+            "inventory_quantity_threshold": 3,
+            "stack_images": true,
+            "show_thumbnails": false,
+            "enable_image_zoom": true,
+            "reviews_enabled": false
+          }
+        },
+        "product-recommendations": {
+          "type": "product-recommendations",
+          "settings": {
+            "show_product_recommendations": true,
+            "show_product_info": true
+          }
+        }
+      },
+      "content_for_index": [
+        "slideshow",
+        "featured-collections",
+        "collection-list",
+        "featured-product",
+        "timeline",
+        "blog-posts",
+        "shop-the-look"
+      ]
+    },
+    "Vogue": {
+      "heading_color": "#303030",
+      "text_color": "#303030",
+      "text_light_color": "#595959",
+      "link_color": "#000000",
+      "background": "#ffffff",
+      "light_background": "#ffffff",
+      "product_on_sale_color": "#f94c43",
+      "button_background": "#f5db8b",
+      "button_text_color": "#303030",
+      "header_background": "#ffffff",
+      "header_heading_color": "#303030",
+      "header_light_color": "#595959",
+      "footer_background": "#ffffff",
+      "footer_heading_color": "#303030",
+      "footer_text_color": "#595959",
+      "navigation_background": "#ffffff",
+      "navigation_text_color": "#303030",
+      "newsletter_popup_background": "#ffffff",
+      "newsletter_popup_text_color": "#303030",
+      "secondary_elements_background": "#fce7a8",
+      "secondary_elements_text_color": "#303030",
+      "heading_font": "din_neuzeit_grotesk_n3",
+      "heading_size": "small",
+      "uppercase_heading": true,
+      "text_font": "futura_n4",
+      "base_text_font_size": 14,
+      "show_page_transition": false,
+      "show_element_staggering": false,
+      "search_mode": "product,article",
+      "product_show_price_on_hover": true,
+      "product_show_secondary_image": false,
+      "product_info_alignment": "center",
+      "product_image_size": "natural",
+      "product_list_horizontal_spacing": "medium",
+      "product_list_vertical_spacing": "small",
+      "cart_type": "drawer",
+      "cart_enable_notes": true,
+      "cart_show_free_shipping_threshold": false,
+      "cart_free_shipping_threshold": "50",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_accent_color": "#a17c5e",
+      "checkout_button_color": "#454545",
+      "sections": {
+        "sidebar-menu": {
+          "type": "sidebar-menu",
+          "settings": {
+            "primary_menu": "main-menu",
+            "show_social_media": true
+          }
+        },
+        "announcement": {
+          "type": "announcement",
+          "settings": {
+            "background": "#f1e4d8",
+            "text_color": "#343434",
+            "content": "Announce something here"
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "use_sticky_header": true,
+            "logo_max_width": 140,
+            "navigation_menu": "main-menu",
+            "navigation_style": "inline",
+            "enable_transparent_header": true,
+            "transparent_text_color": "#ffffff"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-0": {
+              "type": "text",
+              "settings": {
+                "title": "About the shop",
+                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>",
+                "show_social_media": true
+              }
+            },
+            "footer-1": {
+              "type": "links",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "footer-2": {
+              "type": "newsletter",
+              "settings": {
+                "title": "Newsletter",
+                "content": "<p>Subscribe to receive updates, access to exclusive deals, and more.<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "footer-0",
+            "footer-1",
+            "footer-2"
+          ],
+          "settings": {
+            "show_payment_methods": true
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slide-0": {
+              "type": "image",
+              "settings": {
+                "apply_overlay": true,
+                "content_position": "bottomLeft",
+                "subheading": "Slide title",
+                "title": "Tell your story"
+              }
+            },
+            "slide-1": {
+              "type": "image",
+              "settings": {
+                "apply_overlay": true,
+                "content_position": "bottomLeft",
+                "subheading": "Slide title",
+                "title": "Tell your story"
+              }
+            }
+          },
+          "block_order": [
+            "slide-0",
+            "slide-1"
+          ],
+          "settings": {
+            "show_fullscreen": true,
+            "show_arrow": false,
+            "autoplay": true,
+            "cycle_speed": 5,
+            "text_color": "#ffffff",
+            "button_color": "#363636"
+          }
+        },
+        "featured-collections": {
+          "type": "featured-collections",
+          "blocks": {
+            "featured-collection-0": {
+              "type": "collection",
+              "settings": {
+                "grid_items_count": 8,
+                "button_text": "View all products"
+              }
+            }
+          },
+          "block_order": [
+            "featured-collection-0"
+          ],
+          "settings": {
+            "title": "Featured collection",
+            "layout_mode": "grid",
+            "show_product_info": true,
+            "grid_mobile_items_per_row": "2",
+            "grid_desktop_items_per_row": 4
+          }
+        },
+        "collection-list": {
+          "type": "collection-list",
+          "blocks": {
+            "collection-0": {
+              "type": "collection",
+              "settings": {
+                "image_alignment": "center center",
+                "subheading": "Sub-heading",
+                "apply_overlay": true
+              }
+            },
+            "collection-1": {
+              "type": "collection",
+              "settings": {
+                "image_alignment": "center center",
+                "subheading": "Sub-heading",
+                "apply_overlay": true
+              }
+            },
+            "collection-2": {
+              "type": "collection",
+              "settings": {
+                "image_alignment": "center center",
+                "subheading": "Sub-heading",
+                "apply_overlay": true
+              }
+            }
+          },
+          "block_order": [
+            "collection-0",
+            "collection-1",
+            "collection-2"
+          ],
+          "settings": {
+            "add_spacing": true,
+            "expand_collection": false
+          }
+        },
+        "featured-product": {
+          "type": "featured-product",
+          "settings": {
+            "title": "Featured product",
+            "show_vendor": true,
+            "show_description": true,
+            "show_color_swatch": false,
+            "show_color_carousel": false,
+            "show_quantity_selector": true,
+            "show_inventory_quantity": false,
+            "inventory_quantity_threshold": 3
+          }
+        },
+        "timeline": {
+          "type": "timeline",
+          "blocks": {
+            "item-0": {
+              "type": "item",
+              "settings": {
+                "apply_overlay": true,
+                "title": "2000",
+                "subheading": "Sub-heading",
+                "heading": "Heading",
+                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+              }
+            },
+            "item-1": {
+              "type": "item",
+              "settings": {
+                "apply_overlay": true,
+                "title": "2001",
+                "subheading": "Sub-heading",
+                "heading": "Heading",
+                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+              }
+            },
+            "item-2": {
+              "type": "item",
+              "settings": {
+                "apply_overlay": true,
+                "title": "2002",
+                "subheading": "Sub-heading",
+                "heading": "Heading",
+                "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "item-0",
+            "item-1",
+            "item-2"
+          ],
+          "settings": {
+            "text_color": "#ffffff"
+          }
+        },
+        "blog-posts": {
+          "type": "blog-posts",
+          "blocks": {
+            "blog-0": {
+              "type": "blog",
+              "settings": {
+                "blog": "news"
+              }
+            }
+          },
+          "block_order": [
+            "blog-0"
+          ],
+          "settings": {
+            "title": "Featured article",
+            "show_category": false,
+            "button_text": "View all articles"
+          }
+        },
+        "shop-the-look": {
+          "type": "shop-the-look",
+          "blocks": {
+            "look-0": {
+              "type": "look",
+              "settings": {
+                "dot_style": "light",
+                "product_1_horizontal_position": 30,
+                "product_1_vertical_position": 40,
+                "product_2_horizontal_position": 45,
+                "product_2_vertical_position": 65,
+                "product_3_horizontal_position": 70,
+                "product_3_vertical_position": 50
+              }
+            },
+            "look-1": {
+              "type": "look",
+              "settings": {
+                "dot_style": "light",
+                "product_1_horizontal_position": 25,
+                "product_1_vertical_position": 45,
+                "product_2_horizontal_position": 55,
+                "product_2_vertical_position": 30,
+                "product_3_horizontal_position": 65,
+                "product_3_vertical_position": 60
+              }
+            }
+          },
+          "block_order": [
+            "look-0",
+            "look-1"
+          ],
+          "settings": {
+            "subheading": "Shop",
+            "title": "Our looks"
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "show_collection_info": true,
+            "show_collection_image": false,
+            "show_sort_by": true,
+            "show_layout_switch": false,
+            "toolbar_position": "bottom",
+            "filter_position": "sidebar",
+            "filter_mode": "tag",
+            "show_filter_color_swatch": true,
+            "grid_items_per_page": 16,
+            "grid_mobile_items_per_row": "2",
+            "grid_desktop_items_per_row": 4
+          }
+        },
+        "recently-viewed-products": {
+          "type": "recently-viewed-products",
+          "settings": {
+            "show_section": true,
+            "title": "Recently viewed",
+            "show_product_info": true
+          }
+        },
+        "collection-footer": {
+          "type": "collection-footer",
+          "settings": {
+            "show_section": false,
+            "text_color": "#ffffff",
+            "apply_overlay": true,
+            "title": "Our story",
+            "content": "<p>Add your own custom content to explain your processes...<\/p>"
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_share_buttons": true,
+            "show_vendor": true,
+            "show_color_swatch": false,
+            "show_color_carousel": false,
+            "show_quantity_selector": true,
+            "show_inventory_quantity": false,
+            "inventory_quantity_threshold": 3,
+            "stack_images": true,
+            "show_thumbnails": false,
+            "enable_image_zoom": true,
+            "reviews_enabled": false
+          }
+        },
+        "product-recommendations": {
+          "type": "product-recommendations",
+          "settings": {
+            "show_product_recommendations": true,
+            "show_product_info": true
+          }
+        }
+      },
+      "content_for_index": [
+        "slideshow",
+        "featured-collections",
+        "collection-list",
+        "featured-product",
+        "timeline",
+        "blog-posts",
+        "shop-the-look"
+      ]
+    }
+  }
+}

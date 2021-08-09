@@ -1,0 +1,144 @@
+<section id="section-{{section.id}}" class="Section Section--spacingNormal contact-form-main">
+    {%- capture section_content -%}
+      <div class="FeatureText__ContentWrapper">
+        <div class="FeatureText__Content">
+          {%- if section.settings.subheading != blank or section.settings.title != blank -%}
+            <header class="SectionHeader">
+              {%- if section.settings.subheading != blank -%}
+                <h3 class="SectionHeader__SubHeading Heading u-h6">{{ section.settings.subheading | escape }}</h3>
+              {%- endif -%}
+  
+              {%- if section.settings.title != blank -%}
+                <h2 class="SectionHeader__Heading Heading u-h1">{{ section.settings.title }}</h2>
+              {%- endif -%}
+  
+              {%- if section.settings.content != blank -%}
+                <div class="SectionHeader__Description Rte u-h6">
+                  {{ section.settings.content }}
+                </div>
+              {%- endif -%}
+
+              {%- if section.settings.icon1 != blank or section.settings.icon2 != blank -%}
+                <div class="SectionHeader__Description u-h6 icons_info_contact">
+                  {%- if section.settings.icon1 != blank -%}
+                  <div class="contact-icon" style="display: flex; align-items: flex-start;">
+                    <img class="Image--lazyLoad " style="margin-right: 10px;" data-src="{{section.settings.icon1 | img_url: '24x'}}" /> 
+                    <p>{{ section.settings.content1}} </p>
+                  </div>
+                  {%- endif -%}
+                  
+
+                  {%- if section.settings.icon2 != blank -%}
+                  <div class="contact-icon" style="display: flex; align-items: flex-start;">
+                    <img class="Image--lazyLoad " style="margin-right: 10px;" data-src="{{section.settings.icon2 | img_url: '24x'}}" /> 
+                    <p>{{ section.settings.content2}}</p>
+                    </div>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+  
+              {%- if section.settings.link_text != blank -%}
+                <a href="{{ section.settings.link_url }}" class="Link Link--underline">{{ section.settings.link_text | escape }}</a>
+              {%- endif -%}
+            </header>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endcapture -%}
+  
+    {%- capture section_image -%}
+        <div class="FeatureText__ImageWrapper ">
+            {%- form 'contact', class: 'Form Form--spacingTight' -%}
+            {%- if form.posted_successfully? -%}
+              <p class="Alert Alert--success">{{ 'contact.form.successfully_sent' | t }}</p>
+            {%- endif -%}
+    
+            {%- if form.errors -%}
+              <div class="Form__Alert Alert Alert--error">
+                <ul class="Alert__ErrorList">
+                  {%- for field in form.errors -%}
+                    {%- if field == 'form' -%}
+                      <li class="Alert__ErrorItem">{{ form.errors.messages[field] }}</li>
+                    {%- else -%}
+                      <li class="Alert__ErrorItem"><strong>{{ form.errors.translated_fields[field] }}</strong> {{ form.errors.messages[field] }}</li>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </ul>
+              </div>
+            {%- endif -%}
+    
+            <div class="Form__Group">
+              <div class="Form__Item">
+                <input type="text" class="Form__Input" name="contact[name]" aria-label="{{ 'contact.form.name' | t }}" placeholder="{{ 'contact.form.name' | t }}" required {% if customer %}value="{{ customer.name }}"{% endif %}>
+                <label class="Form__FloatingLabel">{{ 'contact.form.name' | t }}</label>
+              </div>
+    
+              <div class="Form__Item">
+                <input type="email" class="Form__Input" name="contact[email]" aria-label="{{ 'contact.form.email' | t }}" placeholder="{{ 'contact.form.email' | t }}" required {% if customer %}value="{{ customer.email }}"{% endif %}>
+                <label class="Form__FloatingLabel">{{ 'contact.form.email' | t }}</label>
+              </div>
+            </div>
+    
+            {%- for block in section.blocks -%}
+              {%- assign field_title = block.settings.title -%}
+    
+              {%- if field_title == blank -%}
+                {%- capture field_title -%}Custom field {% increment custom_field %}{%- endcapture -%}
+              {%- endif -%}
+    
+              {%- if block.type == 'text' -%}
+                <div class="Form__Item">
+                  {%- if block.settings.use_long_text -%}
+                    <textarea name="contact[{{ field_title | escape }}]" cols="30" rows="10" class="Form__Textarea" aria-label="{{ block.settings.title | escape }}" placeholder="{{ block.settings.title | escape }}" {% if block.settings.is_required %}required{% endif %}></textarea>
+                    <label class="Form__FloatingLabel">{{ block.settings.title | escape }}</label>
+                  {%- else -%}
+                    <input type="text" class="Form__Input" name="contact[{{ field_title | escape }}]" aria-label="{{ block.settings.title | escape }}" placeholder="{{ block.settings.title | escape }}" {% if block.settings.is_required %}required{% endif %}>
+                    <label class="Form__FloatingLabel">{{ block.settings.title | escape }}</label>
+                  {%- endif -%}
+                </div>
+              {%- elsif block.type == 'dropdown' -%}
+                {%- assign values = block.settings.values | split: ',' -%}
+    
+                {%- if values == empty -%}
+                  {%- continue -%}
+                {%- endif -%}
+    
+                <div class="Form__Item">
+                  <div class="Form__Select Select Select--primary">
+                    {%- render 'icon' with 'select-arrow' -%}
+    
+                    <select name="contact[{{ field_title | escape }}]" title="{{ block.settings.title | escape }}" required>
+                      <option value="" disabled selected>{{ block.settings.title | escape }}</option>
+    
+                      {%- for value in values -%}
+                        {%- assign trim_value = value | strip -%}
+    
+                        <option value="{{ trim_value | escape }}">{{ trim_value | escape }}</option>
+                      {%- endfor -%}
+                    </select>
+                  </div>
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+    
+            <div class="Form__Item">
+              <textarea name="contact[body]" cols="30" rows="10" class="Form__Textarea" aria-label="{{ 'contact.form.message' | t }}" placeholder="{{ 'contact.form.message' | t }}" required></textarea>
+              <label class="Form__FloatingLabel">{{ 'contact.form.message' | t }}</label>
+            </div>
+    
+            <button type="submit" class="Form__Submit Button Button--primary Button--full">{{ 'contact.form.submit' | t }}</button>
+          {%- endform -%}
+        </div>
+    {%- endcapture -%}
+  
+    <div class="FeatureText FeatureText--withImage FeatureText--image{{ section.settings.image_position | capitalize }}">
+      {%- if section.settings.image_position == 'left' -%}
+        {{- section_image -}}
+        {{- section_content -}}
+      {%- else -%}
+        {{- section_content -}}
+        {{- section_image -}}
+      {%- endif -%}
+    </div>
+
+  </section>

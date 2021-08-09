@@ -1,0 +1,23 @@
+<div id="modal-cart-limit-alert" class="Modal Modal--dark Modal--address " aria-hidden="true" role="dialog" data-scrollable>
+
+  <div class="Modal__Content Rte">
+    <div class="Form__Alert Alert Alert--error">
+      <ul class="Alert__ErrorList">
+        <li class="Alert__ErrorItem missing-date--msg">{{ 'product.mix_match.checkout_min_items_error_msg' | t }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <button class="Modal__Close Modal__Close--outside" data-animate-bottom data-action="close-modal">{% render 'icon' with 'close' %}</button>
+</div>
+
+<style media="screen">
+  #modal-cart-limit-alert .Form__Alert {
+    margin-top: 40px;
+  }
+  @media screen and (min-width: 641px) {
+    #modal-cart-limit-alert .Form__Alert {
+      margin-top: 30px;
+    }
+  }
+</style>

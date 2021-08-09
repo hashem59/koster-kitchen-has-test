@@ -1,0 +1,53 @@
+<!-- /sections/icons-list-snippet.liquid -->
+<section class="Section Section--spacingNormal" data-section-id="{{ block.id }}">
+
+    <div class="Container index-logos logo-section {{ block.settings.color_bg }}{% if block.settings.title != blank %} index-logos--tall{% endif %}">
+  
+      {% if block.settings.title != blank %}
+        <header class="SectionHeader SectionHeader--center">
+          <div class="Container">
+              <h2 class="SectionHeader__Heading Heading u-h3">{{ block.settings.title | escape }}</h2>
+          </div>
+        </header>
+      {% endif %}
+  
+        <div class="logo-bar">
+            {%-if block.settings.image != blank -%}
+                {%- render 'icons-list-details', block: block, show_mobile: block.settings.show_mobile, link: block.settings.link, image: block.settings.image, description: block.settings.description-%}
+            {%- endif -%}
+
+            {%-if block.settings.image1 != blank -%}
+                {%- render 'icons-list-details', block: block, show_mobile: block.settings.show_mobile1, link: block.settings.link1, image: block.settings.image1, description: block.settings.description1 -%}
+            {%- endif -%}
+
+            {%-if block.settings.image2 != blank -%}
+                {%- render 'icons-list-details', block: block, show_mobile: block.settings.show_mobile2, link: block.settings.link2, image: block.settings.image2, description: block.settings.description2 -%}
+            {%- endif -%}
+
+            {%-if block.settings.image3 != blank -%}
+                {%- render 'icons-list-details', block: block, show_mobile: block.settings.show_mobile3, link: block.settings.link3, image: block.settings.image3, description: block.settings.description3 -%}
+            {%- endif -%}
+
+            {%-if block.settings.image4 != blank -%}
+                {%- render 'icons-list-details', block: block, show_mobile: block.settings.show_mobile4, link: block.settings.link4, image: block.settings.image4, description: block.settings.description4 -%}
+            {%- endif -%}
+
+            {%-if block.settings.image5 != blank -%}
+                {%- render 'icons-list-details', show_mobile: block.settings.show_mobile5, link: block.settings.link5, image: block.settings.image5, description: block.settings.description5 -%}
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</section>
+  
+  <style>
+  .logo-bar__item.section--{{block.id}} { max-width: {{block.settings.logo_size}}px !important;  }
+  .logo-bar__item.section--{{block.id}} .logo-description h3 { font-size: {{block.settings.font_size_desktop}}px !important;  }
+  @media only screen and (max-width: 780px) {
+    .logo-bar__item.section--{{block.id}} {max-width: {{block.settings.logo_size_mobile}}px !important; }
+    .logo-bar__item.section--{{block.id}} .logo-description h3 { font-size: {{block.settings.font_size_mobile}}px !important;  }
+  }
+  </style>
+  

@@ -1,0 +1,30 @@
+<article class="ArticleItem {% unless contact_page %} teamMember{% endunless %}"{{ block.shopify_attributes }}>
+    {%- if image != blank -%}
+      {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,500,600,700,800,900,1000,1200', image: image -%}{%- endcapture -%}
+      {%- assign image_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+  
+      <a class="ArticleItem__ImageWrapper AspectRatio AspectRatio--withFallback" style=" padding-bottom: 25% !important; --aspect-ratio: 1" href="#">
+        <img class="ArticleItem__Image Image--lazyLoad Image--fadeIn"
+             data-src="{{ image_url }}"
+             data-widths="[{{ supported_sizes }}]"
+             data-sizes="auto"
+             alt="{{ image.alt | escape }}">
+  
+        <noscript>
+          <img class="ArticleItem__Image" src="{{ image | img_url: '600x' }}" alt="{{ image.alt | escape }}">
+        </noscript>
+      </a>
+    {%- endif -%}
+  
+    <div class="ArticleItem__Content" {% unless contact_page %} style="text-align: center;" {% endunless %}>
+  
+      {% if title != blank %}
+        <h2 class="ArticleItem__Title Heading u-h5">{{ title }}</h2>
+      {% endif %}
+      {% if text != blank %}
+        <div class="ArticleItem__Excerpt">{{ text }}</div>
+      {% endif %}
+
+
+    </div>
+  </article>

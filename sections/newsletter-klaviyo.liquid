@@ -1,0 +1,345 @@
+<section id="section-{{section.id}}" class="Section {% unless section.settings.image %}Section--spacingNormal{% endunless %}">
+    {%- capture section_content -%}
+      <div class="FeatureText__ContentWrapper">
+        <div class="FeatureText__Content">
+            <div class="klaviyo-form-XFkxGr"></div>
+        </div>
+      </div>
+    {%- endcapture -%}
+  
+    {%- capture section_image -%}
+      {%- if section.settings.image != blank -%}
+        <div class="FeatureText__ImageWrapper ">
+            
+          <div class="CollectionItem__ImageWrapper">
+            {%- capture supported_sizes -%}{%- render 'image-size', sizes: '400,600,700,800,900,1000,1200', image: section.settings.image -%}{%- endcapture -%}
+  
+            <div class="AspectRatio" style="max-width: {{ section.settings.image.width }}px; --aspect-ratio: {{ section.settings.image.aspect_ratio }}">
+              {%- assign image_url = section.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+              <img class="Image--lazyLoad Image--slide{{ section.settings.image_position | capitalize }}" data-src="{{ image_url }}" data-expand="-200" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ section.settings.image.alt | escape }}">
+    
+              <noscript>
+                <img src="{{ section.settings.image | img_url: '800x' }}" alt="{{ section.settings.image.alt | escape }}">
+              </noscript>
+            </div>
+          </div>
+      
+          <div class="CollectionItem__Content hidden-phone  {% if section.settings.content_position == "middleCenterLeft"%} CollectionItem__Content--middleCenter {% else %} CollectionItem__Content--{{ section.settings.content_position | default: 'bottomLeft' }} {% endif %}">
+            <header class="SectionHeader">  
+              {% if section.settings.title != blank %}
+                <h2 class="SectionHeader__Heading SectionHeader__Heading--emphasize Heading" style="margin:0;">
+                    <span class="u-h4 title_highlight"style="line-height: 1;">{{ section.settings.title | escape }}</span>
+                </h2>
+              {% endif %}
+              {% if section.settings.subheading != blank %}
+                <h2 class="SectionHeader__Heading SectionHeader__Heading--emphasize Heading" style="margin-top: -0.1em;">
+                    <span class="u-h6 title_highlight">{{ section.settings.subheading | escape }}</span>
+                </h2>
+              {% endif %}
+            </header>
+          </div> 
+
+          <div class="CollectionItem__Content hidden-tablet-and-up {% if section.settings.content_mobile_position == "middleCenterLeft"%} CollectionItem__Content--middleCenter {% else %}CollectionItem__Content--{{ section.settings.content_mobile_position | default: 'bottomLeft' }} {% endif %}">
+            <header class="SectionHeader">  
+              {% if section.settings.title != blank %}
+                <h2 class="SectionHeader__Heading SectionHeader__Heading--emphasize Heading" style="margin:0;">
+                    <span class="u-h4 title_highlight">{{ section.settings.title | escape }}</span>
+                </h2>
+              {% endif %}
+              {% if section.settings.subheading != blank %}
+                <h2 class="SectionHeader__Heading SectionHeader__Heading--emphasize Heading" style=" margin-top: -.4em;">
+                    <span class="u-h6 title_highlight">{{ section.settings.subheading | escape }}</span>
+                </h2>
+              {% endif %}
+            </header>
+          </div> 
+
+        </div>
+
+      {%- endif -%}
+    {%- endcapture -%}
+  
+    <div class="FeatureText {% if section.settings.image != blank %}FeatureText--withImage FeatureText--image{{ section.settings.image_position | capitalize }} {% endif %}">
+      {%- if section.settings.image_position == 'left' -%}
+        {{- section_image -}}
+        {{- section_content -}}
+      {%- else -%}
+        {{- section_content -}}
+        {{- section_image -}}
+      {%- endif -%}
+    </div>
+  </section>
+
+  <style>
+    #section-{{ section.id }} .title_highlight{
+      background-color: {{ section.settings.title_highlight }};
+      color: {{ section.settings.title_color }};
+      font-size: {{ section.settings.title_size }}px;
+      padding: 0 10px;
+    }
+    #section-{{ section.id }} .FeatureText__ContentWrapper{
+        background-color: {{ section.settings.content_color }};
+    }
+    #section-{{ section.id }} .FeatureText__Content {
+        max-width: unset;
+    }
+    #section-{{ section.id }} .FeatureText--withImage, #section-{{ section.id }} .FeatureText__ImageWrapper .AspectRatio {
+        height: 100%;
+    }
+    #section-{{ section.id }} .FeatureText__ImageWrapper img {
+        object-fit: cover;
+    }
+    #section-{{ section.id }} .FeatureText__ImageWrapper{
+        position: relative;
+    }
+    #section-{{ section.id }} .klaviyo-form-XFkxGr * {
+      font-family: var(--text-font-family) !important;
+    }
+    #section-{{ section.id }} .klaviyo-form-XFkxGr strong, 
+    #section-{{ section.id }} .klaviyo-form-XFkxGr strong em {
+      font-family: 'Brother Printed Regular' !important;
+      font-style: normal !important;
+    } 
+    #section-{{ section.id }} .klaviyo-form-XFkxGr p, #section-{{ section.id }} .klaviyo-form-XFkxGr strong {
+      text-align: left !important;
+      font-size: 18px !important;
+    } 
+    @media screen and (min-width: 640px){
+        #section-{{ section.id }} .FeatureText__ImageWrapper{
+            width: 40%;
+        }
+        #section-{{ section.id }} .FeatureText__ContentWrapper{
+            padding: 50px;
+        }
+        {%- if section.settings.content_position == "middleCenterLeft"-%}
+          #section-{{ section.id }} header.SectionHeader {
+              width: 55%;
+              margin: 0 auto;
+              text-align: left;
+          }
+        {%- endif -%}
+    }   
+    
+    @media screen and (max-width: 1170px) and (min-width: 640px){
+        #section-{{ section.id }} .FeatureText__ImageWrapper{
+            width: 50%;
+        }
+    }
+    @media screen and (max-width: 641px){
+        #section-{{ section.id }} .title_highlight{
+            font-size: {{ section.settings.title_mobile_size }}px;
+        }
+        {%- if section.settings.content_mobile_position == "middleCenterLeft"-%}
+          #section-{{ section.id }} header.SectionHeader {
+              width: 50%;
+              margin: 0 auto;
+              text-align: left;
+          }
+        {%- endif -%}
+
+        #section-{{ section.id }} .FeatureText__ImageWrapper{
+          max-height: 300px;
+        }
+
+        #section-{{ section.id }} .FeatureText--withImage .FeatureText__ContentWrapper{
+          padding-top: 0;
+        }
+        #section-{{ section.id }} .klaviyo-form-XFkxGr * {
+          font-size: 14px !important;
+          font-weight: 400 !important;
+        }
+        #section-{{ section.id }} .klaviyo-form-XFkxGr strong, 
+        #section-{{ section.id }} .klaviyo-form-XFkxGr strong em {
+          font-size: 16px !important;
+        } 
+      }
+      #section-{{ section.id }} .klaviyo-form-XFkxGr button{
+        font-size: 18px !important;
+        font-weight: 700 !important;
+        font-style: italic !important;
+        font-family: 'Brother Printed italic' !important;
+      }
+  </style>
+
+  {% schema %}
+  {
+    "name": "Newsletter",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "info": "1200 x 1200px .png recommended"
+      },
+      {
+        "type": "select",
+        "id": "image_position",
+        "label": "Image position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "right"
+      },
+        {
+          "type": "select",
+          "id": "content_position",
+          "label": "Content position",
+          "options": [
+            {
+                "value": "topLeft",
+                "label": "Top left"
+            },
+            {
+                "value": "topRight",
+                "label": "Top right"
+            },
+            {
+                "value": "topCenter",
+                "label": "Top center"
+            },
+            {
+              "value": "middleLeft",
+              "label": "Middle left"
+            },
+            {
+              "value": "middleRight",
+              "label": "Middle right"
+            },
+            {
+              "value": "middleCenter",
+              "label": "Middle center"
+            },
+            {
+              "value": "middleCenterLeft",
+              "label": "Middle center left"
+            },
+            {
+              "value": "bottomLeft",
+              "label": "Bottom left"
+            },
+            {
+              "value": "bottomRight",
+              "label": "Bottom right"
+            },
+            {
+              "value": "bottomCenter",
+              "label": "Bottom center"
+            }
+          ],
+          "default": "bottomLeft"
+        },
+        {
+          "type": "select",
+          "id": "content_mobile_position",
+          "label": "Content position on mobile",
+          "options": [
+            {
+                "value": "topLeft",
+                "label": "Top left"
+            },
+            {
+                "value": "topRight",
+                "label": "Top right"
+            },
+            {
+                "value": "topCenter",
+                "label": "Top center"
+            },
+            {
+              "value": "middleLeft",
+              "label": "Middle left"
+            },
+            {
+              "value": "middleRight",
+              "label": "Middle right"
+            },
+            {
+              "value": "middleCenter",
+              "label": "Middle center"
+            },
+            {
+              "value": "middleCenterLeft",
+              "label": "Middle center left"
+            },
+            {
+              "value": "bottomLeft",
+              "label": "Bottom left"
+            },
+            {
+              "value": "bottomRight",
+              "label": "Bottom right"
+            },
+            {
+              "value": "bottomCenter",
+              "label": "Bottom center"
+            }
+          ],
+          "default": "bottomLeft"
+        },
+        {
+          "type": "color",
+          "id": "title_highlight",
+          "label": "Title highlight color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "title_color",
+          "label": "Text color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "content_color",
+          "label": "Content background-color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "range",
+          "id": "title_size",
+          "label": "Title size on desktop",
+          "min": 20,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "default": 40
+        },
+        {
+          "type": "range",
+          "id": "title_mobile_size",
+          "label": "Title size on mobile",
+          "min": 10,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "default": 20
+        }
+    ],
+    "presets": [
+      {
+        "category": "Promotional",
+        "name": "Newsletter with Klaviyo",
+        "settings": {}
+      }
+    ]
+  }
+  {% endschema %}

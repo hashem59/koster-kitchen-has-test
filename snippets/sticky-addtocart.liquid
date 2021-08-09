@@ -1,0 +1,186 @@
+{% style %}
+/* sticky add to cart info */
+.sticky-btn-wrapper {
+  background-color: #F8F8F8;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  z-index: 2147483647;
+  width: 100%;
+  border: none;
+  overflow: hidden;
+  transform: translateY(100%);
+  transition: transform 300ms ease 0s;
+  box-shadow: 0px -6px 18px rgba(0, 0, 0, 0.09);
+}
+
+.sticky-btn-wrapper.fixed-btn {
+    transform: translateY(0px)
+}
+
+.sticky-btn-wrapper .add-to-cart {
+    padding: 0
+}
+
+.sticky-btn--inner {
+    max-width: 1260px;
+    padding: 10px 15px;
+    margin: 0 auto;
+    min-height: 70px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.sticky-btn-info {
+  min-width: 0;
+  max-width: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+
+@media screen and (max-width: 800px) {
+  .sticky-btn-info {
+      display:none
+  }
+}
+
+.sticky-btn-info .list-tags {
+  margin-top: 5px
+}
+
+.sticky-btn-action {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end
+}
+
+.disabled-add-to-cart .sticky-btn-wrapper .ProductForm__AddToCart  {
+  cursor: not-allowed;
+  opacity: 0.75
+}
+
+.sticky-btn-variant {
+  font-size: var(--base-text-font-size)
+}
+
+@media screen and (max-width: 800px) {
+  .sticky-btn-action {
+    -webkit-box-pack:center;
+    -ms-flex-pack: center;
+    justify-content: center
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sticky-btn-action,
+  .sticky-btn-wrapper .add-to-cart {
+    width: 100%;
+  }
+  .sticky-btn--inner {
+    padding: 14px 14px 22px
+  }
+}
+
+  .sticky-btn-img {
+    width: 60px;
+    margin-right: 17px;
+    border: 1px solid #DADADA;
+  }
+
+  .no-scroll .fixed-btn,
+  .no-scroll .fixedAddToCart {
+    display: none;
+  }
+
+{% endstyle %}
+
+<div class="">
+  {% assign featured_image = product.featured_image %}
+  <div class="sticky-btn-wrapper">
+    <div class="sticky-btn--inner">
+      <div class="sticky-btn-info">
+        <div class="sticky-btn-img">
+          {% assign image = featured_image %}
+          {%- capture supported_sizes -%}{%- render 'image-size', sizes: '400,600,700,800,900,1000,1200', image: image -%}{%- endcapture -%}
+
+          <div class="AspectRatio" style="max-width: 350px; --aspect-ratio: {{ image.aspect_ratio }}">
+            {%- assign image_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+            <img class="Image--lazyLoad " data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ image.alt | escape }}">
+
+            <noscript>
+              <img src="{{ image | img_url: '800x' }}" alt="{{ image.alt | escape }}">
+            </noscript>
+          </div>
+        </div>
+        <div class="sticky-btn-title">
+          <div class="list-title Heading u-h5">
+            <span>{{product.title}}</span>
+          </div>
+          <div class="sticky-btn-variant" data-current-varaints>
+            {%- if product.variants.size > 1 -%}
+              {{ product.selected_or_first_available_variant.title }}
+            {%- endif -%}
+          </div>
+
+        </div>
+
+      </div>
+      <div class="sticky-btn-action">
+        <div class="add-to-cart clearfix">
+          {%- assign selected_variant = product.selected_or_first_available_variant -%}
+          <button type="submit" class="ProductForm__AddToCart Button {% if selected_variant.available %}Button--primary{% else %}Button--secondary{% endif %} Button--full">
+            {%- if selected_variant.available -%}
+              <span>{% if product.template_suffix == 'pre-order' %}{{ 'product.form.pre_order' | t }}{% else %}{{ 'product.form.add_to_cart' | t }}{% endif %}</span>
+
+              {%- if section.settings.show_price_in_button or true -%}
+                 &nbsp;–&nbsp;&nbsp;
+                <span data-sticky-addToCart-price data-varaint-price="{{ selected_variant.price }}">{{ selected_variant.price | money_without_trailing_zeros }}</span>
+              {%- endif -%}
+            {%- else -%}
+              {{- 'product.form.sold_out' | t -}}
+            {%- endif -%}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

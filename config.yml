@@ -1,0 +1,23 @@
+development:
+  password: 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
+  # theme_id: "124124561568" #hashem
+  theme_id: "124120694944"
+  store: https://klosterkitchen.myshopify.com
+  # 5ab3e0b79ab13ead4aa818a114174dca
+
+
+# development-b2b:
+#   password: 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
+#   theme_id: "124120694944"
+#   store: https://kloster-kitchen-b2b.myshopify.com/
+#   #key ba72ecc1dc583773934e9174d9517e28
+
+# staging:
+#   password: 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
+#   theme_id: "122399654048"
+#   store: https://klosterkitchen.myshopify.com
+#
+# production:
+#   password: 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
+#   theme_id: "122330153120"
+#   store: https://klosterkitchen.myshopify.com

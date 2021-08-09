@@ -1,0 +1,252 @@
+{%- capture flickity_options -%}
+{
+  "prevNextButtons": false,
+  "setGallerySize": {% if block.settings.show_fullscreen %}false{% else %}true{% endif %},
+  "adaptiveHeight": {% if block.settings.show_fullscreen %}false{% else %}true{% endif %},
+  "wrapAround": true,
+  "dragThreshold": 15,
+  "pauseAutoPlayOnHover": false,
+  "autoPlay": false,
+  "pageDots": false
+}
+{%- endcapture -%}
+
+
+<section id="section-{{ block.id }}" data-section-id="{{ block.id }}" data-section-type="slideshow">
+  <div class="Slideshow {% if block.settings.show_fullscreen %}Slideshow--fullscreen{% endif %}">
+    <div class="Slideshow__Carousel {% if block.settings.show_arrow %}Slideshow__Carousel--withScrollButton{% endif %} Carousel Carousel--fadeIn {% if block.settings.show_fullscreen %}Carousel--fixed{% endif %} Carousel--insideDots"
+         data-flickity-config='{{ flickity_options }}'>
+
+         {%- capture slide_content -%}
+          {%- comment -%}
+            Implementation note: this is an art driven image selection so it would have been better to be able to use the "picture" tag instead. However,
+            as the mobile and desktop image could have different aspect ratio, the image allocation space would not have work properly without explicitly
+            distinguishing the two images, hence the two containers.
+          {%- endcomment -%}
+
+          {%- assign mobile_image = block.settings.mobile_image | default: block.settings.image -%}
+
+          {%- if mobile_image -%}
+            <div class="Slideshow__ImageContainer {% if block.settings.apply_overlay %}Image--contrast{% endif %} {% unless block.settings.show_fullscreen %}AspectRatio{% endunless %} hidden-tablet-and-up"
+                 style="{% unless block.settings.show_fullscreen %}--aspect-ratio: {{ mobile_image.aspect_ratio }};{% endunless %} background-image: url({{ mobile_image | img_url: '1x1', format: 'jpg' }})">
+                <img class="Slideshow__Image Image--lazyLoad"
+                     src="{{ mobile_image | img_url: '1x1' }}"
+                     data-src="{{ mobile_image | img_url: 'x800' }}"
+                     alt="{{ mobile_image.alt | escape }}">
+
+                <noscript>
+                  <img class="Slideshow__Image" src="{{ mobile_image | img_url: 'x800' }}" alt="{{ mobile_image.alt | escape }}">
+                </noscript>
+            </div>
+          {%- endif -%}
+
+          {%- if block.settings.image -%}
+            <div class="Slideshow__ImageContainer {% if block.settings.apply_overlay %}Image--contrast{% endif %} {% unless block.settings.show_fullscreen %}AspectRatio AspectRatio--withFallback{% endunless %} hidden-phone"
+                 style="{% unless block.settings.show_fullscreen %}padding-bottom: {{ 100.0 | divided_by: block.settings.image.aspect_ratio }}%; --aspect-ratio: {{ block.settings.image.aspect_ratio }};{% endunless %} background-image: url({{ block.settings.image | img_url: '1x1', format: 'jpg' }})">
+              {% assign image_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+
+              <img class="Slideshow__Image Image--lazyLoad hide-no-js"
+                   data-src="{{ image_url }}"
+                   data-optimumx="1.2"
+                   data-widths="[400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200]"
+                   data-sizes="auto"
+                   alt="{{ block.settings.image.alt | escape }}">
+
+              <noscript>
+                <img class="Slideshow__Image" src="{{ block.settings.image | img_url: '1000x' }}" alt="{{ block.settings.image.alt | escape }}">
+              </noscript>
+            </div>
+          {%- else -%}
+            <div class="Slideshow__ImageContainer {% if block.settings.apply_overlay %}Image--contrast{% endif %} {% if block.settings.show_fullscreen %}PlaceholderBackground{% endif %} PlaceholderSvg--dark">
+              {%- capture placeholder -%}{% cycle 'lifestyle-1', 'lifestyle-2' %}{%- endcapture -%}
+              {{ placeholder | placeholder_svg_tag: 'Slideshow__Image PlaceholderBackground__Svg' }}
+            </div>
+          {%- endif -%}
+
+          {%- capture slideshow_content -%}
+            {%- if block.settings.subheading != blank -%}
+              <!-- <h3 class="SectionHeader__SubHeading Heading u-h6">{{ block.settings.subheading | escape }}</h3> -->
+            {%- endif -%}
+
+            {%- if block.settings.title != blank -%}
+              <!-- <h2 class="SectionHeader__Heading SectionHeader__Heading--emphasize Heading u-h1 title1">
+                <span class="title_highlight">{{ block.settings.title }}</span>
+              </h2> -->
+            {%- endif -%}
+
+            
+            {% if block.settings.subheading != blank %}
+              <h2 class="SectionHeader__Heading SectionHeader__Heading--emphasize Heading u-h1 title1" style="margin-bottom:2px;">
+                  <span class="title_highlight">{{ block.settings.subheading | escape }}</span>
+              </h2>
+            {% endif %}
+
+            {% if block.settings.title != blank %}
+              <h2 class="SectionHeader__Heading SectionHeader__Heading--emphasize Heading u-h1 title1" style="margin-top: 0;">
+                  <span class="title_highlight">{{ block.settings.title }}</span>
+              </h2>
+            {% endif %}
+
+            {%- if block.settings.title2 != blank -%}
+              <h2 class="SectionHeader__Heading SectionHeader__Heading--emphasize Heading u-h1 titel2">{{ block.settings.title2 }}</h2>
+            {%- endif -%}
+
+            {%- if block.settings.enableLine -%}
+              <hr class="hrClass">
+            {%- endif -%}
+
+            {%- if block.settings.text != blank -%}
+              <h2 class="SectionHeader__Heading Heading section__text regular_font">{{ block.settings.text }}</h2>
+            {%- endif -%}
+
+            <style>
+              #Slideshow__Content--{{ block.id }} .title1{
+                font-size: {{ block.settings.fontSizeDesktop_title }}px !important;
+              }
+              #Slideshow__Content--{{ block.id }} .titel2{
+                font-size: {{ block.settings.fontSizeDesktop }}px !important;
+              }
+              #Slideshow__Content--{{ block.id }} .Heading.u-h1.title1{
+                color: {{ block.settings.title_color }};
+                margin-bottom: 30px;
+                line-height: 1.2;
+                
+              }
+              #Slideshow__Content--{{ block.id }} .section__text{
+                font-size: {{ block.settings.fontSizeTextDesktop }}px;
+                font-style: normal;
+              }
+              {%- if block.settings.enableLine -%}
+              #Slideshow__Content--{{ block.id }} .titel2{
+                margin-bottom: 0;
+              }
+              #Slideshow__Content--{{ block.id }} .hrClass{
+                background: {{ block.settings.lineColor }};
+                margin: 12px auto 25px;
+                width: 59px;
+                height: 0px;
+                border: 3px solid {{ block.settings.lineColor }};
+                /* margin: 0 auto; */
+              }
+              #Slideshow__Content--{{ block.id }}.Slideshow__Content--middleLeft .hrClass,
+              #Slideshow__Content--{{ block.id }}.Slideshow__Content--bottomLeft .hrClass{
+                margin-left: 0;
+              }
+              #Slideshow__Content--{{ block.id }}.Slideshow__Content--middleRight .hrClass,
+              #Slideshow__Content--{{ block.id }}.Slideshow__Content--bottomRight .hrClass{
+                margin-right: 0;
+              }
+              {%- endif -%}
+              #Slideshow__Content--{{ block.id }} .title_highlight{
+                background-color: {{ block.settings.title_highlight }};
+                white-space:pre;
+                padding: 1px 5px 4px 3px;
+              }
+              @media screen and (max-width: 640px) {
+                #Slideshow__Content--{{ block.id }} .title1{
+                font-size: {{ block.settings.fontSizeMobile_title }}px !important;
+              }
+                #Slideshow__Content--{{ block.id }} .titel2{
+                  font-size: {{ block.settings.fontSizeMobile }}px !important;
+                }
+                #Slideshow__Content--{{ block.id }} .section__text{
+                  font-size: {{ block.settings.fontSizeTextMobile }}px;
+                }
+                #Slideshow__Content--{{ block.id }} .hrClass{
+                  width: 34px;
+                }
+                #Slideshow__Content--{{ block.id }}.Slideshow__Content--bottomCenter, 
+                #Slideshow__Content--{{ block.id }}.Slideshow__Content--bottomLeft, 
+                #Slideshow__Content--{{ block.id }}.Slideshow__Content--bottomRight{
+                  bottom: 0;
+                }
+              } 
+              @media screen and (min-width: 640px) {
+                #Slideshow__Content--{{ block.id }} .SectionHeader__ButtonWrapper{
+                  margin-top: 40px;
+                }
+              }
+            </style>
+
+
+
+            {%- if block.settings.button_1_text != blank and block.settings.button_2_text != blank -%}
+              {%- assign has_two_buttons = true -%}
+            {%- else -%}
+              {%- assign has_two_buttons = false -%}
+            {%- endif -%}
+
+            {%- if block.settings.button_1_text != blank or block.settings.button_2_text != blank -%}
+              <div class="SectionHeader__ButtonWrapper">
+                <div class="ButtonGroup ButtonGroup--spacingSmall {% if has_two_buttons %}ButtonGroup--sameSize{% endif %}">
+                  {%- if block.settings.button_1_text != blank -%}
+                    <a href="{{ block.settings.button_1_link }}" class="ButtonGroup__Item Button">{{ block.settings.button_1_text | escape }}</a>
+                  {%- endif -%}
+
+                  {%- if block.settings.button_2_text != blank -%}
+                    <a href="{{ block.settings.button_2_link }}" class="ButtonGroup__Item Button">{{ block.settings.button_2_text | escape }}</a>
+                  {%- endif -%}
+                </div>
+              </div>
+            {%- endif -%}
+          {%- endcapture -%}
+
+          {%- if slideshow_content != blank -%}
+            <div class="Slideshow__Content Slideshow__Content--{{ block.settings.content_position }}" id="Slideshow__Content--{{ block.id }}">
+              <header class="SectionHeader">
+                {{ slideshow_content }}
+              </header>
+            </div>
+          {%- endif -%}
+        {%- endcapture -%}
+
+        {%- comment -%}This code allows to cover a common use case where merchant would like to have a clickable image{%- endcomment -%}
+
+        {%- if block.settings.button_1_text == blank and block.settings.button_1_link != blank -%}
+          <a href="{{ block.settings.button_1_link }}" id="Slide{{ block.id }}" class="Slideshow__Slide Carousel__Cell {% if forloop.first %}is-selected{% endif %}" {% if forloop.first %}style="visibility: visible"{% endif %} data-slide-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+            {{- slide_content -}}
+          </a>
+        {%- else -%}
+          <div id="Slide{{ block.id }}" class="Slideshow__Slide Carousel__Cell {% if forloop.first %}is-selected{% endif %}" {% if forloop.first %}style="visibility: visible"{% endif %} data-slide-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+            {{- slide_content -}}
+          </div>
+        {%- endif -%}
+
+    </div>
+
+    {%- if block.settings.show_arrow -%}
+      <button data-href="#section-{{ block.id }}-end" class="Slideshow__ScrollButton RoundButton RoundButton--medium" aria-label="{{ 'general.accessibility.scroll_to_content' | t }}" data-animate-bottom>
+        {%- render 'icon' with 'arrow-bottom' -%}
+      </button>
+    {%- endif -%}
+  </div>
+
+  <span id="section-{{ block.id }}-end" class="Anchor"></span>
+</section>
+
+<style>
+  #section-{{ block.id }} .Heading,
+   #section-{{ block.id }} .flickity-page-dots {
+    color: {{ block.settings.text_color }};
+  }
+
+
+  #section-{{ block.id }} .Button {
+    color: {{ block.settings.button_color }};
+    border-color: {{ block.settings.button_background }};
+    /* background-color: {{ block.settings.button_background }}; */
+  }
+
+  #section-{{ block.id }} .Button::before {
+    background-color: {{ block.settings.button_background }};
+  }
+
+  {%- if settings.show_button_transition -%}
+    @media (-moz-touch-enabled: 0), (hover: hover) {
+      #section-{{ block.id }} .Button:hover {
+        color: {{ block.settings.button_background }};
+        /* background-color: transparent; */
+      }
+    }
+  {%- endif -%}
+</style>

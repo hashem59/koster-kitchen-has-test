@@ -1,0 +1,343 @@
+<div class="PageContent">
+  <div class="Container">
+    {%- render 'contact-snippet', section: section -%}
+    {%- render 'contact-members-snippet', section: section -%}
+  </div>
+</div>
+<style>
+  #section-{{ section.id }} .ArticleItem__Excerpt{
+    font-size: 14px;
+  }
+  #section-{{ section.id }} .ArticleItem__Content {
+    margin: 0;
+  }
+  
+  #section-{{section.id}} .FeatureText--withImage .FeatureText__ContentWrapper .Heading p{
+    margin: 0;
+    line-height: 1;
+  }
+
+  @media screen and (min-width: 641px) {
+    #section-{{section.id}} .FeatureText--withImage .FeatureText__ContentWrapper, 
+    #section-{{section.id}} .FeatureText--withImage .FeatureText__ImageWrapper{
+      vertical-align: top;
+    }
+    #section-{{section.id}} .FeatureText--withImage .FeatureText__ContentWrapper{
+      padding-top: 10px;
+    }
+    #section-{{section.id}} .FeatureText--imageRight .FeatureText__ContentWrapper {
+      /* padding-right: 244px; */
+      padding-left: 0;
+    }
+    #section-{{section.id}} .FeatureText--imageRight .AspectRatio, 
+    #section-{{section.id}} .FeatureText--imageRight .FeatureText__Content{
+      margin-left: 0;
+    }
+    #section-{{section.id}} .FeatureText--imageLeft .AspectRatio, 
+    #section-{{section.id}} .FeatureText--imageLeft .FeatureText__Content{
+      margin-right: 0;
+    }
+    #section-{{section.id}} .FeatureText--imageLeft .FeatureText__ContentWrapper {
+      /* padding-left: 244px; */
+      padding-right: 0;
+    }
+    #section-{{section.id}} .FeatureText--imageRight .FeatureText__ImageWrapper {
+      padding-left: 50px;
+    }
+    #section-{{section.id}} .FeatureText--imageLeft .FeatureText__ImageWrapper {
+      padding-right: 50px;
+    }
+    #section-{{ section.id }} .icons_info_contact{
+      margin-top: 40px;
+    }
+    #section-{{ section.id }} .FeatureText--withImage .FeatureText__ContentWrapper .Heading{
+      font-size: 44px;
+      margin-bottom: 25px;
+    }
+    #section-{{ section.id }}.teamMemberSection{
+      margin-top: 100px;
+    }
+    .PageContent .Container{
+      padding: 0;
+    }
+    #section-{{ section.id }} .ArticleItem__Title.Heading {
+      margin-bottom: 11px;
+    }
+    #section-{{ section.id }} .ArticleItem__ImageWrapper{
+      margin-bottom: 15px;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    #section-{{ section.id }}.teamMemberSection{
+      margin-top: 50px;
+    }
+    #section-{{ section.id }} .ArticleItem__Title.Heading {
+      margin-bottom: 6px;
+    }
+    #section-{{ section.id }} .ArticleItem__ImageWrapper{
+      margin-bottom: 10px;
+    }
+    #section-{{ section.id }} .ArticleItem__Excerpt{
+      font-size: 12px;
+    }
+    #section-{{ section.id }} .ArticleItem__Title{
+      font-size: 18px;
+    }
+    #section-{{ section.id }} .FeatureText--imageRight{
+      flex-direction: column;
+      text-align: center;
+    }
+    #section-{{ section.id }} .FeatureText__Content{
+      text-align: center;
+    }
+    #section-{{section.id}} .FeatureText--withImage .FeatureText__ContentWrapper .Heading{
+      font-size: 24px;
+    }
+    #section-{{section.id}} .FeatureText--withImage .FeatureText__ContentWrapper .SectionHeader__Description{
+      font-size: 14px;
+    }
+    #section-{{ section.id }} .contact-icon{
+      justify-content: center;
+      font-size: 18px;
+    }
+    #section-{{ section.id }} .icons_info_contact{
+      margin-top: 30px;
+    }
+    #section-{{section.id}} .FeatureText__ContentWrapper {
+      padding-bottom: 10px;
+    }
+    #section-{{section.id}}.contact-form-main{
+      margin-top: 0;
+    }
+    .PageContent{
+      margin-top: 0;
+    }
+    
+  }
+</style>
+{% schema %}
+{
+  "name": "Contact page",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Form Info"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Title",
+      "default": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Heading",
+      "default": "<p>Title</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Text",
+      "default": "<p>Add your own custom content to give more information about your store, availability details...</p>"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Form position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon1",
+      "label": "icon"
+    },
+    {
+      "type": "richtext",
+      "id": "content1",
+      "label": "Text",
+      "default": "<p>Announce something here</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon2",
+      "label": "icon"
+    },
+    {
+      "type": "richtext",
+      "id": "content2",
+      "label": "Text",
+      "default": "<p>Announce something here</p>"
+    },
+    {
+      "type": "header",
+      "content": "Members Info"
+    },  
+    {
+      "type": "text",
+      "id": "subheading1",
+      "label": "Sub-heading"
+    },
+    {
+      "type": "text",
+      "id": "title1",
+      "label": "Heading"
+    },
+    {
+      "type": "header",
+      "content": "Memeber 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "name",
+      "label": "Name"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Description"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text"
+    },
+    {
+      "type": "header",
+      "content": "Memeber 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "name2",
+      "label": "Name"
+    },
+    {
+      "type": "richtext",
+      "id": "text2",
+      "label": "Description"
+    },
+    {
+      "type": "header",
+      "content": "Memeber 3"
+    }
+    ,
+    {
+      "type": "image_picker",
+      "id": "image3",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "name3",
+      "label": "Name"
+    },
+    {
+      "type": "richtext",
+      "id": "text3",
+      "label": "Description"
+    },
+    {
+      "type": "header",
+      "content": "Memeber 4"
+    }
+    ,
+    {
+      "type": "image_picker",
+      "id": "image4",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "name4",
+      "label": "Name"
+    },
+    {
+      "type": "richtext",
+      "id": "text4",
+      "label": "Description"
+    }
+    
+    
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Text field",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Name",
+          "default": "Custom field"
+        },
+        {
+          "type": "checkbox",
+          "id": "use_long_text",
+          "label": "Use long text",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "is_required",
+          "label": "Field is required",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "dropdown",
+      "name": "Dropdown",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Name",
+          "default": "Custom field"
+        },
+        {
+          "type": "text",
+          "id": "values",
+          "label": "Values",
+          "info": "Separate each value by a comma.",
+          "default": "value 1, value 2, value 3"
+        }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "text",
+        "settings": {
+          "title": "Your phone (optional)"
+        }
+      }
+    ]
+  }
+}
+{% endschema %}

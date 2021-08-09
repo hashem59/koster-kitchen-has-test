@@ -1,0 +1,30 @@
+{% assign fake_option_arr = product.metafields.tante-e.fake-variants | split: '#' %}
+{% assign fake_option_title = fake_option_arr[0] | strip %}
+<div class="ProductForm__Option ProductForm__FakeOption ProductForm__Option--labelled">
+  <span class="ProductForm__Label">
+    {{ fake_option_title }}
+  </span>
+  <ul class="SizeSwatchList HorizontalList HorizontalList--spacingTight FakeSwatchList">
+    {%- for i in (1..3) -%}
+      {%- if fake_option_arr[i] != blank -%}
+        {% assign fake_variant = fake_option_arr[i] | split: '|' %}
+        {% assign href = fake_variant[2] | strip | strip_newlines %}
+        <!-- href={{href}} -->
+        <li class="HorizontalList__Item" a data-href="{{ href }}" {% if product.tags contains "one_shot_icon" and href != blank and settings.one_shot_icon != blank %}style="position: relative"{% endif %}>
+          <input id="option-product-template-fake{{i}}" class="SizeSwatch__Radio" type="radio" name="fake-option"
+                 value="{{ fake_variant[0] }}" {% if href == blank %}checked="checked"{% endif %}>
+          <label for="option-product-template-fake{{i}}" onclick="location.pathname = this.parentNode.href" style="background-image: url({{ fake_variant[1] }})" class="SizeSwatch">{{ fake_variant[0] }}</label>
+        {% if product.tags contains "one_shot_icon" and href != blank and settings.one_shot_icon != blank %}
+        <!-- one-shot-icon -->
+          <div class="one-shot-icon">
+            <img class="one-shot-img" src="{{settings.one_shot_icon | img_url: '50x'}}">
+          </div>
+        {% endif %}
+        </li>
+      {%- else -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+  </ul>
+</div>

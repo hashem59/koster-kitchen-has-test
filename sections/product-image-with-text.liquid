@@ -1,0 +1,59 @@
+<!-- {{ product.metafields.global.text-image-section-1 }} -->
+
+
+{%- for i in (1..3) -%}
+
+  {% assign metafiledKey = 'text-image-section-' | append: forloop.index %}
+
+  {% if product.metafields.tante-e[metafiledKey] != blank %}
+  	{% assign allData =  product.metafields.tante-e[metafiledKey]  %}
+  	{% assign separatedData = allData | split: '|' %}
+  	{% assign imageLink = separatedData[0] | strip | strip_newlines | remove: ' ' %}
+  	{% assign mobileImageLink = separatedData[1] | strip | strip_newlines | remove: ' ' %}
+  	{% assign title = separatedData[2] %}
+  	{% assign content = separatedData[3] %}
+
+    {% assign image = imageLink | split: '/' | last %}
+    {% assign image = image | split: '?' | first %}
+    <!-- <h3>{{image}}</h3> -->
+    {% assign image = images[image] %}
+
+    {% assign mobile_image = mobileImageLink | split: '/' | last %}
+    {% assign mobile_image = mobile_image | split: '?' | first %}
+    <!-- <h3>{{mobile_image}}</h3> -->
+    {% assign mobile_image = images[mobile_image] %}
+
+    {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+    {% assign image_position = 'right' %}
+    {% if thecycle contains 'even' %}
+      {% assign image_position = 'left' %}
+    {% endif %}
+
+  	{% render 'include-product-text-with-image',image_position: image_position , image: image, mobile_image: mobile_image, title: title, content: content %}
+
+  {% endif %}
+
+{%- endfor -%}
+
+<style media="screen">
+@media screen and (max-width: 640px) {
+  #shopify-section-{{section.id}} {
+    background-color: #F8F8F8
+  }
+}
+
+</style>
+
+{% schema %}
+{
+  "name": "Product text with image",
+  "class": "shopify-section--bordered",
+  "settings": [
+  	{
+  	  "type": "header",
+  	  "content": "Section content from the product metafield"
+
+  	}
+   ]
+}
+{% endschema %}

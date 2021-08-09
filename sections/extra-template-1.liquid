@@ -1,0 +1,1632 @@
+<!-- section extra-template-1 -->
+{% assign counter = 0 %}
+<div class="extraTemplatePages">
+{%- for block in section.blocks -%}
+
+    {%- if block.type == "slideBanner" -%}
+        {%- render 'homepage-banner-snippet', block: block -%}
+    {%- elsif block.type == "image_text_overlay" -%}
+        {%- render 'image-with-text-overlay-extraOptions', block: block -%}
+    {%- elsif block.type == "rich_text_image" -%}
+        {%- render 'richText-with-image', block: block -%}
+    {%- elsif block.type == "rich_text" -%}
+        {%- render 'rich-text-snippet', block: block -%}    
+    {%- elsif block.type == "featured_video" -%}
+        {%- render 'featured-video-snippet', block: block -%}
+    {%- elsif block.type == "testimonial" -%}
+        {%- render 'testimonials-snippet', block: block -%}
+    {%- elsif block.type =="icons_description" -%}
+        {%- render 'icons_description', block: block-%}
+    {%- elsif block.type == "icon_list"-%}
+        {%- render 'icons-list-snippet', block: block-%}
+    {%- elsif block.type == "logo_list" -%}
+        {%- render 'logo_snippet', block: block-%}
+    {%- elsif block.type == "collection" -%}
+        {%- render 'featured-collection-snippet', block: block-%}     
+    {%- elsif block.type == "instagram" -%}
+        {%- render 'instagram-gallery-snippet', block: block-%} 
+    {%- elsif block.type == "team_members" -%}
+        {% assign counter = counter | plus: 1 %}
+        {% if counter == 1 %}
+          {%- render 'team-members-snippet', block: block, section: section, counter: counter -%}   
+        {% endif %}  
+    {%- endif -%} 
+{%- endfor -%}
+</div>
+
+
+{% schema %}
+{
+    "name": "Page Template",
+    "settings": [
+    ],
+    "blocks":[
+          {
+            "type": "slideBanner",
+            "name": "Homepage Banner",
+            "settings": [
+              {
+                "type": "checkbox",
+                "id": "show_fullscreen",
+                "label": "Show full-screen images",
+                "info": "If enabled, images will be resized to fit the entire screen.",
+                "default": false
+              },
+              {
+                "type": "checkbox",
+                "id": "show_arrow",
+                "label": "Show bottom arrow",
+                "default": false
+              },
+              {
+                "type": "color",
+                "id": "text_color",
+                "label": "Text",
+                "default": "#ffffff"
+              },
+              {
+                "type": "color",
+                "id": "button_color",
+                "label": "Button text",
+                "default": "#363636"
+              },
+              {
+                "type": "color",
+                "id": "button_background",
+                "label": "Button background",
+                "default": "#ffffff"
+              },
+              {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image",
+                "info": "1800 x 800px .jpg recommended"
+              },
+              {
+                "type": "image_picker",
+                "id": "mobile_image",
+                "label": "Mobile image",
+                "info": "750 x 1100px .jpg recommended. If none is set, desktop image will be cropped."
+              },
+              {
+                "type": "checkbox",
+                "id": "apply_overlay",
+                "label": "Apply overlay on image",
+                "info": "This can improve text visibility.",
+                "default": true
+              },
+              {
+                "type": "select",
+                "id": "content_position",
+                "label": "Content position",
+                "options": [
+                  {
+                    "value": "middleLeft",
+                    "label": "Middle left"
+                  },
+                  {
+                    "value": "middleCenter",
+                    "label": "Middle center"
+                  },
+                  {
+                    "value": "middleRight",
+                    "label": "Middle right"
+                  },
+                  {
+                    "value": "bottomLeft",
+                    "label": "Bottom left"
+                  },
+                  {
+                    "value": "bottomCenter",
+                    "label": "Bottom center"
+                  },
+                  {
+                    "value": "bottomRight",
+                    "label": "Bottom right"
+                  }
+                ],
+                "default": "bottomLeft"
+              },
+              {
+                "type": "text",
+                "id": "subheading",
+                "label": "Sub-heading",
+                "default": "Slide title"
+              },
+              {
+                "type": "html",
+                "id": "title",
+                "label": "Heading"
+              },
+              {
+                "type": "range",
+                "id": "fontSizeDesktop_title",
+                "min": 12,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "label": "Font size desktop",
+                "default": 40
+              },
+              {
+                "type": "range",
+                "id": "fontSizeMobile_title",
+                "min": 12,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "label": "Font size mobile",
+                "default": 30
+              },
+              {
+                "type": "color",
+                "id": "title_highlight",
+                "label": "Title highlight color",
+                "default": "#ffffff"
+              },
+              {
+                "type": "color",
+                "id": "title_color",
+                "label": "Title color",
+                "default": "#ffffff"
+              },
+              {
+                "type": "text",
+                "id": "title2",
+                "label": "Heading 2"
+              },
+              {
+                "type": "range",
+                "id": "fontSizeDesktop",
+                "min": 12,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "label": "Font size desktop",
+                "default": 40
+              },
+              {
+                "type": "range",
+                "id": "fontSizeMobile",
+                "min": 12,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "label": "Font size mobile",
+                "default": 30
+              },
+              {
+                "type": "checkbox",
+                "id": "enableLine",
+                "label": "Show short line",
+                "default": true
+              },
+              {
+                "type": "color",
+                "id": "lineColor",
+                "label": "Line color",
+                "default": "#ffffff"
+              },
+              {
+                "type": "text",
+                "id": "text",
+                "label": "Text"
+              },
+              {
+                "type": "range",
+                "id": "fontSizeTextDesktop",
+                "min": 12,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "label": "Font size desktop",
+                "default": 40
+              },
+              {
+                "type": "range",
+                "id": "fontSizeTextMobile",
+                "min": 12,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "label": "Font size mobile",
+                "default": 30
+              },
+              {
+                "type": "header",
+                "content": "Button 1"
+              },
+              {
+                "type": "text",
+                "id": "button_1_text",
+                "label": "Text"
+              },
+              {
+                "type": "url",
+                "id": "button_1_link",
+                "label": "Link"
+              },
+              {
+                "type": "header",
+                "content": "Button 2"
+              },
+              {
+                "type": "text",
+                "id": "button_2_text",
+                "label": "Text"
+              },
+              {
+                "type": "url",
+                "id": "button_2_link",
+                "label": "Link"
+              }
+            ]
+          },
+          {
+            "type": "image_text_overlay",
+            "name": "Image with text overlay",
+            "settings": [
+                {
+                    "type": "select",
+                    "id": "section_size",
+                    "label": "Section size",
+                    "options": [
+                        {
+                            "value": "small",
+                            "label": "Small"
+                        },
+                        {
+                            "value": "normal",
+                            "label": "Normal"
+                        },
+                        {
+                            "value": "large",
+                            "label": "Large"
+                        }
+                    ],
+                        "default": "large"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image",
+                    "info": "1500 x 800px .jpg recommended"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "newImageMobile",
+                    "label": "Image for mobile",
+                    "info": "1500 x 800px .jpg recommended" 
+                },
+                {
+                    "type": "color",
+                    "id": "text_color",
+                    "label": "Text",
+                    "default": "#ffffff"
+                },
+                {
+                    "type": "color",
+                    "id": "overlay_color",
+                    "label": "Overlay",
+                    "default": "#000000"
+                },
+                {
+                    "type": "range",
+                    "id": "overlay_opacity",
+                    "label": "Overlay opacity",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "default": 30
+                },
+                {
+                    "type": "checkbox",
+                    "id": "showPageName",
+                    "label": "Show page name"
+                },
+                {
+                    "type": "select",
+                    "id": "content_position",
+                    "label": "Content position",
+                    "options": [
+                      {
+                        "value": "topLeft",
+                        "label": "Top left"
+                      },
+                      {
+                        "value": "topRight",
+                        "label": "Top right"
+                      },
+                      {
+                        "value": "topCenter",
+                        "label": "Top center"
+                      },
+                      {
+                        "value": "middleLeft",
+                        "label": "Middle left"
+                      },
+                      {
+                        "value": "middleRight",
+                        "label": "Middle right"
+                      },
+                      {
+                        "value": "middleCenter",
+                        "label": "Middle center"
+                      },
+                      {
+                        "value": "bottomLeft",
+                        "label": "Bottom left"
+                      },
+                      {
+                        "value": "bottomRight",
+                        "label": "Bottom right"
+                      },
+                      {
+                        "value": "bottomCenter",
+                        "label": "Bottom center"
+                      }
+                    ],
+                    "default": "bottomLeft"
+                },
+                {
+                    "type": "text",
+                    "id": "subheading",
+                    "label": "Sub-heading"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Heading",
+                    "default": "Tell your story"
+                },
+                {
+                    "type": "richtext",
+                    "id": "content",
+                    "label": "Text",
+                    "default": "<p>Add your own custom content to give more information about your store, availability details...</p>"
+                }
+            ]
+        },
+        {
+            "type":"rich_text_image",
+            "name": "Rich text with image",
+            "settings": [
+              {
+                "type": "text",
+                "id": "subheading",
+                "label": "Sub-heading",
+                "default": "Sub-heading"
+              },
+              {
+                "type": "text",
+                "id": "title",
+                "label": "Heading",
+                "default": "Title"
+              },
+              {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image",
+                "info": "1200 x 1200px .png recommended"
+              },
+              {
+                "type": "image_picker",
+                "id": "mobile_image",
+                "label": "Image for mobile",
+                "info": "1200 x 1200px .png recommended"
+              },
+              {
+                "type": "select",
+                "id": "image_position",
+                "label": "Image position",
+                "options": [
+                  {
+                    "value": "left",
+                    "label": "Left"
+                  },
+                  {
+                    "value": "right",
+                    "label": "Right"
+                  }
+                ],
+                "default": "right"
+              },
+              {
+                "type": "richtext",
+                "id": "content",
+                "label": "Text",
+                "default": "<p>Add your own custom content to give more information about your store, availability details...</p>"
+              },
+              {
+                "type": "text",
+                "id": "link_text",
+                "label": "Link text"
+              },
+              {
+                "type": "url",
+                "id": "link_url",
+                "label": "Link URL"
+              }
+            ]
+        },         
+        {
+          "type":"rich_text",
+          "name": "Rich text",
+          "settings": [
+            {
+              "type": "select",
+              "id": "content_position",
+              "label": "Content position",
+              "options": [
+                {
+                  "value": "left",
+                  "label": "Left"
+                },
+                {
+                  "value": "right",
+                  "label": "Right"
+                },
+                {
+                  "value": "center",
+                  "label": "Center"
+                }
+              ],
+              "default": "right"
+            },
+            {
+              "type": "select",
+              "id": "content_position_mob",
+              "label": "Content position in mobile",
+              "options": [
+                {
+                  "value": "left",
+                  "label": "Left"
+                },
+                {
+                  "value": "right",
+                  "label": "Right"
+                },
+                {
+                  "value": "center",
+                  "label": "Center"
+                }
+              ],
+              "default": "right"
+            },
+            {
+              "type": "text",
+              "id": "subheading",
+              "label": "Sub-heading",
+              "default": "Sub-heading"
+            },
+            {
+              "type": "text",
+              "id": "title",
+              "label": "Heading",
+              "default": "Title"
+            },
+            {
+              "type": "richtext",
+              "id": "content",
+              "label": "Text",
+              "default": "<p>Add your own custom content to give more information about your store, availability details...</p>"
+            },
+            {
+              "type": "text",
+              "id": "link_text",
+              "label": "Link text"
+            },
+            {
+              "type": "url",
+              "id": "link_url",
+              "label": "Link URL"
+            }
+          ]
+        },
+        {
+          "type": "featured_video",
+          "name": "Featured video",
+          "settings": [
+            {
+              "type": "text",
+              "id": "heading",
+              "label": "title",
+              "default": "Title"
+            },
+            {
+              "type": "color",
+              "id": "background_color",
+              "label": "Section background",
+              "default": "#ffffff"
+            } ,
+            {
+              "type": "select",
+              "id": "section_size",
+              "label": "Section size",
+              "options": [
+                {
+                  "value": "small",
+                  "label": "Small"
+                },
+                {
+                  "value": "normal",
+                  "label": "Normal"
+                },
+                {
+                  "value": "large",
+                  "label": "Large"
+                }
+              ],
+              "default": "large"
+            },
+            {
+              "type": "range",
+              "id": "section_height",
+              "label": "Section Height on mobile",
+              "min": 100,
+              "max": 500,
+              "step": 10,
+              "unit": "px",
+              "default": 200
+            } ,
+            {
+              "type": "color",
+              "id": "text_color",
+              "label": "Text",
+              "default": "#ffffff"
+            },
+            {
+              "type": "text",
+              "id": "subheading",
+              "label": "Sub-heading"
+            },
+            {
+              "type": "text",
+              "id": "title",
+              "label": "Heading",
+              "default": "Your video"
+            },
+            {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image",
+              "info": "1500 x 800px .jpg recommended."
+            },
+            {
+              "type": "video_url",
+              "accept": ["vimeo", "youtube"],
+              "id": "video_url",
+              "label": "Video URL",
+              "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
+            }
+          ]
+        },
+        {
+          "type": "testimonial",
+          "name": "Testimonials",
+          "settings": [
+            {
+              "type": "checkbox",
+              "id": "autoplay",
+              "label": "Auto rotate between testimonials",
+              "default": true
+            },
+            {
+              "type": "range",
+              "id": "cycle_speed",
+              "min": 3,
+              "max": 8,
+              "step": 1,
+              "unit": "sec",
+              "label": "Change testimonials every",
+              "default": 5
+            },
+            {
+              "type": "color",
+              "id": "background",
+              "label": "Background",
+              "default": "#eaeaea"
+            },
+            {
+              "type": "color",
+              "id": "text_color",
+              "label": "Text",
+              "default": "#1c1b1b"
+            },
+            {
+              "type": "header",
+              "content": "Testimonial Info"
+            },
+            {
+              "type": "image_picker",
+              "id": "logo",
+              "label": "Logo",
+              "info": "340 x 80px .jpg recommended"
+            },
+            {
+              "type": "richtext",
+              "id": "quote",
+              "label": "Quote",
+              "default": "<p>Share what your customers are saying about your products, your company...</p>",
+              "info": "For best results, keep the word count consistent in each quote."
+            },
+            {
+              "type":"text",
+              "id":"name",
+              "label":"Name"
+            },
+            {
+              "type": "header",
+              "content": "Testimonial Info"
+            },
+            {
+              "type": "image_picker",
+              "id": "logo1",
+              "label": "Logo",
+              "info": "340 x 80px .jpg recommended"
+            },
+            {
+              "type": "richtext",
+              "id": "quote1",
+              "label": "Quote",
+              "default": "<p>Share what your customers are saying about your products, your company...</p>",
+              "info": "For best results, keep the word count consistent in each quote."
+            },
+            {
+              "type":"text",
+              "id":"name1",
+              "label":"Name"
+            },
+            {
+              "type": "header",
+              "content": "Testimonial Info"
+            },
+            {
+              "type": "image_picker",
+              "id": "logo2",
+              "label": "Logo",
+              "info": "340 x 80px .jpg recommended"
+            },
+            {
+              "type": "richtext",
+              "id": "quote2",
+              "label": "Quote",
+              "default": "<p>Share what your customers are saying about your products, your company...</p>",
+              "info": "For best results, keep the word count consistent in each quote."
+            },
+            {
+              "type":"text",
+              "id":"name2",
+              "label":"Name"
+            },
+            {
+              "type": "header",
+              "content": "Testimonial Info"
+            },
+            {
+              "type": "image_picker",
+              "id": "logo3",
+              "label": "Logo",
+              "info": "340 x 80px .jpg recommended"
+            },
+            {
+              "type": "richtext",
+              "id": "quote3",
+              "label": "Quote",
+              "default": "<p>Share what your customers are saying about your products, your company...</p>",
+              "info": "For best results, keep the word count consistent in each quote."
+            },
+            {
+              "type":"text",
+              "id":"name3",
+              "label":"Name"
+            },
+            {
+              "type": "header",
+              "content": "Testimonial Info"
+            },
+            {
+              "type": "image_picker",
+              "id": "logo4",
+              "label": "Logo",
+              "info": "340 x 80px .jpg recommended"
+            },
+            {
+              "type": "richtext",
+              "id": "quote4",
+              "label": "Quote",
+              "default": "<p>Share what your customers are saying about your products, your company...</p>",
+              "info": "For best results, keep the word count consistent in each quote."
+            },
+            {
+              "type":"text",
+              "id":"name4",
+              "label":"Name"
+            },
+            {
+              "type": "header",
+              "content": "Testimonial Info"
+            },
+            {
+              "type": "image_picker",
+              "id": "logo5",
+              "label": "Logo",
+              "info": "340 x 80px .jpg recommended"
+            },
+            {
+              "type": "richtext",
+              "id": "quote5",
+              "label": "Quote",
+              "default": "<p>Share what your customers are saying about your products, your company...</p>",
+              "info": "For best results, keep the word count consistent in each quote."
+            },
+            {
+              "type":"text",
+              "id":"name5",
+              "label":"Name"
+            }
+          ]
+        },
+        {
+          "type": "icons_description",
+          "name": "Icons with info section",
+          "settings": [
+            {
+              "type": "text",
+              "id": "title",
+              "label": "Heading",
+              "default": "Logo list"
+            },
+            {
+                "type": "select",
+                "id": "desktop_length",
+                "label": "Items per row in desktop",
+                "options": [
+                    { "value": "1", "label": "1" },
+                    { "value": "2", "label": "2" },
+                    { "value": "3", "label": "3" },
+                    { "value": "4", "label": "4" }
+                ],
+                "default": "2"
+            },
+            {
+                "type": "select",
+                "id": "mobile_length",
+                "label": "Items per row in mobile",
+                "options": [
+                    { "value": "1", "label": "1" },
+                    { "value": "2", "label": "2" },
+                    { "value": "3", "label": "3" },
+                    { "value": "4", "label": "4" }
+                ],
+                "default": "2"
+            },
+    
+            {
+                "type": "range",
+                "id": "font_size_desktop",
+                "min": 5,
+                "max": 30,
+                "step": 1,
+                "unit": "px",
+                "label": "Font size of description on desktop",
+                "default": 22
+            },
+            {
+                "type": "range",
+                "id": "font_size_mobile",
+                "min": 5,
+                "max": 30,
+                "step": 1,
+                "unit": "px",
+                "label": "Font size on mobile",
+                "default": 12
+            },
+            {
+                "type": "checkbox",
+                "id": "show_description_mobile",
+                "label": "Show description on mobile",
+                "default": false
+            },
+            {
+                "type": "url",
+                "id": "btn_link",
+                "label": "Button link"
+            },
+            {
+                "type": "text",
+                "id": "btn_text",
+                "label": "Button text"
+            },
+            {
+              "type": "header",
+              "content": "Icon Info"
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image",
+                "info": "640 x 640px .png recommended"
+            },
+            {
+                "type": "text",
+                "id": "image_heading",
+                "label": "Heading"
+            },
+            {
+                "type": "text",
+                "id": "description",
+                "label": "Short description"
+            },
+            {
+                "type": "url",
+                "id": "link",
+                "label": "Link"
+            },
+            {
+                "type": "checkbox",
+                "id": "show_mobile",
+                "label": "Show on mobile",
+                "default": false
+            },
+            {
+              "type": "header",
+              "content": "Icon Info"
+            },
+            {
+                "type": "image_picker",
+                "id": "image1",
+                "label": "Image",
+                "info": "640 x 640px .png recommended"
+            },
+            {
+                "type": "text",
+                "id": "image_heading1",
+                "label": "Heading"
+            },
+            {
+                "type": "text",
+                "id": "description1",
+                "label": "Short description"
+            },
+            {
+                "type": "url",
+                "id": "link1",
+                "label": "Link"
+            },
+            {
+                "type": "checkbox",
+                "id": "show_mobile1",
+                "label": "Show on mobile",
+                "default": false
+            },
+            {
+              "type": "header",
+              "content": "Icon Info"
+            },
+            {
+                "type": "image_picker",
+                "id": "image2",
+                "label": "Image",
+                "info": "640 x 640px .png recommended"
+            },
+            {
+                "type": "text",
+                "id": "image_heading2",
+                "label": "Heading"
+            },
+            {
+                "type": "text",
+                "id": "description2",
+                "label": "Short description"
+            },
+            {
+                "type": "url",
+                "id": "link2",
+                "label": "Link"
+            },
+            {
+                "type": "checkbox",
+                "id": "show_mobile2",
+                "label": "Show on mobile",
+                "default": false
+            },
+            {
+              "type": "header",
+              "content": "Icon Info"
+            },
+            {
+                "type": "image_picker",
+                "id": "image3",
+                "label": "Image",
+                "info": "640 x 640px .png recommended"
+            },
+            {
+                "type": "text",
+                "id": "image_heading3",
+                "label": "Heading"
+            },
+            {
+                "type": "text",
+                "id": "description3",
+                "label": "Short description"
+            },
+            {
+                "type": "url",
+                "id": "link3",
+                "label": "Link"
+            },
+            {
+                "type": "checkbox",
+                "id": "show_mobile3",
+                "label": "Show on mobile",
+                "default": false
+            },
+            {
+              "type": "header",
+              "content": "Icon Info"
+            },
+            {
+                "type": "image_picker",
+                "id": "image4",
+                "label": "Image",
+                "info": "640 x 640px .png recommended"
+            },
+            {
+                "type": "text",
+                "id": "image_heading4",
+                "label": "Heading"
+            },
+            {
+                "type": "text",
+                "id": "description4",
+                "label": "Short description"
+            },
+            {
+                "type": "url",
+                "id": "link4",
+                "label": "Link"
+            },
+            {
+                "type": "checkbox",
+                "id": "show_mobile4",
+                "label": "Show on mobile",
+                "default": false
+            },
+            {
+              "type": "header",
+              "content": "Icon Info"
+            },
+            {
+                "type": "image_picker",
+                "id": "image5",
+                "label": "Image",
+                "info": "640 x 640px .png recommended"
+            },
+            {
+                "type": "text",
+                "id": "image_heading5",
+                "label": "Heading"
+            },
+            {
+                "type": "text",
+                "id": "description5",
+                "label": "Short description"
+            },
+            {
+                "type": "url",
+                "id": "link5",
+                "label": "Link"
+            },
+            {
+                "type": "checkbox",
+                "id": "show_mobile5",
+                "label": "Show on mobile",
+                "default": false
+            }
+          ]
+        },
+        {
+          "type": "icon_list",
+          "name": "Icons list",
+          "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Heading",
+                "default": "Logo list"
+            },
+            {
+                "type": "range",
+                "id": "logo_size",
+                "min": 20,
+                "max": 200,
+                "step": 2,
+                "unit": "px",
+                "label": "Logo size on desktop",
+                "default": 30
+            },
+            {
+                "type": "range",
+                "id": "logo_size_mobile",
+                "min": 20,
+                "max": 200,
+                "step": 2,
+                "unit": "px",
+                "label": "Logo size on mobile",
+                "default": 30
+            },
+            {
+                "type": "range",
+                "id": "font_size_desktop",
+                "min": 5,
+                "max": 30,
+                "step": 1,
+                "unit": "px",
+                "label": "Font size on desktop",
+                "default": 22
+            },
+            {
+                "type": "range",
+                "id": "font_size_mobile",
+                "min": 5,
+                "max": 30,
+                "step": 1,
+                "unit": "px",
+                "label": "Font size on mobile",
+                "default": 12
+            },
+            {
+                "type":"header",
+                "content": "Icon info"
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image",
+                "info": "640 x 640px .png recommended"
+            },
+            {
+                "type": "text",
+                "id": "description",
+                "label": "Short description"
+            },
+            {
+                "type": "url",
+                "id": "link",
+                "label": "Link"
+            },
+            {
+                "type": "checkbox",
+                "id": "show_mobile",
+                "label": "Show on mobile",
+                "default": false
+            },
+            {
+                "type":"header",
+                "content": "Icon info"
+            },
+            {
+                  "type": "image_picker",
+                  "id": "image1",
+                  "label": "Image",
+                  "info": "640 x 640px .png recommended"
+              },
+              {
+                  "type": "text",
+                  "id": "description1",
+                  "label": "Short description"
+              },
+              {
+                  "type": "url",
+                  "id": "link1",
+                  "label": "Link"
+              },
+              {
+                  "type": "checkbox",
+                  "id": "show_mobile1",
+                  "label": "Show on mobile",
+                  "default": false
+              },
+              {
+                  "type":"header",
+                  "content": "Icon info"
+              },
+              {
+                  "type": "image_picker",
+                  "id": "image2",
+                  "label": "Image",
+                  "info": "640 x 640px .png recommended"
+              },
+              {
+                  "type": "text",
+                  "id": "description2",
+                  "label": "Short description"
+              },
+              {
+                  "type": "url",
+                  "id": "link2",
+                  "label": "Link"
+              },
+              {
+                  "type": "checkbox",
+                  "id": "show_mobile2",
+                  "label": "Show on mobile",
+                  "default": false
+              },
+              {
+                  "type":"header",
+                  "content": "Icon info"
+              },
+              {
+                  "type": "image_picker",
+                  "id": "image3",
+                  "label": "Image",
+                  "info": "640 x 640px .png recommended"
+              },
+              {
+                  "type": "text",
+                  "id": "description3",
+                  "label": "Short description"
+              },
+              {
+                  "type": "url",
+                  "id": "link3",
+                  "label": "Link"
+              },
+              {
+                  "type": "checkbox",
+                  "id": "show_mobile3",
+                  "label": "Show on mobile",
+                  "default": false
+              },
+              {
+                  "type":"header",
+                  "content": "Icon info"
+              },
+              {
+                  "type": "image_picker",
+                  "id": "image4",
+                  "label": "Image",
+                  "info": "640 x 640px .png recommended"
+              },
+              {
+                  "type": "text",
+                  "id": "description4",
+                  "label": "Short description"
+              },
+              {
+                  "type": "url",
+                  "id": "link4",
+                  "label": "Link"
+              },
+              {
+                  "type": "checkbox",
+                  "id": "show_mobile4",
+                  "label": "Show on mobile",
+                  "default": false
+              },
+              {
+                  "type":"header",
+                  "content": "Icon info"
+              },
+              {
+                  "type": "image_picker",
+                  "id": "image5",
+                  "label": "Image",
+                  "info": "640 x 640px .png recommended"
+              },
+              {
+                  "type": "text",
+                  "id": "description5",
+                  "label": "Short description"
+              },
+              {
+                  "type": "url",
+                  "id": "link5",
+                  "label": "Link"
+              },
+              {
+                  "type": "checkbox",
+                  "id": "show_mobile5",
+                  "label": "Show on mobile",
+                  "default": false
+              }
+          ]
+        },
+        {
+          "type": "logo_list",
+          "name": "Logo list",
+          "settings": [
+              {
+                  "type": "text",
+                  "id": "header",
+                  "label": "Heading",
+                  "default": "Logo list"
+              },
+              {
+                  "type": "range",
+                  "id": "logo_size",
+                  "min": 20,
+                  "max": 200,
+                  "step": 2,
+                  "unit": "px",
+                  "label": "Logo size on desktop",
+                  "default": 30
+              },
+              {
+                  "type": "range",
+                  "id": "logo_size_mobile",
+                  "min": 20,
+                  "max": 200,
+                  "step": 2,
+                  "unit": "px",
+                  "label": "Logo size on mobile",
+                  "default": 30
+              },
+              {
+                  "type": "header",
+                  "content": "Logo/text info"
+              },
+              {
+                  "type": "text",
+                  "id": "title",
+                  "label": "Text"
+              },
+              {
+                  "type": "image_picker",
+                  "id": "image",
+                  "label": "Image",
+                  "info": "640 x 640px .png recommended"
+              },
+              {
+                  "type": "url",
+                  "id": "link",
+                  "label": "Link"
+              },
+              {
+                  "type": "checkbox",
+                  "id": "show_mobile",
+                  "label": "Show on mobile",
+                  "default": false
+              },
+              {
+                  "type": "header",
+                  "content": "Logo/text info"
+              },
+              {
+                  "type": "text",
+                  "id": "title1",
+                  "label": "Text"
+              },
+              {
+                  "type": "image_picker",
+                  "id": "image1",
+                  "label": "Image",
+                  "info": "640 x 640px .png recommended"
+              },
+              {
+                  "type": "url",
+                  "id": "link1",
+                  "label": "Link"
+              },
+              {
+                  "type": "checkbox",
+                  "id": "show_mobile1",
+                  "label": "Show on mobile",
+                  "default": false
+              },
+              {
+                  "type": "header",
+                  "content": "Logo/text info"
+              },
+              {
+                  "type": "text",
+                  "id": "title2",
+                  "label": "Text"
+              },
+              {
+                  "type": "image_picker",
+                  "id": "image2",
+                  "label": "Image",
+                  "info": "640 x 640px .png recommended"
+              },
+              {
+                  "type": "url",
+                  "id": "link2",
+                  "label": "Link"
+              },
+              {
+                  "type": "checkbox",
+                  "id": "show_mobile2",
+                  "label": "Show on mobile",
+                  "default": false
+              },
+              {
+                  "type": "header",
+                  "content": "Logo/text info"
+              },
+              {
+                  "type": "text",
+                  "id": "title3",
+                  "label": "Text"
+              },
+              {
+                  "type": "image_picker",
+                  "id": "image3",
+                  "label": "Image",
+                  "info": "640 x 640px .png recommended"
+              },
+              {
+                  "type": "url",
+                  "id": "link3",
+                  "label": "Link"
+              },
+              {
+                  "type": "checkbox",
+                  "id": "show_mobile3",
+                  "label": "Show on mobile",
+                  "default": false
+              },
+              {
+                  "type": "header",
+                  "content": "Logo/text info"
+              },
+              {
+                  "type": "text",
+                  "id": "title4",
+                  "label": "Text"
+              },
+              {
+                  "type": "image_picker",
+                  "id": "image4",
+                  "label": "Image",
+                  "info": "640 x 640px .png recommended"
+              },
+              {
+                  "type": "url",
+                  "id": "link4",
+                  "label": "Link"
+              },
+              {
+                  "type": "checkbox",
+                  "id": "show_mobile4",
+                  "label": "Show on mobile",
+                  "default": false
+              },
+              {
+                  "type": "header",
+                  "content": "Logo/text info"
+              },
+              {
+                  "type": "text",
+                  "id": "title5",
+                  "label": "Text"
+              },
+              {
+                  "type": "image_picker",
+                  "id": "image5",
+                  "label": "Image",
+                  "info": "640 x 640px .png recommended"
+              },
+              {
+                  "type": "url",
+                  "id": "link5",
+                  "label": "Link"
+              },
+              {
+                  "type": "checkbox",
+                  "id": "show_mobile5",
+                  "label": "Show on mobile",
+                  "default": false
+              },
+              {
+                  "type": "header",
+                  "content": "Logo/text info"
+              },
+              {
+                  "type": "text",
+                  "id": "title6",
+                  "label": "Text"
+              },
+              {
+                  "type": "image_picker",
+                  "id": "image6",
+                  "label": "Image",
+                  "info": "640 x 640px .png recommended"
+              },
+              {
+                  "type": "url",
+                  "id": "link6",
+                  "label": "Link"
+              },
+              {
+                  "type": "checkbox",
+                  "id": "show_mobile6",
+                  "label": "Show on mobile",
+                  "default": false
+              }
+          ] 
+        },
+        {
+          "type": "collection",
+          "name": "Featured collection",
+          "settings": [
+            {
+              "type": "text",
+              "id": "header",
+              "label": "Sub-heading",
+              "default": "Featured collection"
+            },
+            {
+              "type": "select",
+              "id": "layout_mode",
+              "label": "Layout",
+              "options": [
+                {
+                  "value": "grid",
+                  "label": "Grid"
+                },
+                {
+                  "value": "carousel",
+                  "label": "Carousel"
+                }
+              ],
+              "default": "grid"
+            },
+            {
+              "type": "checkbox",
+              "id": "show_product_info",
+              "label": "Show product info",
+              "default": true
+            },
+            {
+              "type": "checkbox",
+              "id": "show_vendor",
+              "label": "Show vendor",
+              "default": false
+            },
+            {
+              "type": "checkbox",
+              "id": "show_color_swatch",
+              "label": "Show color swatch",
+              "info": "Some colors appear white? [Learn more](http://support.maestrooo.com/article/80-product-uploading-custom-color-for-color-swatch).",
+              "default": false
+            },
+            {
+              "type": "header",
+              "content": "Grid",
+              "info": "Those settings apply only if the layout mode is set to grid."
+            },
+            {
+              "type": "select",
+              "id": "grid_mobile_items_per_row",
+              "label": "Products per row (mobile)",
+              "options": [
+                {
+                  "value": "1",
+                  "label": "1"
+                },
+                {
+                  "value": "2",
+                  "label": "2"
+                }
+              ],
+              "default": "2"
+            },
+            {
+              "type": "range",
+              "min": 2,
+              "max": 4,
+              "id": "grid_desktop_items_per_row",
+              "label": "Products per row (desktop)",
+              "default": 4
+            },
+            {
+              "type": "collection",
+              "id": "collection",
+              "label": "Collection"
+            },
+            {
+              "type": "text",
+              "id": "title",
+              "label": "Heading",
+              "info": "If none is set, collection title is used."
+            },
+            {
+              "type": "range",
+              "id": "grid_items_count",
+              "min": 2,
+              "max": 50,
+              "step": 1,
+              "label": "Products to show",
+              "default": 8
+            },
+            {
+              "type": "text",
+              "id": "button_text",
+              "label": "Button text",
+              "default": "View all products"
+            }
+          ]
+        },
+        {
+          "type": "team_members",
+          "name": "Team Members",
+          "settings": [
+            {
+              "type": "text",
+              "id": "subheading",
+              "label": "Sub-heading"
+            },
+            {
+              "type": "text",
+              "id": "title",
+              "label": "Heading"
+            },
+            {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image"
+            },
+            {
+              "type": "text",
+              "id": "name",
+              "label": "Name"
+            },
+            {
+              "type": "richtext",
+              "id": "text",
+              "label": "Description"
+            },
+            {
+              "type": "url",
+              "id": "button_link",
+              "label": "Button link"
+            },
+            {
+              "type": "text",
+              "id": "button_text",
+              "label": "Button text"
+            }
+          ]
+        },
+        {
+          "type": "instagram",
+          "name": "Instagram",
+          "settings":[
+            {
+              "type": "text",
+              "id": "subheading",
+              "label": "Sub-heading",
+              "default": "Sub-heading"
+            },
+            {
+              "type": "text",
+              "id": "title",
+              "label": "Heading",
+              "default": "Your HTML"
+            },
+            {
+              "type": "select",
+              "id": "gallery_layout",
+              "label": "Layout",
+              "options":[
+                {
+                  "value": "teaser",
+                  "label": "Teaser"
+                },
+                {
+                  "value": "gallery",
+                  "label": "Gallery"
+                }
+              ]
+            }
+          ]
+        }
+        
+    ]
+  
+}
+{% endschema %}

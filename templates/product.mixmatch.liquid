@@ -1,0 +1,31 @@
+{% section 'product-template-mixmatch' %}
+{% section 'product-description' %}
+{% section 'product-logos_section' %}
+{%- if product.metafields.tante-e.community-headline != blank -%}
+  {%- section 'product-community-section' -%}
+{%- endif -%}
+{%- if product.metafields.tante-e.text-image-section-1 != blank -%}
+  {% section 'product-image-with-text' %}
+{%- endif -%}
+
+{%- if product.metafields.tante-e.product-usp-content -%}
+  {% section 'product-product-focus' %}
+{%- endif -%}
+
+{% section 'product-reviews-section' %}
+
+{% section 'product-recommendations' %}
+
+{% section 'product-instagram-section' %}
+
+{%- if product.metafields.tante-e.product-faq-content -%}
+  {% section 'product-faq' %}
+{%- endif -%}
+
+
+{% section 'recently-viewed-products' %}
+
+<script>
+  window.ShopifyXR=window.ShopifyXR||function(){(ShopifyXR.q=ShopifyXR.q||[]).push(arguments)};
+  ShopifyXR('addModels', {{ product.media | where: 'media_type', 'model' | json }});
+</script>

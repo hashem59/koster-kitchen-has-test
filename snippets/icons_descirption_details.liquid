@@ -1,0 +1,32 @@
+<div class="1/{{mobile_length}}--phone 1/{{desktop_length}}--tablet 1/{{desktop_length}}--lap-and-up  logo-bar__item section--{{block.id}} {% unless show_mobile %} hidden-phone {% endunless %}" {{ block.shopify_attributes }}>
+    {% if link != blank %}
+      <a href="{{ link }}" class="logo-bar__link" target="_blank">
+    {% endif %}
+    {% if image != blank %}
+      <div class="logo-bar__image_div">
+        {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,250,300,350,400,450,500,550', image: image -%}{%- endcapture -%}
+        <div class="AspectRatio" style="max-width: {{ image.width }}px; --aspect-ratio: {{ image.aspect_ratio }}">
+          {%- assign image_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+          <img class="Image--lazyLoad logo-bar__image" data-src="{{ image_url }}"  data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ image.alt | escape }}">
+
+          <noscript>
+            <img src="{{ image | img_url: '160x' }}" alt="{{ image.alt | default: title }}">
+          </noscript>
+        </div>
+      </div>
+    {% endif %}
+    {% if link != blank %}
+      </a>
+    {% endif %}
+
+    {% if description != blank or  image_heading != blank %}
+      <div class="logo-description">
+          {% if image_heading != blank %}
+              <h4 class="SectionHeader__Heading Heading u-h5">{{ image_heading | escape }}</h4>
+          {% endif %}
+          {% if description != blank %}
+              <h5 class="u-h6 description_text dark-grey {% unless show_description_mobile %} hidden-phone{% endunless %}">{{description}}</h5>
+          {% endif %}
+      </div>
+    {% endif %}
+  </div>

@@ -1,0 +1,185 @@
+{% assign testimonial_size = 0 %}
+{%- if block.settings.quote != blank or block.settings.logo != blank-%}
+    {% assign testimonial_size = testimonial_size | plus: 1 %}
+{%- endif -%}
+{%- if block.settings.quote1 != blank or block.settings.logo1 != blank-%}
+    {% assign testimonial_size = testimonial_size | plus: 1 %}
+{%- endif -%}
+{%- if block.settings.quote2 != blank or block.settings.logo2 != blank-%}
+    {% assign testimonial_size = testimonial_size | plus: 1 %}
+{%- endif -%}
+{%- if block.settings.quote3 != blank or block.settings.logo3 != blank-%}
+    {% assign testimonial_size = testimonial_size | plus: 1 %}
+{%- endif -%}
+{%- if block.settings.quote4 != blank or block.settings.logo4 != blank-%}
+    {% assign testimonial_size = testimonial_size | plus: 1 %}
+{%- endif -%}
+{%- if block.settings.quote5 != blank or block.settings.logo5 != blank-%}
+    {% assign testimonial_size = testimonial_size | plus: 1 %}
+{%- endif -%}
+{%- capture flickity_options -%}
+{
+  "prevNextButtons": false,
+  "wrapAround": true,
+  "dragThreshold": 16,
+  "pageDots": {%- if testimonial_size > 1 -%}true{%- else -%}false{%- endif -%},
+  "autoPlay": {% if block.settings.autoplay %}{{ block.settings.cycle_speed | times: 1000 }}{% else %}false{% endif %}
+}
+{%- endcapture -%}
+
+{%- assign should_show_nav = false -%}
+
+{%- if block.settings.logo != blank or block.settings.logo1 != blank or block.settings.logo2 != blank or block.settings.logo3 != blank or block.settings.logo4 != blank or block.settings.logo5 != blank -%}
+    {%- assign should_show_nav = true -%}
+{%- endif -%}
+
+<section class="Section testimonial_section_snippet" id="section-{{ block.id }}" data-section-id="{{ block.id }}" data-section-type="testimonials">
+  <div class="TestimonialList {% if should_show_nav %}TestimonialList--withNav{% endif %} Carousel Carousel--fadeIn" data-flickity-config='{{ flickity_options }}'>
+
+    {% if block.settings.quote != blank or block.settings.logo != blank %}
+    <div id="block-{{ block.id }}11" class="Carousel__Cell Testimonial {% if forloop.first %}is-selected{% endif %}" {{ block.shopify_attributes }} data-slide-index="0">
+        <div class="Container">
+          {%- if block.settings.quote != blank -%}
+            <div class="Testimonial__Content">
+              <div class="Heading u-h5 regular_font testimonial_quote" style="margin-bottom: 15px;font-weight: 500; line-height:1.43;">{{ block.settings.quote }}</div>
+              {%- if block.settings.name != blank -%}<p class="u-h6" style="font-style: italic;">{{ block.settings.name }}</p>{%- endif -%}
+            </div>
+          {%- endif -%}
+
+          {%- if block.settings.logo != blank -%}
+            <img class="Testimonial__Logo hidden-lap-and-up" src="{{ block.settings.logo | img_url: '300x' }}" alt="{{ block.settings.logo.alt | escape }}">
+          {%- endif -%}
+        </div>
+    </div>
+    {% endif %}
+
+    {% if block.settings.quote1 != blank or block.settings.logo1 != blank %}
+    <div id="block-{{ block.id }}22" class="Carousel__Cell Testimonial {% if forloop.first %}is-selected{% endif %}" {{ block.shopify_attributes }} data-slide-index="1">
+        <div class="Container">
+          {%- if block.settings.quote1 != blank -%}
+            <div class="Testimonial__Content">
+                <div class="Heading u-h5 regular_font testimonial_quote" style="margin-bottom: 15px;font-weight: 500; line-height:1.43;">{{ block.settings.quote1 }}</div>
+                {%- if block.settings.name1 != blank -%}<p class="u-h6" style="font-style: italic;">{{ block.settings.name1 }}</p>{%- endif -%}
+            </div>
+          {%- endif -%}
+
+          {%- if block.settings.logo1 != blank -%}
+            <img class="Testimonial__Logo hidden-lap-and-up" src="{{ block.settings.logo1 | img_url: '300x' }}" alt="{{ block.settings.logo1.alt | escape }}">
+          {%- endif -%}
+        </div>
+    </div>
+    {% endif %}
+
+    {% if block.settings.quote2 != blank or block.settings.logo2 != blank %}
+    <div id="block-{{ block.id }}33" class="Carousel__Cell Testimonial {% if forloop.first %}is-selected{% endif %}" {{ block.shopify_attributes }} data-slide-index="2">
+        <div class="Container">
+          {%- if block.settings.quote2 != blank -%}
+            <div class="Testimonial__Content">
+                <div class="Heading u-h5 regular_font testimonial_quote" style="margin-bottom: 15px;font-weight: 500; line-height:1.43;">{{ block.settings.quote2 }}</div>
+                {%- if block.settings.name2 != blank -%}<p class="u-h6" style="font-style: italic;">{{ block.settings.name2 }}</p>{%- endif -%}
+            </div>
+          {%- endif -%}
+
+          {%- if block.settings.logo2 != blank -%}
+            <img class="Testimonial__Logo hidden-lap-and-up" src="{{ block.settings.logo2 | img_url: '300x' }}" alt="{{ block.settings.logo2.alt | escape }}">
+          {%- endif -%}
+        </div>
+    </div>
+    {% endif %}
+
+    {% if block.settings.quote3 != blank or block.settings.logo3 != blank %}
+    <div id="block-{{ block.id }}44" class="Carousel__Cell Testimonial {% if forloop.first %}is-selected{% endif %}" {{ block.shopify_attributes }} data-slide-index="3">
+        <div class="Container">
+          {%- if block.settings.quote3 != blank -%}
+            <div class="Testimonial__Content">
+                <div class="Heading u-h5 regular_font testimonial_quote" style="margin-bottom: 15px;font-weight: 500; line-height:1.43;">{{ block.settings.quote3 }}</div>
+                {%- if block.settings.name3 != blank -%}<p class="u-h6" style="font-style: italic;">{{ block.settings.name3 }}</p>{%- endif -%}
+            </div>
+          {%- endif -%}
+
+          {%- if block.settings.logo3 != blank -%}
+            <img class="Testimonial__Logo hidden-lap-and-up" src="{{ block.settings.logo3 | img_url: '300x' }}" alt="{{ block.settings.logo3.alt | escape }}">
+          {%- endif -%}
+        </div>
+    </div>
+    {% endif %}
+
+    {% if block.settings.quote4 != blank or block.settings.logo4 != blank %}
+    <div id="block-{{ block.id }}55" class="Carousel__Cell Testimonial {% if forloop.first %}is-selected{% endif %}" {{ block.shopify_attributes }} data-slide-index="4">
+        <div class="Container">
+          {%- if block.settings.quote4 != blank -%}
+            <div class="Testimonial__Content">
+                <div class="Heading u-h5 regular_font testimonial_quote" style="margin-bottom: 15px;font-weight: 500; line-height:1.43;">{{ block.settings.quote4 }}</div>
+                {%- if block.settings.name4 != blank -%}<p class="u-h6" style="font-style: italic;">{{ block.settings.name4 }}</p>{%- endif -%}
+            </div>
+          {%- endif -%}
+
+          {%- if block.settings.logo4 != blank -%}
+            <img class="Testimonial__Logo hidden-lap-and-up" src="{{ block.settings.logo4 | img_url: '300x' }}" alt="{{ block.settings.logo4.alt | escape }}">
+          {%- endif -%}
+        </div>
+    </div>
+    {% endif %}
+
+    {% if block.settings.quote5 != blank or block.settings.logo5 != blank %}
+    <div id="block-{{ block.id }}66" class="Carousel__Cell Testimonial {% if forloop.first %}is-selected{% endif %}" {{ block.shopify_attributes }} data-slide-index="5">
+        <div class="Container">
+          {%- if block.settings.quote5 != blank -%}
+            <div class="Testimonial__Content">
+                <div style="margin-bottom: 15px;font-weight: 500; line-height:1.43;" class="Heading u-h5 regular_font testimonial_quote">{{ block.settings.quote5 }}</div>
+
+                {%- if block.settings.name5 != blank -%}<p class="u-h6" style="font-style: italic;">{{ block.settings.name5 }}</p>{%- endif -%}            </div>
+          {%- endif -%}
+
+          {%- if block.settings.logo5 != blank -%}
+            <img class="Testimonial__Logo hidden-lap-and-up" src="{{ block.settings.logo5 | img_url: '300x' }}" alt="{{ block.settings.logo5.alt | escape }}">
+          {%- endif -%}
+        </div>
+    </div>
+    {% endif %}
+
+
+  </div>
+
+  {%- if should_show_nav -%}
+    <div class="TestimonialNav hidden-pocket">
+
+        {%- if block.settings.logo != blank -%}
+            <img class="TestimonialNav__Item {% if forloop.first %}is-selected{% endif %}" src="{{ block.settings.logo | img_url: '300x' }}" alt="{{ block.settings.logo.alt | escape }}" data-index="0">
+        {%- endif -%}
+        {%- if block.settings.logo1 != blank -%}
+            <img class="TestimonialNav__Item {% if forloop.first %}is-selected{% endif %}" src="{{ block.settings.logo1 | img_url: '300x' }}" alt="{{ block.settings.logo1.alt | escape }}" data-index="1">
+        {%- endif -%}
+        {%- if block.settings.logo2 != blank -%}
+            <img class="TestimonialNav__Item {% if forloop.first %}is-selected{% endif %}" src="{{ block.settings.logo2 | img_url: '300x' }}" alt="{{ block.settings.logo2.alt | escape }}" data-index="2">
+        {%- endif -%}
+
+        {%- if block.settings.logo3 != blank -%}
+            <img class="TestimonialNav__Item {% if forloop.first %}is-selected{% endif %}" src="{{ block.settings.logo3 | img_url: '300x' }}" alt="{{ block.settings.logo3.alt | escape }}" data-index="3">
+        {%- endif -%}
+        {%- if block.settings.logo4 != blank -%}
+            <img class="TestimonialNav__Item {% if forloop.first %}is-selected{% endif %}" src="{{ block.settings.logo4 | img_url: '300x' }}" alt="{{ block.settings.logo4.alt | escape }}" data-index="4">
+        {%- endif -%}
+        {%- if block.settings.logo5 != blank -%}
+            <img class="TestimonialNav__Item {% if forloop.first %}is-selected{% endif %}" src="{{ block.settings.logo5 | img_url: '300x' }}" alt="{{ block.settings.logo5.alt | escape }}" data-index="5">
+        {%- endif -%}
+
+    </div>
+  {%- endif -%}
+</section>
+
+<style>
+  #section-{{ block.id }} {
+    color: {{ block.settings.text_color }};
+    background: {{ block.settings.background }};
+    padding-bottom: 50px;
+  }
+
+  #section-{{ block.id }} .flickity-page-dots .dot {
+    border-color: #707070;
+    border-width: 1px;
+  }
+  #section-{{ block.id }} .flickity-page-dots .dot.is-selected {
+    background-color: #707070;
+  }
+</style>

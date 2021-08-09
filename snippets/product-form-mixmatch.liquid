@@ -1,0 +1,469 @@
+{%- comment -%}
+Those are the option names for which we automatically detect swatch. For the color, we use them to display a swatch, while
+for size, we use it to display a size chart (if applicable)
+{%- endcomment -%}
+
+{%- assign color_label = 'color,colour,couleur,colore,farbe,색,色,färg,farve' | split: ',' -%}
+{%- assign size_label = 'size,taille,größe,tamanho,tamaño,koko,サイズ' | split: ',' -%}
+{% assign show_color_swatch = false %}
+{% assign is_color_swatch = false %}
+
+{% assign product_tags = product.tags | join: "," %}
+{% assign n_shots = product_tags | split: "meta_shots-" | last | split: "," | first %}
+{% assign is_order_min_set = false %}
+{%- if product_tags contains 'meta_order-min' -%}
+  {% assign is_order_min_set = true %}
+{%- endif -%}
+{%- assign saved_percentage = product.selling_plan_groups[0].selling_plans[0].price_adjustments[0].value -%}
+
+{% assign selector_mode = "block" %}
+
+{%- assign size_chart_page = '' -%}
+{%- assign product_popovers = '' -%}
+{%- assign show_option_label = false -%}
+
+{%- assign selected_variant = product.selected_or_first_available_variant -%}
+
+{%- form 'product', product, class: 'ProductForm' -%}
+  <div class="ProductForm__Variants">
+
+      {%- for option in product.options_with_values -%}
+        {%- assign downcase_option = option.name | downcase -%}
+        {%- capture option_index -%}option{{ option.position }}{%- endcapture -%}
+
+        <div class="ProductForm__Option {% if show_option_label %}ProductForm__Option--labelled{% endif %}">
+          <span class="ProductForm__Label">
+            {{ option.name }}
+
+            {% if is_color_swatch and show_color_swatch %}
+              <span class="ProductForm__SelectedValue">{{ option.selected_value }}</span>
+            {% endif %}
+          </span>
+
+          <ul class="SizeSwatchList HorizontalList HorizontalList--spacingTight FakeSwatchList MixMatch_List">
+            {%- for value in option.values -%}
+              {%- for variant in product.variants -%}
+                {%- assign variant_image = variant.image | default: product.featured_image -%}
+                {%- if variant[option_index] == value -%}
+                  <li class="HorizontalList__Item">
+                    <input id="option-{{ section.id }}-{{ forloop.parentloop.parentloop.index0 }}-{{ forloop.parentloop.index0 }}"
+                      class="SizeSwatch__Radio" type="text" name="option-{{ forloop.parentloop.index0 }}-{{variant.id}}"
+                      value="{{ variant.id }}">
+                    <label for="option-{{ section.id }}-{{ forloop.parentloop.parentloop.index0 }}-{{ forloop.parentloop.index0 }}"  class="SizeSwatch" style="background-image: url({{ variant_image | img_url: '64x64' }})">
+                      <div class="MixMatch_VariantTitle Text--alignLeft">
+                        {% assign title = value | split: ' ' %}
+                        {% for item in title %}
+                          {% if forloop.last %}
+                            <span class="MixMatch_VariantTitle--Emphasized">
+                              {{ item }}
+                            </span>
+                          {% else %}
+                            {{ item }}
+                          {% endif %}
+                        {% endfor %}
+                        <div class="MixMatch_Subtext">
+                          {{ product.metafields.tante-e.package-shots }}
+                        </div>
+                      </div>
+                      <span class="MixMatch_VariantPrice u-h6">
+                        {{ variant.price | money_without_trailing_zeros }}
+                      </span>
+
+                      {%- if variant.id == selected_variant.id -%}
+                        {% assign qty_val = 1 %}
+
+                        {%- if is_order_min_set -%}
+                          {%- if variant.id == product.selected_variant.id -%}
+                            {% assign qty_val = product.variants.size %}
+                          {%- else -%}
+                            {% assign qty_val = 1 %}
+                          {%- endif -%}
+                        {%- endif -%}
+
+                      {%- else -%}
+                        {% assign qty_val = 0 %}
+                      {%- endif -%}
+
+                      <span class="MixMatch_VariantQty">
+                        <div class="ProductForm__QuantitySelector">
+                          <div class="QuantitySelector QuantitySelector--large">
+                            {%- assign quantity_minus_one = line_item.quantity | minus: 1 -%}
+                            <span class="QuantitySelector__Button Link Link--secondary MixMatch_QtySelector " data-action="decrease-quantity">{% render 'icon' with 'minus' %}</span>
+                            <input type="text" class="QuantitySelector__CurrentQuantity u-h5 {% if variant.id == selected_variant.id %}js-preSelectedVar{% endif %}" pattern="[0-9]*"
+                              data-action="update-mixmatch-price" max-match-variant data-variantID="{{ variant.id }}"
+                              data-variant-title="{{ variant.title }}" name="quantity" data-varaint-price="{{ variant.price }}"
+                              data-varaint-compare-price="{{ variant.compare_at_price }}" value="{{qty_val}}"
+                              aria-label="{{ 'product.form.quantity' | t }}">
+                            <span class="QuantitySelector__Button Link Link--secondary MixMatch_QtySelector" data-action="increase-quantity">{% render 'icon' with 'plus' %}</span>
+                          </div>
+                        </div>
+                      </span>
+                    </label>
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+            {%- endfor -%}
+          </ul>
+          <span class="ProductForm__Error Alert Alert--error Alert--min-items" style="display:none;">{{ 'product.mix_match.error_min_items' | t }}</span>
+          <div class="Panel Panel__PurchaseTypes" data-saved-percentage="{{ saved_percentage | default: 0 }}" data-shoots-per-bottle="{{n_shots}}" data-order-min="{% if is_order_min_set %}{{ product.variants.size }}{% else %}1{% endif %}">
+            <div class="Panel_Tabs TabList" role="tablist">
+              <div class="Panel_Tab Panel_Tab--first" data-action="toggle-tab" aria-controls="panel-subscription" aria-selected="false" role="tab">
+                <div class="Field">
+                  <input id="OnetimeTarget" data-action="update-mixmatch-price" name="orderType" type="radio" class="is-checkradio"
+                  value="subscription" checked=""><label for="OnetimeTarget">
+                    <span class="tab-label Heading u-h5">{{ 'product.mix_match.subscription' | t }}&nbsp;</span>
+                    <span class="tab-secondary u-h5">  {{ 'product.mix_match.save_html' | t: saved: saved_percentage }}
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div class="Panel_Tab Panel_Tab--second is-active" data-action="toggle-tab" aria-controls="panel-one-time" aria-selected="true" role="tab">
+                <div class="Field">
+                  <input id="SubscriptionTarget" data-action="update-mixmatch-price" name="orderType" type="radio" class="is-checkradio" checked value="onetime">
+                  <label for="SubscriptionTarget">
+                    <span class="tab-label Heading u-h5">{{ 'product.mix_match.one_time' | t }}</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="Panel_Block">
+              <div class="TabPanel panel-subscription" aria-hidden="true" role="tabpanel" id="panel-subscription">
+                <div class="">
+                  <div class="Form__Item">
+                    <div class="Form__Select Select Select--primary">
+                      {%- render 'icon' with 'select-arrow' -%}
+                      <select name="selling_plan" >
+                        {% for frequency in intervals %}
+                          <!-- <option value="{{ frequency }}">
+                            {%- if frequency == "4" -%}
+                              {{ 'product.mix_match.subscription_interval_recommened' | t: interval: frequency }}
+                            {%- else -%}
+                              {{ 'product.mix_match.subscription_interval' | t: interval: frequency }}
+                            {%- endif -%}
+                          </option> -->
+                        {% endfor %}
+                        {% for group in product.selling_plan_groups %}
+                          {% for selling_plan in group.selling_plans %}
+                            <option value="{{selling_plan.id}}">
+                              {{ selling_plan.name }}
+                              {%- if selling_plan.name contains ' 4 ' -%}
+                                {{ 'product.mix_match.subscription_interval_recommened' | t }}
+                              {%- endif -%}
+                            </option>
+                          {% endfor %}
+                        {%- endfor -%}
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="MixMatch_Usp Flex Flex_JustifyStart">
+                  {%- if section.settings.mixmatch_usp_1_text != blank -%}
+                    <div class="Flex_Half MixMatch_Usp-Item">
+                      {% comment %}{% render 'icon' with "stop-delivery" %}{% endcomment %}
+                      {%- if section.settings.mixmatch_usp_1_icon != blank -%}
+                        {{ section.settings.mixmatch_usp_1_icon | replace: '<svg ', '<svg class="Icon Icon--stop-delivery" ' }}
+                      {%- endif -%}
+                      <div class="MixMatch_Usp-TextWrapper">
+                        <div class="MixMatch_Usp-Text">
+                          {{ section.settings.mixmatch_usp_1_text }}
+                        </div>
+                        <div class="hidden-phone MixMatch_Subtext">
+                          {{ section.settings.mixmatch_usp_1_subtext }}
+                        </div>
+                      </div>
+                    </div>
+                  {%- endif -%}
+                  {%- if section.settings.mixmatch_usp_2_text != blank -%}
+                    <div class="Flex_Half MixMatch_Usp-Item">
+                      {% comment %}{% render 'icon' with "change-delivery" %}{% endcomment %}
+                      {%- if section.settings.mixmatch_usp_2_icon != blank -%}
+                        {{ section.settings.mixmatch_usp_2_icon | replace: '<svg ', '<svg class="Icon Icon--change-delivery" ' }}
+                      {%- endif -%}
+                      <div class="MixMatch_Usp-TextWrapper">
+                        <div class="MixMatch_Usp-Text">
+                          {{ section.settings.mixmatch_usp_2_text }}
+                        </div>
+                        <div class="hidden-phone MixMatch_Usp-Subtext">
+                          {{ section.settings.mixmatch_usp_2_subtext }}
+                        </div>
+                      </div>
+                    </div>
+                  {%- endif -%}
+                </div>
+              </div>
+              <div class="TabPanel panel-one-time" aria-hidden="false" role="tabpanel" id="panel-one-time">
+                <div class="MixMatch_Usp Flex">
+                  {%- if section.settings.one_time_usp_text != blank -%}
+                    <div class="MixMatch_Usp-Item OneTime_Usp-Item">
+                      {% comment %}{% render 'icon' with "change-delivery" %}{% endcomment %}
+                      {%- if section.settings.one_time_usp_icon != blank -%}
+                        {{ section.settings.one_time_usp_icon | replace: '<svg ', '<svg class="Icon Icon--change-delivery" ' }}
+                      {%- endif -%}
+                      <div class="MixMatch_Usp-TextWrapper">
+                        <div class="MixMatch_Usp-Text">
+                          {{ section.settings.one_time_usp_text }}
+                        </div>
+                        <div class=" MixMatch_Usp-Subtext">
+                          {{ section.settings.one_time_usp_subtext }}
+                        </div>
+                      </div>
+                    </div>
+                  {%- endif -%}
+                </div>
+              </div>
+              <div class="TabPanel_Sticky">
+                <div class="PricePanel Inner_Pannel">
+                  <div class="Flex Flex_Prices">
+                    <div class="Flex_Half">
+                      <div class="ProductMeta__PriceList Heading" style="display:inline-block;">
+                          <span class="ProductMeta__Price Price Text--subdued u-h2" data-mixmatch-price>{{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}</span>
+                          <span class="ProductMeta__Price Price Price--compareAt Text--subdued u-h5" data-maixmatch-compareAt-price>{{ product.selected_or_first_available_variant.compare_at_price | money_without_trailing_zeros }}</span>
+                      </div>
+                      {%- if settings.tax_text != blank -%}
+                        <p class="ProductMeta__TaxNotice Rte">
+                          {%- if settings.tax_text != blank -%}
+                             {{ settings.tax_text | remove: '<p>' | remove: '</p>' }}
+                          {%- endif -%}
+                          {%- if product.tags contains 'pfand' -%}
+                            <br />{{ settings.bottle_price_included }}
+                          {%- endif -%}
+                        </p>
+                      {%- endif -%}
+                    </div>
+                    <div class="Flex_Half">
+                      <div class="ProductMeta__ShotPriceWrapper">
+                        <div class="MixMatch_Subtext">
+                          {% assign shoots-per-bottle = product.metafields.tante-e.shoots-per-bottle | split: '/' %}
+                          {%- for item in shoots-per-bottle -%}
+                            {% assign item_arr = item | split: ' ' %}
+                            {%- for txt in item_arr -%}
+                              {%- if forloop.first -%}
+                                <span class="count" data-count="{{ txt }}">{{ txt }}</span>
+                              {%- else -%}
+                                {%- if forloop.parentloop.first -%}
+                                  <span class="count-text"> {{ txt | prepend: ' ' }} </span>
+                                {%- else -%}
+                                  {{ txt | prepend: ' ' }}
+                                {%- endif -%}
+                              {%- endif -%}
+                            {%- endfor -%}
+                            {%- unless forloop.last -%}
+                              /
+                            {%- endunless -%}
+                          {%- endfor -%}
+                        </div>
+                        <div class="MixMatch_ShotPrice Heading u-h5" >
+                          {% assign n_shots = n_shots | times: 1.00 %}
+                          {% assign shot_price = product.selected_or_first_available_variant.price | divided_by: n_shots %}
+                          {%- capture shot_Price_html -%}
+                            <span data-shot-price>{{ shot_price | money_without_trailing_zeros }}</span>
+                          {%- endcapture -%}
+                          {{ 'product.mix_match.price_per_shot_html' | t: shot_price: shot_Price_html }}
+                          {%- if product.tags contains 'pfand' -%}
+                            <div class="ProductMeta__TaxNotice Rte">
+                              {{ settings.mixmatch_bottle_price_included }}
+                            </div>
+                          {%- endif -%}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Upsell_Panel Inner_Pannel">
+                  <div class="Flex">
+                    <div class="Flex_Half Mobile_Flex_OneWhole">
+                      <div class="YouCan_save panel-subscription TabPanel" aria-selected="false" aria-hidden="true">
+                        {%- capture save_that_much -%}
+                          <span class="Price--highlight">
+                            {{ 'product.mix_match.save' | t }}
+                            <span data-next-discount>4</span>%
+                          </span>
+                        {%- endcapture -%}
+                        {{ 'product.mix_match.subscription_add_more_to_save_html' | t: saveX: save_that_much }}
+                      </div>
+                      <div class="YouCan_save panel-one-time TabPanel" aria-selected="true" aria-hidden="false">
+                        {%- capture save_that_much -%}
+                          <span class="Price--highlight">
+                            {{ 'product.mix_match.save' | t }}
+                            <span data-next-discount>4</span>%
+                          </span>
+                        {%- endcapture -%}
+                        {{ 'product.mix_match.onetime_add_more_to_save_html' | t: saveX: save_that_much }}
+                      </div>
+                    </div>
+                    <div class="Flex_Half Mobile_Flex_OneWhole">
+                      {%- if product.metafields.tante-e.savings-popup -%}
+                        {% assign max_discount_text = product.metafields.tante-e.savings-popup | split: '|' | first | strip %}
+
+                        <div class="Max_Discount" data-action="open-modal" aria-controls="modal-Max_Discount">
+                          {{ max_discount_text }}
+                        </div>
+                      {%- endif -%}
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      {%- endfor -%}
+  </div>
+
+  {%- comment -%}
+  --------------------------------------------------------------------------------------------------------------------
+  ADD TO CART BUTTON
+  --------------------------------------------------------------------------------------------------------------------
+  {%- endcomment -%}
+
+  {%- if section.settings.delivery_note != blank or product.metafields.tante-e.delivery-note -%}
+    {% assign delivery_note = product.metafields.tante-e.delivery-note | default: section.settings.delivery_note %}
+    <div class="ProductForm__DeliveryNote">
+      {{ delivery_note }}
+    </div>
+  {%- endif -%}
+
+  {%- if section.settings.show_payment_button == false or product.selling_plan_groups.size > 0 -%}
+    {%- assign use_primary_button = true -%}
+  {%- else -%}
+    {%- assign use_primary_button = false -%}
+  {%- endif -%}
+
+  <button type="submit" data-use-primary-button="{% if use_primary_button %}true{% else %}false{% endif %}" class="ProductForm__AddToCart Button Button--primary Button--full" data-action="mixmatch-add-to-cart" {% comment %}disabled="disabled"{% endcomment %}>
+    {%- if selected_variant.available -%}
+      <span>{% if product.template_suffix == 'pre-order' %}{{ 'product.form.pre_order' | t }}{% else %}{{ 'product.form.add_to_cart' | t }}{% endif %}</span>
+
+      {%- if section.settings.show_price_in_button -%}
+        <span class="Button__SeparatorDot"></span>
+        <span>{{ selected_variant.price | money_without_trailing_zeros }}</span>
+      {%- endif -%}
+    {%- else -%}
+      {{- 'product.form.sold_out' | t -}}
+    {%- endif -%}
+  </button>
+
+  {%- if section.settings.show_payment_button -%}
+    {{ form | payment_button }}
+  {%- endif -%}
+
+  {%- if section.settings.payments_mothods_icon != blank -%}
+    <div class="ProductForm__PaymentsMethods">
+      {%- capture supported_sizes -%}{%- render 'image-size', sizes: '600,800', image: section.settings.payments_mothods_icon -%}{%- endcapture -%}
+
+      <div class="AspectRatio hidden-phone" style="max-width: {{section.settings.payments_mothods_icon.width}}px; --aspect-ratio: {{ section.settings.payments_mothods_icon.aspect_ratio }}">
+        {%- assign image_url = section.settings.payments_mothods_icon | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+        <img class="Image--lazyLoad"
+         data-src="{{ section.settings.payments_mothods_icon | img_url: 'master' }}"
+         data-widths="[{{ supported_sizes }}]"
+         alt="{{ section.settings.payments_mothods_icon.alt | escape }}">
+      </div>
+      {%- capture supported_sizes -%}{%- render 'image-size', sizes: '600,800', image: section.settings.payments_mothods_icon_mobile -%}{%- endcapture -%}
+      <div class="AspectRatio hidden-tablet-and-up" style="max-width: {{section.settings.payments_mothods_icon_mobile.width}}px; --aspect-ratio: {{ section.settings.payments_mothods_icon_mobile.aspect_ratio }}">
+        {%- assign image_url = section.settings.payments_mothods_icon_mobile | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+        <img class="Image--lazyLoad"
+         data-src="{{ section.settings.payments_mothods_icon_mobile | img_url: 'master' }}"
+         data-widths="[{{ supported_sizes }}]"
+         alt="{{ section.settings.payments_mothods_icon_mobile.alt | escape }}">
+      </div>
+    </div>
+  {%- endif -%}
+
+{%- endform -%}
+
+{%- if section.settings.show_payment_button and selected_variant.available == false -%}
+  <style>
+    #shopify-section-{{ section.id }} .shopify-payment-button {
+      display: none;
+    }
+  </style>
+{%- endif -%}
+
+{%- comment -%}
+--------------------------------------------------------------------------------------------------------------------
+OFF SCREEN ELEMENTS
+
+Implementation note: in the past (with "include") we could accumulate the data and output it outside the snippet
+itself. However with the new "render" tag, everything that is captured inside cannot be used outside the snippet
+itself. As a consequence we are moving them in JavaScript. This allows to make sure that those elements are upper
+in the DOM tree, and do not show below the content
+--------------------------------------------------------------------------------------------------------------------
+{%- endcomment -%}
+
+<div class="Product__OffScreen">
+  {{- product_popovers -}}
+  {{- product_modals -}}
+</div>
+
+<script type="text/javascript">
+function getQueryParams(qs) {
+    qs = qs.split('+').join(' ');
+    var params = {},
+        tokens,
+        re = /[?&]?([^=]+)=([^&]*)/g;
+    while (tokens = re.exec(qs)) {
+        params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
+    }
+    return params;
+}
+function clearQtys () {
+  var qytInputs = document.querySelectorAll('[data-variantid]');
+  qytInputs.forEach(function(item){
+    item.value = 0;
+  })
+}
+var requestedQty = getQueryParams(window.location.search)['quantity'];
+if (requestedQty !== undefined) {
+  requestedQty = parseInt(requestedQty);
+  if (typeof requestedQty === "number" ) {
+    var selectedInput = document.querySelector('#product_form_{{ product.id }} .js-preSelectedVar');
+    if (selectedInput) {
+      clearQtys()
+      selectedInput.value = requestedQty
+    }
+  }
+}
+</script>
+
+
+
+{% comment %}
+------------------------------------------------------------------------------
+Product Data. This must be outputted for all products (including home page).
+
+IMPORTANT: THIS CODE IS VITAL. DO NOT EDIT IT NOT REMOVE IT. MAKE SURE TO KEEP
+THE EXACT SAME ATTRIBUTES.
+------------------------------------------------------------------------------
+{% endcomment %}
+
+<script type="application/json" data-product-json>
+  {
+    "product": {{ product | json }},
+    "selected_variant_id": {{ selected_variant.id }}
+    {%- if section.settings.show_inventory_quantity -%}
+      ,"inventories": {
+        {%- for variant in product.variants -%}
+          {%- assign inventory_message = '' -%}
+
+          {%- if section.settings.inventory_quantity_threshold == 0 -%}
+            {%- capture inventory_message -%}{{- 'product.form.inventory_quantity_count' | t: count: variant.inventory_quantity -}}{%- endcapture -%}
+          {%- else -%}
+            {%- capture inventory_message -%}{{- 'product.form.low_inventory_quantity_count' | t: count: variant.inventory_quantity -}}{%- endcapture -%}
+          {%- endif -%}
+
+          "{{ variant.id }}": {
+            "inventory_management": {{ variant.inventory_management | json }},
+            "inventory_policy": {{ variant.inventory_policy | json }},
+            "inventory_quantity": {{ variant.inventory_quantity | json }},
+            "inventory_message": {{ inventory_message | json }}
+          }{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      }
+    {%- endif -%}
+  }
+</script>
+<script type="application/json" data-product-discount-rules-json>
+  {{ product.metafields.tante-e.qty-discount-rules | json }}
+</script>

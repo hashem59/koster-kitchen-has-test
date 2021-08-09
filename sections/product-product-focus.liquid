@@ -1,0 +1,352 @@
+{% style %}
+
+.product-focus-has-content {
+  position: relative;
+  max-width: 1230px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 920px) {
+    .product-focus-wrapper {
+        text-align:center
+    }
+}
+
+.product-focus-wrapper.align-image-to-section {
+    padding-bottom: 0
+}
+
+.product-focus-has-content .product-focus-hero-image-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center
+}
+
+@media screen and (max-width: 920px) {
+    .product-focus-has-content .product-focus-hero-image-container {
+        position:relative;
+        bottom: auto;
+        left: auto;
+        display: block;
+        margin: 0 0 0 0;
+        padding: 0;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+.align-image-to-section .product-focus-has-content .product-focus-hero-image-container {
+    padding: 30px 0 0
+}
+
+.product-focus-has-content .product-focus-hero-image {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    max-width: 380px;
+    margin: auto
+}
+
+@media screen and (max-width: 920px) {
+    .product-focus-has-content .product-focus-hero-image {
+        display:block;
+        max-width: 100%
+    }
+}
+
+.product-focus-has-content .product-focus-hero-image .img {
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+}
+
+.align-image-to-section .product-focus-has-content .product-focus-hero-image .img {
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: auto;
+    bottom: 0
+}
+
+@media screen and (max-width: 920px) {
+    .align-image-to-section .product-focus-has-content .product-focus-hero-image .img {
+        -webkit-transform:translateX(0%);
+        -ms-transform: translateX(0%);
+        transform: translateX(0%)
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .product-focus-has-content .product-focus-hero-image .img {
+        -webkit-transform:translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+        position: static;
+        display: block;
+        margin-right: auto;
+        margin-left: auto
+    }
+}
+
+.product-focus-list-container {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding-right: 30px;
+    padding-left: 30px
+}
+
+.align-image-to-section .product-focus-list-container {
+    padding-bottom: 90px
+}
+
+@media screen and (max-width: 920px) {
+    .align-image-to-section .product-focus-list-container {
+        padding-bottom:60px
+    }
+}
+
+.product-focus-list {
+    position: relative;
+    width: 100%;
+    min-height: 380px;
+    margin: 0;
+    font-size: 0;
+    text-align: left
+}
+
+.product-focus-list-item {
+    display: inline-block;
+    width: 50%;
+    padding: 0 0 0 165px ;
+    margin: 30px 0;
+    font-size: 16px;
+    text-align: left;
+    vertical-align: top
+}
+
+@media screen and (max-width: 920px) {
+    .product-focus-list-item {
+        display:block;
+        width: 100%;
+        padding: 0;
+        text-align: center
+    }
+
+    .product-focus-list-item:last-child {
+        margin-bottom: 0
+    }
+
+    .product-focus-list-item:last-child p:last-child {
+        padding-bottom: 0
+    }
+}
+
+.product-focus-list-item.list-item-1,.product-focus-list-item.list-item-3 {
+    padding: 0 165px  0 0;
+    text-align: right
+}
+
+@media screen and (max-width: 920px) {
+    .product-focus-list-item.list-item-1,.product-focus-list-item.list-item-3 {
+        display:block;
+        float: none;
+        width: 100%;
+        padding: 0;
+        text-align: center
+    }
+}
+
+.no-image .product-focus-list-item {
+    padding: 30px 60px;
+    text-align: center
+}
+
+@media screen and (max-width: 920px) {
+    .no-image .product-focus-list-item {
+        display:block;
+        float: none;
+        width: 100%;
+        padding: 0;
+        text-align: center
+    }
+}
+
+.product-focus-list-item-icon {
+    margin-bottom: 15px;
+    color: #1a1a18
+}
+
+.product-focus-list-item-title {
+    margin: 0 0 10px;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.product-focus-list-item-text {
+  padding: 0;
+  color: #707070;
+  max-width: 255px;
+  margin-left: 0;
+}
+
+.product-focus-list-item.list-item-1 .product-focus-list-item-text,
+.product-focus-list-item.list-item-3 .product-focus-list-item-text {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+@media screen and (max-width: 480px) {
+    .product-focus-list-item-text {
+        word-break:break-word
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .product-focus-list-item-text {
+        margin: 0 auto;
+        max-width: 350px
+    }
+}
+
+@media screen and (max-width: 640px) {
+  .product-focus-list-item-title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .product-focus-list-item {
+    font-size: 14px;
+  }
+}
+
+{% endstyle %}
+
+{% assign focus_heading = product.metafields.tante-e.product-usp-heading %}
+{% assign focus_content = product.metafields.tante-e.product-usp-content | strip_newlines | split: '|' %}
+{% assign main_image = focus_content[0] | remove: ' ' | split: '/' | last | split: '?' | first %}
+{% assign main_image = images[main_image] %}
+
+{%- if product.metafields.tante-e.product-usp-section-icons != blank -%}
+  {% assign iconsloop = product.metafields.tante-e.product-usp-section-icons | split: '|' %}
+{%- endif -%}
+
+<section class="Section Section--spacingNormal ">
+  <div class="Container">
+    {%- if focus_heading != blank -%}
+      <header class="SectionHeader SectionHeader--center">
+        <h2 class="SectionHeader__Heading Heading u-h3">{{- focus_heading -}}</h2>
+      </header>
+    {%- endif -%}
+     <div class="module-body clearfix product-focus-has-content">
+        <div class="product-focus-list-container ">
+           <ul class="product-focus-list clearfix">
+
+             {% assign headlineID = 1 %}
+             {% assign contentID = 2 %}
+
+             {%- for i in (1..4) -%}
+                {%- unless forloop.first -%}
+                  {% assign headlineID = headlineID | plus: 2 %}
+                  {% assign contentID = contentID | plus: 2 %}
+                {%- endunless -%}
+                {% assign headline = focus_content %}
+                 <li class="product-focus-list-item list-item-{{i}}">
+                    <h2 class="Heading product-focus-list-item-title">
+                       {{focus_content[headlineID]}}
+                    </h2>
+                    <div class="module-content product-focus-list-item-text rte">
+                       <p>
+                         {{focus_content[contentID]}}
+                       </p>
+                    </div>
+                 </li>
+             {%- endfor -%}
+
+           </ul>
+        </div>
+        <div class="product-focus-hero-image-container">
+           <div class="product-focus-hero-image">
+             <div class="img">
+               {% assign image = main_image %}
+               {%- capture supported_sizes -%}{%- render 'image-size', sizes: '400,600,700,800,900,1000,1200', image: image -%}{%- endcapture -%}
+
+               <div class="AspectRatio" style="max-width: 200px; --aspect-ratio: {{ image.aspect_ratio }}">
+                 {%- assign image_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                 <img class="Image--lazyLoad Image--slide{{ image_position | capitalize }}" data-src="{{ image_url }}" data-expand="-200" data-widths="[{{ supported_sizes }}]"
+                  data-sizes="auto" alt="{{ title | escape }}">
+
+                 <noscript>
+                   <img src="{{ image | img_url: '800x' }}" alt="{{ title | escape }}">
+                 </noscript>
+               </div>
+             </div>
+           </div>
+        </div>
+     </div>
+     {%- if product.metafields.tante-e.ingredients != blank or product.metafields.tante-e.nutritions  -%}
+       <div class="product-info-container">
+         <div class="info-buttons text-center">
+           {%- if product.metafields.tante-e.nutritions != blank -%}
+             <button type="button" class="Button" data-action="open-modal"
+                      aria-controls="modal-{{ section.id }}-nutritions">
+              {{ product.metafields.tante-e.nutritions | split: '|' | first }}
+            </button>
+           {%- endif -%}
+           {%- if product.metafields.tante-e.ingredients != blank -%}
+             <button type="button" class="Button" data-action="open-modal"
+                      aria-controls="modal-{{ section.id }}-ingredients">
+               {{ product.metafields.tante-e.ingredients | split: '|' | first }}
+             </button>
+           {%- endif -%}
+         </div>
+       </div>
+     {%- endif -%}
+
+  </div>
+</section>
+{%- if product.metafields.tante-e.ingredients != blank -%}
+<div id="modal-{{ section.id }}-ingredients" class="Modal Modal--dark Modal--fullScreen Modal--pageContent" aria-hidden="true" role="dialog" data-scrollable>
+  {% assign page_handle =  product.metafields.tante-e.ingredients | split: '|' | last | strip | strip_newlines %}
+
+    <!-- <header class="Modal__Header">
+      <h2 class="Modal__Title Heading u-h1">{{ pages[page_handle].title }}</h2>
+    </header> -->
+    <div class="Modal__Content Rte">
+      <div class="Container Container--extraNarrow">
+        {{ pages[page_handle].content }}
+      </div>
+    </div>
+
+  <button class="Modal__Close RoundButton RoundButton--large" data-animate-bottom data-action="close-modal">{% render 'icon' with 'close' %}</button>
+  <button class="Modal__Close Modal__Close--outside" data-animate-bottom data-action="close-modal">{% render 'icon' with 'close' %}</button>
+
+</div>
+{%- endif -%}
+{%- if product.metafields.tante-e.nutritions != blank -%}
+<div id="modal-{{ section.id }}-nutritions" class="Modal Modal--dark Modal--fullScreen Modal--pageContent" aria-hidden="true" role="dialog" data-scrollable>
+  {% assign page_handle =  product.metafields.tante-e.nutritions | split: '|' | last | strip | strip_newlines %}
+<!--
+  <header class="Modal__Header">
+    <h2 class="Modal__Title Heading u-h1">{{ pages[page_handle].title }}</h2>
+  </header> -->
+  <div class="Modal__Content Rte">
+    <div class="Container Container--extraNarrow">
+        {{ pages[page_handle].content }}
+    </div>
+  </div>
+
+  <button class="Modal__Close RoundButton RoundButton--large" data-animate-bottom data-action="close-modal">{% render 'icon' with 'close' %}</button>
+  <button class="Modal__Close Modal__Close--outside" data-animate-bottom data-action="close-modal">{% render 'icon' with 'close' %}</button>
+</div>
+{%- endif -%}

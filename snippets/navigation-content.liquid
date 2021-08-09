@@ -1,0 +1,88 @@
+{% assign imageBlocksSize = 0 %}
+{% assign iconsBlocksSize = 0 %}
+
+<div class="Gird Grid--center images-text">
+    {% for block in section.blocks %}
+      {%- if block.settings.tab_position == tabName-%}
+        {% if block.type == "image" %}
+          {%- render 'image-with-links', block: block, section: section -%}
+          {% assign imageBlocksSize = imageBlocksSize | plus: 1 %}
+        {% endif %}
+      {%- endif -%}
+    {% endfor %}
+  </div>
+  {% unless imageBlocksSize > 0 %}
+    <style>#{{tabName}} .images-text{display: none;}</style>
+  {% endunless %}
+
+  <nav class="SidebarMenu__Nav SidebarMenu__Nav--primary icons-with-link" aria-label="{{ 'header.navigation.sidebar_title' | t }}">
+    {% for block in section.blocks %}
+      {%- if block.settings.tab_position == tabName -%}
+        {% if block.type == "icon" %}
+          {%- render 'icons-with-link', block: block, section: section -%}
+          {% assign iconsBlocksSize = iconsBlocksSize | plus: 1 %}
+
+        {% endif %}
+      {%- endif -%}
+    {% endfor %}
+  </nav>
+  {% unless iconsBlocksSize > 0 %}
+    <style>#{{tabName}} .icons-with-link{display: none;}</style>
+  {% endunless %}
+
+
+  {% if main_menu != blank %}
+    <nav class="SidebarMenu__Nav SidebarMenu__Nav--primary" aria-label="{{ 'header.navigation.sidebar_title' | t }}">
+        {%- for link in main_menu.links -%}
+        <div class="Collapsible">
+            {%- if link.links != blank -%}
+            <button class="Collapsible__Button Heading u-h6" data-action="toggle-collapsible" {% if link.links != blank %}aria-expanded="false"{% endif %}>
+                {{- link.title | escape -}} <span class="Collapsible__Plus"></span>
+            </button>
+
+            <div class="Collapsible__Inner">
+                <div class="Collapsible__Content">
+                {%- for sub_link in link.links -%}
+                    <div class="Collapsible">
+                    {%- if sub_link.links != blank -%}
+                        <button class="Collapsible__Button Heading Text--subdued Link--primary u-h7" data-action="toggle-collapsible" {% if sub_link.links != blank %}aria-expanded="false"{% endif %}>
+                        {{- sub_link.title | escape -}} <span class="Collapsible__Plus"></span>
+                        </button>
+
+                        <div class="Collapsible__Inner">
+                        <div class="Collapsible__Content">
+                            <ul class="Linklist Linklist--bordered Linklist--spacingLoose">
+                            {%- for sub_sub_link in sub_link.links -%}
+                                <li class="Linklist__Item">
+                                <a href="{{ sub_sub_link.url }}" class="Text--subdued Link Link--primary">{{ sub_sub_link.title | escape }}</a>
+                                </li>
+                            {%- endfor -%}
+                            </ul>
+                        </div>
+                        </div>
+                    {%- else -%}
+                        <a href="{{ sub_link.url }}" class="Collapsible__Button Heading Text--subdued Link Link--primary u-h7">{{ sub_link.title | escape }}</a>
+                    {%- endif -%}
+                    </div>
+                {%- endfor -%}
+                </div>
+            </div>
+            {%- else -%}
+            <a href="{{ link.url }}" class="Collapsible__Button Heading Link Link--primary u-h6">{{ link.title | escape }}</a>
+            {%- endif -%}
+        </div>
+        {%- endfor -%}
+    </nav>
+  {% endif %}
+
+  {% if secondary_menu != blank %}
+    <nav class="SidebarMenu__Nav SidebarMenu__Nav--secondary">
+        <ul class="Linklist Linklist--spacingLoose">
+        {%- for link in secondary_menu.links -%}
+            <li class="Linklist__Item">
+            <a href="{{ link.url }}" class="Text--subdued Link Link--primary">{{ link.title | escape }}</a>
+            </li>
+        {%- endfor -%}
+        </ul>
+    </nav>
+  {% endif %}

@@ -1,0 +1,106 @@
+<section class="Section Section--spacingNormal teamMemberSection" id="section-{{ block.id }}" data-section-id="{{ block.id }}" data-section-type="article-list">
+    <div class="Container">
+
+    {% if counter == 1 %}
+      {%- if block.settings.subheading != blank or block.settings.title != blank -%}
+        <header class="SectionHeader SectionHeader--center">
+          {%- if block.settings.subheading != blank -%}
+            <h3 class="SectionHeader__SubHeading Heading u-h6">{{ block.settings.subheading | escape }}</h3>
+          {%- endif -%}
+  
+          {%- if block.settings.title != blank -%}
+            <h2 class="SectionHeader__Heading Heading u-h3">{{ block.settings.title | escape }}</h2>
+          {%- endif -%}
+        </header>
+      {%- endif -%}
+    {% endif %}
+
+    {% assign blockCounter = 0 %}
+    {% assign gridCounter = 1 %}
+
+    {% capture BlocksContent %}
+      {%- for block in section.blocks -%}
+        {% if blockCounter == 4 %}
+          {% assign blockCounter = 0 %}
+          {% assign gridCounter = gridCounter | plus: 1 %}
+        {% endif %}
+        {%- case block.type -%}
+          {%- when 'team_members' -%}
+            {% assign blockCounter =  blockCounter | plus: 1 %}
+              <div class="Grid__Cell 1/2--phone 1/3--tablet 1/4--lap-and-up teamGrids pageNumber-{{gridCounter}} {% if gridCounter == 1 %} activeGrid{% endif %}" grid-counter-data="{{gridCounter}}">
+                {%- render 'member-item', block: block, image: block.settings.image, title: block.settings.name, text: block.settings.text -%}
+              </div>
+         {%- endcase -%}
+      {%- endfor -%}
+    {% endcapture %}
+
+      <div class="ArticleListWrapper">
+        <div class="ArticleList Grid Grid--center team_members_grid">
+          {{BlocksContent}}
+        </div>
+      </div>
+
+    <div class="pagination hidden-tablet-and-up">
+      <ul class="pagination-list">
+        {% for i in (1..gridCounter) %}
+          {% if i > 3 %}
+            <li class="pagination-item" onclick="getNextGrids()"> > </li>
+            {% break %}
+          {% endif %}
+          <li class="pagination-item {%if forloop.index == 1 %}activePageLink{% endif %}" onclick="transferToNewPage('{{i}}')" pageNumber="{{i}}">{{i}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+
+    {% if counter == 1 %}
+      {%- if block.settings.button_text != blank -%}
+        <div class="SectionFooter">
+          <a href="{{ block.settings.button_link }}" class="Button Button--primary">{{ block.settings.button_text | escape }}</a>
+        </div>
+      {%- endif -%}
+    {% endif %}
+
+    </div>
+  </section>
+  
+  <script>
+    function getNextGrids(){
+      var pagItems = document.querySelector(".activeGrid");
+      var pageNumber = pagItems.getAttribute("grid-counter-data");
+      console.log("last pageNumber:",pageNumber);
+      transferToNewPage(parseInt(pageNumber)+1);
+    }
+
+    function transferToNewPage(pageClassNumber){
+      if(parseInt(pageClassNumber) < 4){
+        var pagItems = document.querySelectorAll(".pagination-item");
+        pagItems.forEach(function(element){
+          element.classList.remove("activePageLink");
+        });
+        var classAttribute = '[pageNumber="'+pageClassNumber+'"]';
+        console.log("classAttribute: ", classAttribute);
+        var pageLink = document.querySelector(classAttribute);
+        pageLink.classList.add("activePageLink");
+      }
+
+
+      var className = '.pageNumber-'+pageClassNumber;
+      console.log("className: ", className);
+      var GridsWithClass = document.querySelectorAll(className);
+      console.log("GridsWithClass:",GridsWithClass);
+      var allGrids = document.querySelectorAll(".teamGrids");
+      console.log("allGrids:",allGrids);
+
+      if( GridsWithClass.length > 0 ){
+        allGrids.forEach(function(element){
+          element.classList.remove("activeGrid");
+          console.log("element: ",element, "remove active grid");
+        });
+        GridsWithClass.forEach(function(element){
+          element.classList.add("activeGrid");
+          console.log("element: ",element, "add active grid");
+        });
+      }
+    }
+  </script>

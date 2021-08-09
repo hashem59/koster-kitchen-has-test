@@ -1,0 +1,108 @@
+<section class="Section Section--spacingNormal" id="section-{{ section.id }}">
+    <div class="Container">
+      {%- if section.settings.subheading != blank or section.settings.title != blank -%}
+        <header class="SectionHeader SectionHeader--center">
+          {%- if section.settings.subheading != blank -%}
+            <h3 class="SectionHeader__SubHeading Heading u-h6">{{ section.settings.subheading | escape }}</h3>
+          {%- endif -%}
+  
+          {%- if section.settings.title != blank -%}
+            <h2 class="SectionHeader__Heading Heading u-h3">{{ section.settings.title | escape }}</h2>
+          {%- endif -%}
+        </header>
+      {%- endif -%}
+    </div>
+  
+        <div class="squarelovin-container">      
+            {% if section.settings.gallery_layout == "gallery" %}
+                <script id='sqln-60d1e64f976e37fc6f7b23cb' type='text/javascript' data-stream='60d1e64f976e37fc6f7b23cb'>
+                    (function() {
+                    var lang = 'de';
+                    var s = document.createElement('script')
+                    s.type = 'text/javascript';
+                    s.async = true;
+                    s.src =
+                    'https://squarelovin.com/squarelovin.js?stream=60d1e64f976e37fc6f7b23cb&amp;t=main&amp;l=' + lang +
+                    '&amp;u=' + location.href;
+                    var sc = document.getElementsByTagName('script')[0];
+                    sc.parentNode.insertBefore(s, sc);
+                    })();
+                </script>
+            {% else %}
+                <script id='sqln-60d1e64f976e37fc6f7b23cb' type='text/javascript' datastream='60d1e64f976e37fc6f7b23cb'>
+                    (function() {
+                    var lang = 'de';
+                    var s = document.createElement('script');
+                    s.type = 'text/javascript';
+                    s.async = true;
+                    s.src =
+                    'https://squarelovin.com/squarelovin.js?stream=60d1e64f976e37fc6f7b23cb&t=teaser&l=' + lang +
+                    '&u=' + location.href;
+                    var sc = document.getElementsByTagName('script')[0];
+                    sc.parentNode.insertBefore(s, sc);
+                    })();
+                </script>
+            {% endif %}
+        </div>
+</section>
+<style>
+    {% if section.settings.gallery_layout == "teaser" %}
+        .squarelovin-productstream-arrow.squarelovin-arrow-right {
+            right: 10px;
+        }
+        .squarelovin-productstream-arrow.squarelovin-arrow-left {
+            left: 10px;
+        }
+        @media screen and (max-width: 767px) {
+            
+            .squarelovin-productstream-arrow-margin{
+                margin-right: 8px !important;
+            }
+        }
+    {% endif %}
+    
+    .squarelovin-branding{
+        display: none;
+    }
+</style>
+{% schema %}
+{
+    "name": "Instagram",
+    "settings":[
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "Sub-heading",
+        "default": "Sub-heading"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Your HTML"
+      },
+      {
+        "type": "select",
+        "id": "gallery_layout",
+        "label": "Layout",
+        "options":[
+          {
+            "value": "teaser",
+            "label": "Teaser"
+          },
+          {
+            "value": "gallery",
+            "label": "Gallery"
+          }
+        ]
+      }
+    ],
+    "presets":[
+        {
+            "category": "Image",
+            "name": "Instagram",
+            "settings": {}
+        }
+    ]
+}
+{% endschema %}

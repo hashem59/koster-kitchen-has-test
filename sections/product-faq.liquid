@@ -1,0 +1,92 @@
+
+<section class="Section Section_Faq"  data-section-id="{{ section.id }}" data-section-type="Section_Community">
+  <div class="Section_Faq_Inner Container">
+    {% assign faq_metafields = product.metafields.tante-e %}
+    {%- if faq_metafields.product-faq-headline != balnk -%}
+      <header class="SectionHeader SectionHeader--center">
+        <h2 class="SectionHeader__Heading Heading u-h3">{{ faq_metafields.product-faq-headline }}</h2>
+      </header>
+    {%- endif -%}
+    <div class="Section_Faq_Content">
+      {% assign product_faq_array = faq_metafields.product-faq-content | split: '|' %}
+      {% for i in (0..11) %}
+        {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+        {%- if thecycle == 'odd' -%}
+          {%- if product_faq_array[i].size > 10 -%}
+            {% assign contentIndex = i | plus: 1 %}
+            {% assign tabContent = product_faq_array[contentIndex] %}
+            <div class="Collapsible Collapsible--large">
+              <button class="Collapsible__Button Heading u-h6" data-action="toggle-collapsible"  aria-expanded="false">
+                {{- product_faq_array[i] -}} <span class="Collapsible__Plus">{%- render 'icon' icon: 'select-arrow' -%}</span>
+              </button>
+              <div class="Collapsible__Inner " >
+                <div class="Collapsible__Content">
+                  <div class="Rte">
+                    <p>
+                      {% assign tabContent = tabContent | newline_to_br | strip_newlines | split:'<br />' %}
+                      {%- for par in tabContent -%}
+                        {% assign parText = par | strip %}
+                        {%- if parText != blank -%}
+                          <p>
+                            {{ par | strip }}
+                          </p>
+                        {%- endif -%}
+                      {%- endfor -%}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+        {%- endif -%}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style media="screen">
+  .Section_Faq {
+    background: #201F1F;
+    padding: 120px 0;
+  }
+  .Section_Faq .Heading,
+  .Section_Faq,
+  .Section_Faq .Collapsible__Plus  {
+    color: #ffffff;
+  }
+  .Section_Faq .Collapsible .Heading  {
+    font-size: 18px;
+    font-family: var(--heading-2-font-family);
+    font-weight: 500;
+    padding-right: 40px;
+    margin-bottom: 0;
+  }
+  .Section_Faq .Collapsible  {
+    border-top: 0;
+  }
+  .Section_Faq .Collapsible__Plus  {
+    right: 0;
+  }
+  .Section_Faq .Collapsible__Button  {
+    padding: 20px 0;
+  }
+  .Section_Faq .Rte p {
+    margin-bottom: 0.75em;
+  }
+  @media screen and (min-width: 641px) {
+    .Section_Faq_Content {
+      padding-top: 20px
+    }
+  }
+  @media screen and (max-width: 640px) {
+    .Section_Faq {
+      padding: 60px 0 90px;
+    }
+    .Section_Faq .Collapsible__Button  {
+      padding: 20px 0 40px;
+    }
+    .Section_Faq .Collapsible .Heading {
+      font-size: 17px;
+    }
+  }
+</style>

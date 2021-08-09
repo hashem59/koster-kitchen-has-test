@@ -1,0 +1,49 @@
+<!-- /sections/logo_snippet.liquid -->
+<section class="Section Section--spacingNormal logo-main-section section--{{ block.id }}" data-section-id="{{ block.id }}">
+
+    <div class="Container index-logos logo-section {{ block.settings.color_bg }}{% if block.settings.title != blank %} index-logos--tall{% endif %}">
+  
+      {% if block.settings.title != blank %}
+        <header class="SectionHeader SectionHeader--center hidden-tablet-and-up" style="margin-bottom: 5px;">
+          <div class="Container">
+              <p class="monochrome-grey logo_text regular_font">{{ block.settings.title | escape }}</p>
+          </div>
+        </header>
+      {% endif %}
+  
+        <div class="logo-bar">
+          {% if block.settings.image != blank or  block.settings.title != blank %}
+            {%- render 'logo_snippet_details', block: block, title: block.settings.title, show_mobile: block.settings.show_mobile, link: block.settings.link, image: block.settings.image -%}
+          {% endif  %}
+          {% if block.settings.image1 != blank or  block.settings.title1 != blank %}
+            {%- render 'logo_snippet_details', block: block, title: block.settings.title1, show_mobile: block.settings.show_mobile1, link: block.settings.link1, image: block.settings.image1 -%}
+          {% endif  %}
+          {% if block.settings.image2 != blank or  block.settings.title2 != blank %}
+            {%- render 'logo_snippet_details', block: block, title: block.settings.title2, show_mobile: block.settings.show_mobile2, link: block.settings.link2, image: block.settings.image2 -%}
+          {% endif  %}
+          {% if block.settings.image3 != blank or  block.settings.title3 != blank %}
+            {%- render 'logo_snippet_details', block: block, title: block.settings.title3, show_mobile: block.settings.show_mobile3, link: block.settings.link3, image: block.settings.image3 -%}
+          {% endif  %}
+          {% if block.settings.image4 != blank or  block.settings.title4 != blank %}
+            {%- render 'logo_snippet_details', block: block, title: block.settings.title4, show_mobile: block.settings.show_mobile4, link: block.settings.link4, image: block.settings.image4 -%}
+          {% endif  %}
+          {% if block.settings.image5 != blank or  block.settings.title5 != blank %}
+            {%- render 'logo_snippet_details', block: block, title: block.settings.title5, show_mobile: block.settings.show_mobile5, link: block.settings.link5, image: block.settings.image5 -%}
+          {% endif  %}
+          {% if block.settings.image6 != blank or  block.settings.title6 != blank %}
+            {%- render 'logo_snippet_details', block: block, title: block.settings.title6, show_mobile: block.settings.show_mobile6, link: block.settings.link6, image: block.settings.image6 -%}
+          {% endif  %}
+        </div>  
+    </div>
+  
+</section>
+  
+<style>
+  .logo-bar__item.section--{{block.id}} { max-width: {{block.settings.logo_size}}px !important;  }
+  .section--{{ block.id }} .logo-bar{align-items: center;}
+  @media only screen and (max-width: 780px) {
+    .logo-bar__item.section--{{block.id}} {max-width: {{block.settings.logo_size_mobile}}px !important; }
+    .section--{{ block.id }} .logo-bar{justify-content: space-between;}
+  }
+  .section--{{ block.id }} .logo-bar-text{width: auto;}
+</style>

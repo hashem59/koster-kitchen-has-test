@@ -1,0 +1,53 @@
+<!-- /sections/icons_description.liquid -->
+<section class="Section Section--spacingNormal" data-section-id="{{ block.id }}">
+
+    <div class="Container index-logos icons-with-info {{ block.settings.color_bg }}{% if block.settings.title != blank %} index-logos--tall{% endif %}">
+  
+      {% if block.settings.title != blank %}
+        <header class="SectionHeader SectionHeader--center">
+          <div class="Container">
+              <h2 class="SectionHeader__Heading Heading u-h3">{{ block.settings.title | escape }}</h2>
+          </div>
+        </header>
+      {% endif %}
+  
+        <div class="logo-bar Gird Grid--center ArticleListWrapper">
+            {%- if block.settings.image != blank or block.settings.description != blank -%}
+              {%- render 'icons_descirption_details', block: block, mobile_length: block.settings.mobile_length, desktop_length: block.settings.desktop_length, link: block.settings.link, image: block.settings.image, description: block.settings.description, image_heading: block.settings.image_heading, show_mobile: block.settings.show_mobile -%}
+            {%- endif -%}
+            {%- if block.settings.image1 != blank or block.settings.description1 != blank -%}
+              {%- render 'icons_descirption_details', block: block, mobile_length: block.settings.mobile_length, desktop_length: block.settings.desktop_length, link: block.settings.link1, image: block.settings.image1, description: block.settings.description1, image_heading: block.settings.image_heading1, show_mobile: block.settings.show_mobile1 -%}
+            {%- endif -%}
+            {%- if block.settings.image2 != blank or block.settings.description2 != blank -%}
+              {%- render 'icons_descirption_details', block: block, mobile_length: block.settings.mobile_length, desktop_length: block.settings.desktop_length, link: block.settings.link2, image: block.settings.image2, description: block.settings.description2, image_heading: block.settings.image_heading2, show_mobile: block.settings.show_mobile2 -%}
+            {%- endif -%}
+            {%- if block.settings.image3 != blank or block.settings.description3 != blank -%}
+              {%- render 'icons_descirption_details', block: block, mobile_length: block.settings.mobile_length, desktop_length: block.settings.desktop_length, link: block.settings.link3, image: block.settings.image3, description: block.settings.description3, image_heading: block.settings.image_heading3, show_mobile: block.settings.show_mobile3 -%}
+            {%- endif -%}
+            {%- if block.settings.image4 != blank or block.settings.description4 != blank -%}
+              {%- render 'icons_descirption_details', block: block, mobile_length: block.settings.mobile_length, desktop_length: block.settings.desktop_length, link: block.settings.link4, image: block.settings.image4, description: block.settings.description4, image_heading: block.settings.image_heading4, show_mobile: block.settings.show_mobile4 -%}
+            {%- endif -%}
+            {%- if block.settings.image5 != blank or block.settings.description5 != blank -%}
+              {%- render 'icons_descirption_details', block: block, mobile_length: block.settings.mobile_length, desktop_length: block.settings.desktop_length, link: block.settings.link5, image: block.settings.image5, description: block.settings.description5, image_heading: block.settings.image_heading5, show_mobile: block.settings.show_mobile5 -%}
+            {%- endif -%}
+        </div>
+
+      {% if block.settings.btn_text != blank %}
+        <div class="SectionFooter">
+            <a href="{{ block.settings.btn_link }}" class="Button Button--primary">{{ block.settings.btn_text }}</a>
+        </div>
+      {% endif %}
+  
+    </div>
+  
+  </section>
+  
+  <style>
+  /* .logo-bar__item.section--{{block.id}} { max-width: {{block.settings.logo_size}}px !important;  } */
+  .logo-bar__item.section--{{block.id}} .logo-description .description_text { font-size: {{block.settings.font_size_desktop}}px !important;  }
+  @media only screen and (max-width: 780px) {
+    /* .logo-bar__item.section--{{block.id}} {max-width: {{block.settings.logo_size_mobile}}px !important; } */
+    .logo-bar__item.section--{{block.id}} .logo-description .description_text { font-size: {{block.settings.font_size_mobile}}px !important;  }
+  }
+  </style>
+  

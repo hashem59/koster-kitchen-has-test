@@ -1,0 +1,73 @@
+<section class="Section Section--spacingNormal" id="section-{{ block.id }}" data-section-id="{{block.id}}">
+    <div class="Container">
+      {%- if block.settings.subheading != blank or block.settings.title != blank -%}
+        <header class="SectionHeader SectionHeader--center">
+          {%- if block.settings.subheading != blank -%}
+            <h3 class="SectionHeader__SubHeading Heading u-h6">{{ block.settings.subheading | escape }}</h3>
+          {%- endif -%}
+  
+          {%- if block.settings.title != blank -%}
+            <h2 class="SectionHeader__Heading Heading u-h3">{{ block.settings.title | escape }}</h2>
+          {%- endif -%}
+        </header>
+      {%- endif -%}
+    </div>
+
+    <div class="squarelovin-container">
+        {% if block.settings.gallery_layout == "gallery" %}
+            <script id='sqln-60d1e64f976e37fc6f7b23cb' type='text/javascript' data-stream='60d1e64f976e37fc6f7b23cb'>
+                (function() {
+                var lang = 'de';
+                var s = document.createElement('script')
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src =
+                'https://squarelovin.com/squarelovin.js?stream=60d1e64f976e37fc6f7b23cb&amp;t=main&amp;l=' + lang +
+                '&amp;u=' + location.href;
+                var sc = document.getElementsByTagName('script')[0];
+                sc.parentNode.insertBefore(s, sc);
+                })();
+            </script>
+        {% else %}
+            <script id='sqln-60d1e64f976e37fc6f7b23cb' type='text/javascript' datastream='60d1e64f976e37fc6f7b23cb'>
+                (function() {
+                var lang = 'de';
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src =
+                'https://squarelovin.com/squarelovin.js?stream=60d1e64f976e37fc6f7b23cb&t=teaser&l=' + lang +
+                '&u=' + location.href;
+                var sc = document.getElementsByTagName('script')[0];
+                sc.parentNode.insertBefore(s, sc);
+                })();
+            </script>
+        {% endif %}
+    </div>
+</section>
+<style>
+    {% if block.settings.gallery_layout == "teaser" %}
+        .squarelovin-productstream-arrow.squarelovin-arrow-right {
+            right: 10px;
+        }
+        .squarelovin-productstream-arrow.squarelovin-arrow-left {
+            left: 10px;
+        }
+        @media screen and (max-width: 767px) {
+            
+            .squarelovin-productstream-arrow-margin{
+                margin-right: 8px !important;
+            }
+        }
+    {% endif %}
+   
+    @media screen and (min-width: 767px) {
+        #section-{{ block.id }}{
+            margin-top:140px;
+        }
+    }
+    
+    .squarelovin-branding{
+        display: none;
+    }
+</style>

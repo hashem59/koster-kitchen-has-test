@@ -1,0 +1,33 @@
+{% assign product_desc_array = product.description | remove: "<h3></h3>" | replace: 'data-section-type', 'data-section-type-placeholder' | replace: "<h3>","~" | replace: "</h3>","~" | split: '~' %}
+
+<div class="Product__Tabs description_tabs">
+
+{% for i in (1..11) %}
+
+  {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+  {%- if forloop.first -%}
+    {%- continue -%}
+  {%- endif -%}
+  {%- if thecycle == 'odd' -%}
+    {%- if product_desc_array[i].size > 10 -%}
+      {% assign contentIndex = i | plus: 1 %}
+      {% assign tabContent = product_desc_array[contentIndex] %}
+      <div class="Collapsible Collapsible--large">
+        <button class="Collapsible__Button Heading u-h6" data-action="toggle-collapsible"  aria-expanded="{% if i == 3 %}true{% else %}false{% endif %}">
+          {{- product_desc_array[i] -}} <span class="Collapsible__Plus">{%- render 'icon' icon: 'select-arrow' -%}</span>
+        </button>
+
+        <div class="Collapsible__Inner hidden-pocket" {% if i == 3 %}style="overflow: visible; height: auto;"{% endif %}>
+          <div class="Collapsible__Content">
+            <div class="Rte">
+              {{- tabContent -}}
+            </div>
+          </div>
+        </div>
+      </div>
+    {%- endif -%}
+  {%- endif -%}
+
+{% endfor %}
+
+</div>

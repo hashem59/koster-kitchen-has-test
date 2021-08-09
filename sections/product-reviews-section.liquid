@@ -1,0 +1,64 @@
+{%- unless section.settings.enable_section -%}
+  <style media="screen">
+    #shopify-section-{{section.id}} {
+      display: none;
+    }
+  </style>
+{%- endunless -%}
+
+<div class="product-reviews-section">
+
+</div>
+
+<script type="text/javascript">
+  _tsProductReviewsConfig = {
+  tsid: 'X0DC15D47662BA4B31207015D788FA0A3',
+  sku: [{%- for var in product.variants -%}
+      {{ var.sku | json }}
+      {%- unless forloop.last -%}
+        ,
+      {%- endunless -%}
+    {%- endfor -%}],
+  variant: 'productreviews',
+        /* optional */
+  borderColor: '#383838',
+  backgroundColor: '#ffffff',
+  locale: 'de_DE',
+  starColor: '#FFDC0F',
+  commentBorderColor: '#dad9d5',
+  commentHideArrow: 'false',
+  richSnippets: 'on',
+  starSize: '15px',
+  ratingSummary: 'false',
+  maxHeight: '1200px',
+  hideEmptySticker: 'false',
+  filter: 'true',
+  introtext: ''
+
+  };
+  var scripts = document.getElementsByTagName('SCRIPT'),
+  me = scripts[scripts.length - 1];
+  var _ts = document.createElement('SCRIPT');
+  var reviewsWrapper = document.querySelector('.product-reviews-section')
+  _ts.type = 'text/javascript';
+  _ts.async = true;
+  _ts.charset = 'utf-8';
+  _ts.src ='//widgets.trustedshops.com/reviews/tsSticker/tsProductSticker.js';
+  me.parentNode.insertBefore(_ts, me);
+  _tsProductReviewsConfig.script = _ts;
+</script>
+
+{% schema %}
+{
+  "name": "Product Reviews",
+  "class": "Container Section Section--spacingNormal",
+  "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_section",
+        "label": "Enable section",
+        "default": true
+      }
+   ]
+}
+{% endschema %}

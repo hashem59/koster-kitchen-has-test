@@ -1,0 +1,82 @@
+{% assign product-badges-icons = product.metafields.tante-e.product-badges-icons | split: '|' %}
+{% assign product-badges-texts = product.metafields.tante-e.product-badges-text | split: '|' %}
+
+<div class="product-badges-conrtainer">
+  <div class="Grid badges-grid">
+    {%- for icon in product-badges-icons -%}
+        {% assign image_id = icon | strip_newlines | remove: ' ' | split: '/' | last | split: '?' | first %}
+        {% assign image = images[image_id] %}
+        {%- capture supported_sizes -%}{%- render 'image-size', sizes: '250,400', image: image -%}{%- endcapture -%}
+
+        {% assign text = product-badges-texts[forloop.index0] %}
+        <div class="Grid__Cell badge-item">
+          <div class="badge-item--inner">
+            <div class="AspectRatio" style="max-width: {{image.width}}px; --aspect-ratio: {{ image.aspect_ratio }}">
+              <img data-src="{{ image | img_url: '250x' }}" class="Image--lazyLoad"
+              data-widths="[{{ supported_sizes }}]"
+              alt="{{text}}">
+            </div>
+            {%- if text != blank -%}
+              <div class="badge-text">
+                  <p>{{text}}</p>
+              </div>
+            {%- endif -%}
+          </div>
+
+        </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+<style media="screen">
+.product-badges-conrtainer {
+  margin-top: 25px;
+}
+.product-badges-conrtainer .badges-grid {
+text-align: center;
+max-width: 600px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between
+}
+
+.product-badges-conrtainer .badge-item {
+  width: calc(33.33% - 8px);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.badge-item .badge-text {
+  font-family: var(--heading-2-font-family);
+  font-size: 18px;
+  margin: 12px 0;
+  word-break: break-word
+}
+
+@media screen and (min-width: 1281px) {
+  .product-badges-conrtainer .badge-item {
+      width: calc(33.33% - 8px);
+      border: 1px solid #ACACAC;
+      padding: 8px;
+  }
+}
+
+.product-badges-conrtainer .badge-item .AspectRatio {
+  width: 75px
+}
+
+@media screen and (max-width: 640px) {
+  .product-badges-conrtainer .badge-item .AspectRatio {
+    width:60px
+  }
+  .badge-item .badge-text {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .badge-item .badge-text {
+    font-size: 12px;
+  }
+}
+</style>

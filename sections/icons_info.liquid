@@ -1,0 +1,213 @@
+<!-- /sections/icons_info.liquid -->
+<section class="Section Section--spacingNormal" data-section-id="{{ section.id }}">
+
+    <div class="Container index-logos icons-with-info {{ section.settings.color_bg }}{% if section.settings.title != blank %} index-logos--tall{% endif %}">
+  
+      {% if section.settings.title != blank %}
+        <header class="SectionHeader SectionHeader--center">
+          <div class="Container">
+              <h2 class="SectionHeader__Heading Heading u-h3">{{ section.settings.title | escape }}</h2>
+          </div>
+        </header>
+      {% endif %}
+  
+      {% if section.blocks.size > 0 %}
+        <div class="logo-bar Gird Grid--center ArticleListWrapper">
+          {% for block in section.blocks %}
+            <div class="1/{{section.settings.mobile_length}}--phone 1/{{section.settings.desktop_length}}--tablet 1/{{section.settings.desktop_length}}--lap-and-up  logo-bar__item section--{{section.id}} {% unless block.settings.show_mobile %} hidden-phone {% endunless %}" {{ block.shopify_attributes }}>
+              {% if block.settings.link != blank %}
+                <a href="{{ block.settings.link }}" class="logo-bar__link" target="_blank">
+              {% endif %}
+              {% if block.settings.image != blank %}
+                <div class="logo-bar__image_div">
+                  {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,250,300,350,400,450,500,550', image: block.settings.image -%}{%- endcapture -%}
+                  <div class="AspectRatio" style="max-width: {{ block.settings.image.width }}px; --aspect-ratio: {{ block.settings.image.aspect_ratio }}">
+                    {%- assign image_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                    <img class="Image--lazyLoad logo-bar__image" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ block.settings.image.alt | escape }}">
+  
+                    <noscript>
+                      <img src="{{ block.settings.image | img_url: '160x' }}" alt="{{ block.settings.image.alt | default: block.settings.title }}">
+                    </noscript>
+                  </div>
+                </div>
+              {% endif %}
+              {% if block.settings.link != blank %}
+                </a>
+              {% endif %}
+
+              {% if block.settings.description != blank or  block.settings.image_heading != blank %}
+                <div class="logo-description">
+                    {% if block.settings.image_heading != blank %}
+                        <h4 class="SectionHeader__Heading Heading u-h5">{{ block.settings.image_heading | escape }}</h4>
+                    {% endif %}
+                    {% if block.settings.description != blank %}
+                        <h5 class="u-h6 description_text dark-grey {% unless section.settings.show_description_mobile %} hidden-phone{% endunless %}">{{block.settings.description}}</h5>
+                    {% endif %}
+                </div>
+              {% endif %}
+            </div>
+          {% endfor %}
+
+
+        </div>
+      {% endif %}
+
+      {% if section.settings.btn_text != blank %}
+        <div class="SectionFooter">
+            <a href="{{ section.settings.btn_link }}" class="Button Button--primary">{{ section.settings.btn_text }}</a>
+        </div>
+      {% endif %}
+  
+    </div>
+  
+  </section>
+  
+  <style>
+  /* .logo-bar__item.section--{{section.id}} { max-width: {{section.settings.logo_size}}px !important;  } */
+  .logo-bar__item.section--{{section.id}} .logo-description .description_text { font-size: {{section.settings.font_size_desktop}}px !important;  }
+  @media only screen and (max-width: 780px) {
+    /* .logo-bar__item.section--{{section.id}} {max-width: {{section.settings.logo_size_mobile}}px !important; } */
+    .logo-bar__item.section--{{section.id}} .logo-description .description_text { font-size: {{section.settings.font_size_mobile}}px !important;  }
+  }
+  </style>
+  
+  
+  {% schema %}
+    {
+      "name": "Icons with info section",
+      "class": "index-section",
+      "max_blocks": 20,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Logo list"
+        },
+        {
+            "type": "select",
+            "id": "desktop_length",
+            "label": "Items per row in desktop",
+            "options": [
+                { "value": "1", "label": "1" },
+                { "value": "2", "label": "2" },
+                { "value": "3", "label": "3" },
+                { "value": "4", "label": "4" }
+            ],
+            "default": "2"
+        },
+        {
+            "type": "select",
+            "id": "mobile_length",
+            "label": "Items per row in mobile",
+            "options": [
+                { "value": "1", "label": "1" },
+                { "value": "2", "label": "2" },
+                { "value": "3", "label": "3" },
+                { "value": "4", "label": "4" }
+            ],
+            "default": "2"
+        },
+
+        {
+            "type": "range",
+            "id": "font_size_desktop",
+            "min": 5,
+            "max": 30,
+            "step": 1,
+            "unit": "px",
+            "label": "Font size of description on desktop",
+            "default": 22
+        },
+        {
+            "type": "range",
+            "id": "font_size_mobile",
+            "min": 5,
+            "max": 30,
+            "step": 1,
+            "unit": "px",
+            "label": "Font size on mobile",
+            "default": 12
+        },
+        {
+            "type": "checkbox",
+            "id": "show_description_mobile",
+            "label": "Show description on mobile",
+            "default": false
+        },
+        {
+            "type": "url",
+            "id": "btn_link",
+            "label": "Button link"
+        },
+        {
+            "type": "text",
+            "id": "btn_text",
+            "label": "Button text"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "logo_image",
+          "name": "Icon",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image",
+              "info": "640 x 640px .png recommended"
+            },
+            {
+              "type": "text",
+              "id": "image_heading",
+              "label": "Heading"
+            },
+            {
+              "type": "text",
+              "id": "description",
+              "label": "Short description"
+            },
+            
+            {
+              "type": "url",
+              "id": "link",
+              "label": "Link"
+            },
+            {
+              "type": "checkbox",
+              "id": "show_mobile",
+              "label": "Show on mobile",
+              "default": false
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "Icons with info section",
+          "category": "Image",
+          "blocks": [
+            {
+              "type": "logo_image"
+            },
+            {
+              "type": "logo_image"
+            },
+            {
+              "type": "logo_image"
+            },
+            {
+              "type": "logo_image"
+            },
+            {
+              "type": "logo_image"
+            },
+            {
+              "type": "logo_image"
+            }
+          ]
+        }
+      ]
+    }
+  {% endschema %}
+  
