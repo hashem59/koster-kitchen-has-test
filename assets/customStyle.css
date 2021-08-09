@@ -504,7 +504,7 @@ div.shopify-section--slideshow + .index-section .Section--spacingNormal {
   justify-content: left;
   padding-left: 0;
 }
-.MegaMenu__Item{ 
+.MegaMenu__Item{
   margin: 20px 100px 20px 0;
 }
 .MegaMenu{
@@ -1731,3 +1731,6 @@ div#refcandy-poprocks #button .button .icon {
   top: -22px;
 }
 
+body * {
+  background-color: #eee;
+}
